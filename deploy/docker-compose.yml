@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      context: ../api
+    image: our-story-api:latest
+    container_name: our-story-api
+    restart: always
+    env_file:
+      - ../api/.env
+    ports:
+      - "127.0.0.1:7000:7000"

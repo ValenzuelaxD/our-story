@@ -1,0 +1,62 @@
+name: Deploy API (SSH)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'api/**'
+      - 'deploy/**'
+      - '.github/workflows/api-ci-cd.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: api-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Desplegar API en el VPS
+        uses: appleboy/ssh-action@v1.2.5
+        env:
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+          MAIL_SERVER: ${{ secrets.MAIL_SERVER }}
+          MAIL_PORT: ${{ secrets.MAIL_PORT }}
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          APPROVE_SECRET: ${{ secrets.APPROVE_SECRET }}
+          API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          ALLOWED_ORIGINS: ${{ secrets.ALLOWED_ORIGINS }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script_stop: true
+          envs: TURNSTILE_SECRET_KEY,MAIL_SERVER,MAIL_PORT,MAIL_USERNAME,MAIL_PASSWORD,MAIL_FROM,MAIL_TO,APPROVE_SECRET,API_BASE_URL,ALLOWED_ORIGINS
+          script: |
+            set -eu
+            cd /opt/our-story
+            git pull --ff-only
+            umask 077
+            {
+              printf '%s\n' "NODE_ENV=production"
+              printf '%s\n' "PORT=7000"
+              printf '%s\n' "TRUST_PROXY=1"
+              printf '%s\n' "TURNSTILE_SECRET_KEY=$TURNSTILE_SECRET_KEY"
+              printf '%s\n' "MAIL_SERVER=$MAIL_SERVER"
+              printf '%s\n' "MAIL_PORT=$MAIL_PORT"
+              printf '%s\n' "MAIL_USERNAME=$MAIL_USERNAME"
+              printf '%s\n' "MAIL_PASSWORD=$MAIL_PASSWORD"
+              printf '%s\n' "MAIL_FROM=${MAIL_FROM:-$MAIL_USERNAME}"
+              printf '%s\n' "MAIL_TO=${MAIL_TO:-$MAIL_USERNAME}"
+              printf '%s\n' "ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://66.179.211.195}"
+              [ -n "${APPROVE_SECRET:-}" ] && printf '%s\n' "APPROVE_SECRET=$APPROVE_SECRET"
+              [ -n "${API_BASE_URL:-}" ]    && printf '%s\n' "API_BASE_URL=$API_BASE_URL"
+            } > api/.env
+            chmod 600 api/.env
+            bash deploy/update-api.sh

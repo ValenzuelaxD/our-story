@@ -1,0 +1,1 @@
+Código legado opcional (Cloudflare Worker). No hay instrucciones de deploy públicas aquí.

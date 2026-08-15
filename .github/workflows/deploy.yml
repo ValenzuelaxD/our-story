@@ -1,0 +1,31 @@
+name: Deploy sitio (SSH)
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'api/**'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Desplegar sitio en el VPS
+        uses: appleboy/ssh-action@v1.2.5
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script_stop: true
+          script: |
+            set -eu
+            cd /opt/our-story
+            git pull --ff-only
+            bash deploy/update.sh
