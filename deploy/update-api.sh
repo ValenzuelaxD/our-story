@@ -4,6 +4,7 @@ set -euo pipefail
 
 REPO_DIR="/opt/our-story"
 cd "$REPO_DIR"
-git pull --ff-only
+git fetch origin main
+git reset --hard origin/main
 docker compose -f deploy/docker-compose.yml up -d --build
 echo "API actualizada."

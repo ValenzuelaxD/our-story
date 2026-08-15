@@ -54,7 +54,8 @@ jobs:
           script: |
             set -eu
             cd /opt/our-story
-            git pull --ff-only
+            git fetch origin main
+            git reset --hard origin/main
             umask 077
             {
               printf '%s\n' "NODE_ENV=production"

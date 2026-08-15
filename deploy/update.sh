@@ -8,7 +8,8 @@ REPO_DIR="/opt/our-story"
 WEB_ROOT="/var/www/our-story"
 
 cd "$REPO_DIR"
-git pull --ff-only
+git fetch origin main
+git reset --hard origin/main
 npm install --no-audit --no-fund --package-lock=false
 
 # Fase 3: sincroniza el contenido editado vía API (si responde) antes de compilar.
