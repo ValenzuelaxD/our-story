@@ -60,7 +60,7 @@ VITE_TURNSTILE_SITE_KEY=${2:-}
 VITE_GA_MEASUREMENT_ID=${3:-}
 EOF
 cd "$REPO_DIR"
-npm ci
+npm install --no-audit --no-fund --package-lock=false
 npm run build
 mkdir -p "$WEB_ROOT"
 cp -r dist/. "$WEB_ROOT/"

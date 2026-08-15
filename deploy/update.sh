@@ -9,7 +9,7 @@ WEB_ROOT="/var/www/our-story"
 
 cd "$REPO_DIR"
 git pull --ff-only
-npm ci
+npm install --no-audit --no-fund --package-lock=false
 npm run build
 mkdir -p "$WEB_ROOT"
 cp -r dist/. "$WEB_ROOT/"
