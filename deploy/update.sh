@@ -6,10 +6,15 @@ export NVM_DIR="$HOME/.nvm"
 
 REPO_DIR="/opt/our-story"
 WEB_ROOT="/var/www/our-story"
+LOCK_FILE="/tmp/our-story-deploy.lock"
 
 cd "$REPO_DIR"
-git fetch origin main
-git reset --hard origin/main
+
+# Serializa el sync con el deploy de la API (ambos workflows corren en paralelo)
+# para evitar que dos `git fetch` concurrentes compitan por las refs.
+flock "$LOCK_FILE" git fetch origin main
+flock "$LOCK_FILE" git reset --hard origin/main
+
 npm install --no-audit --no-fund --package-lock=false
 
 # Fase 3: sincroniza el contenido editado vía API (si responde) antes de compilar.

@@ -27,6 +27,4 @@ jobs:
           script: |
             set -eu
             cd /opt/our-story
-            git fetch origin main
-            git reset --hard origin/main
             bash deploy/update.sh
