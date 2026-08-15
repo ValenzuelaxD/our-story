@@ -39,8 +39,10 @@ Sitio estático (Nginx) + API de recados (Docker). Todo en un solo servidor.
   `MYSQL_ROOT_PASSWORD`, `MYSQL_DATABASE`/`MYSQL_USER`, `REPO_SLUG` (`owner/repo`).
   **`DB_PASSWORD` y `MYSQL_PASSWORD` deben ser el MISMO valor** (el API se autentica
   contra el usuario que crea el contenedor MySQL).
-- `GITHUB_PAT`: fine-grained PAT con permiso **"workflow"** solo para el repo, para que
-  la API dispare el rebuild (`workflow_dispatch` de `deploy.yml`) tras un `PUT`.
+- `PAT_WORKFLOW`: fine-grained PAT con permisos **"Workflow"** y **"Actions"** (Read and
+  write) solo para el repo, para que la API dispare el rebuild (`workflow_dispatch` de
+  `deploy.yml`) tras un `PUT`. GitHub no permite secret names que empiecen con `GITHUB_`,
+  por eso se llama `PAT_WORKFLOW` (la API lo lee como env `GITHUB_TOKEN`).
 - Flujo: `PUT http://IP:7000/api/contenido` (Bearer `ADMIN_TOKEN`) → MySQL → dispatch
   rebuild → `update.sh` corre `fetch-contenido` (pull desde la API) → build → Nginx.
   Panel web en `http://IP/admin` (mismo `ADMIN_TOKEN`).

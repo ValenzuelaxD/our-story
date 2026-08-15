@@ -62,7 +62,7 @@ Si un texto no es válido (fecha vacía, etc.), `fill()` deja la variable litera
 Con la API y MySQL desplegados:
 
 - `GET http://IP:7000/api/contenido` → `{ ok, content, updated_at }` (público; `content: null` si la tabla está vacía).
-- `PUT http://IP:7000/api/contenido` con header `Authorization: Bearer <ADMIN_TOKEN>` y el JSON completo como body. Guarda en MySQL (tabla `contenido`, fila id=1) y dispara el rebuild del sitio vía GitHub Actions (`workflow_dispatch` en `deploy.yml`, requiere `GITHUB_PAT` con scope "workflow").
+- `PUT http://IP:7000/api/contenido` con header `Authorization: Bearer <ADMIN_TOKEN>` y el JSON completo como body. Guarda en MySQL (tabla `contenido`, fila id=1) y dispara el rebuild del sitio vía GitHub Actions (`workflow_dispatch` en `deploy.yml`, requiere secret `PAT_WORKFLOW` — PAT fine-grained con scopes "Workflow" y "Actions").
 - Panel web: `http://IP:7000/admin` — pide el `ADMIN_TOKEN`, edita `identidad` + JSON completo y guarda. El rebuild tarda unos minutos.
 - El build en producción corre `fetch-contenido` (con `API_CONTEUDO_URL`) antes de compilar: si la API/DB no responden, usa el JSON del repo (fallback).
 
