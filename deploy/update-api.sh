@@ -14,7 +14,12 @@ docker compose -f deploy/docker-compose.yml up -d --build
 echo "API actualizada."
 echo "--- estado contenedores ---"
 docker compose -f deploy/docker-compose.yml ps -a || true
+echo "--- inspect our-story-api ---"
+docker inspect our-story-api --format 'status={{.State.Status}} exit={{.State.ExitCode}} err={{.State.Error}} restarts={{.RestartCount}} oomkilled={{.State.OOMKilled}}' || true
+echo "--- stats ---"
+docker stats --no-stream --format '{{.Name}} mem={{.MemUsage}} cpu={{.CPUPerc}}' || true
+sleep 8
 echo "--- logs our-story-api ---"
-docker logs --tail 60 our-story-api 2>&1 || true
+docker logs --tail 100 our-story-api 2>&1 || true
 echo "--- logs our-story-mysql ---"
 docker logs --tail 30 our-story-mysql 2>&1 || true
