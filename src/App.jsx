@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { MotionConfig } from 'framer-motion';
 
 import { useIsMobile } from './hooks';
+import { TEXTO } from './data/constants';
 
 import ButterfliesFloating from './components/animations/ButterfliesFloating';
 import SlideThemedAmbience from './components/animations/SlideThemedAmbience';
@@ -60,7 +61,7 @@ const DynamicPortals = memo(function DynamicPortals({ activeSlide, setActiveSlid
 function MapaFallback() {
   return (
     <section className="snap-slide slide-bg-teal flex items-center justify-center">
-      <p className="text-rose-200/50 text-sm">O mapa não pôde ser carregado.</p>
+      <p className="text-rose-200/50 text-sm">{TEXTO.mapa.errorCarga}</p>
     </section>
   );
 }

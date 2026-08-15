@@ -1,5 +1,8 @@
 import nodemailer from 'nodemailer'
 
+/** Nombre de quien firma los e-mails del formulario (editable por env). */
+const NOME_ELE = process.env.MAIL_NOME_ELE || 'Davi'
+
 function escapeHtml(s) {
   return String(s)
     .replace(/&/g, '&amp;')
@@ -104,7 +107,7 @@ function buildRecadoHtml({ name, email, message }, siteOrigin, approvalUrl) {
             <td style="padding:22px 26px 26px;text-align:center;">
               <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(251,191,36,0.3),transparent);margin:0 0 18px;"></div>
               <p style="margin:0 0 8px;color:#e9b4c0;font-size:14px;line-height:1.55;font-family:Georgia,'Times New Roman',serif;font-style:italic;">Si quieres agradecer, solo responde a este e-mail: el mensaje vuelve directo a quien lo envió.</p>
-              <p style="margin:16px 0 0;color:#fda4af;font-size:13px;line-height:1.5;font-family:Georgia,'Times New Roman',serif;">Con todo mi amor,<br /><span style="color:#fff7f7;">Davi</span> <span style="font-size:11px;opacity:0.85;">💕</span></p>
+              <p style="margin:16px 0 0;color:#fda4af;font-size:13px;line-height:1.5;font-family:Georgia,'Times New Roman',serif;">Con todo mi amor,<br /><span style="color:#fff7f7;">${NOME_ELE}</span> <span style="font-size:11px;opacity:0.85;">💕</span></p>
             </td>
           </tr>
           ${approvalBlock}
@@ -128,7 +131,7 @@ export async function sendRecadoMail(transporter, { name, email, message }, { fr
   const approvalUrl = opts.approvalUrl || ''
   const subject = `💌 Mensajito para nuestro rinconcito · ${asciiSafeSubjectSnippet(name)}`
   const approvalLine = approvalUrl ? `\n\n── Aprobar publicación en el sitio ──\n${approvalUrl}\n` : ''
-  const text = `Hola, amores: llegó un mensajito a nuestro sitio.\n\nDe: ${name}\nE-mail (para responder): ${email}\n\n---\n\n${message}\n\n---${approvalLine}\nCon amor,\n(el sitio que Davi hizo con cariño para nosotros)\n`
+  const text = `Hola, amores: llegó un mensajito a nuestro sitio.\n\nDe: ${name}\nE-mail (para responder): ${email}\n\n---\n\n${message}\n\n---${approvalLine}\nCon amor,\n(el sitio que ${NOME_ELE} hizo con cariño para nosotros)\n`
   const html = buildRecadoHtml({ name, email, message }, siteOrigin, approvalUrl)
 
   await transporter.sendMail({

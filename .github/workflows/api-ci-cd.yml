@@ -31,13 +31,26 @@ jobs:
           APPROVE_SECRET: ${{ secrets.APPROVE_SECRET }}
           API_BASE_URL: ${{ secrets.API_BASE_URL }}
           ALLOWED_ORIGINS: ${{ secrets.ALLOWED_ORIGINS }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}
+          GITHUB_REPO: ${{ secrets.GITHUB_REPO }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
+          MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
+          MYSQL_USER: ${{ secrets.MYSQL_USER }}
+          MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+          MAIL_NOME_ELE: ${{ secrets.MAIL_NOME_ELE }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script_stop: true
-          envs: TURNSTILE_SECRET_KEY,MAIL_SERVER,MAIL_PORT,MAIL_USERNAME,MAIL_PASSWORD,MAIL_FROM,MAIL_TO,APPROVE_SECRET,API_BASE_URL,ALLOWED_ORIGINS
+          envs: TURNSTILE_SECRET_KEY,MAIL_SERVER,MAIL_PORT,MAIL_USERNAME,MAIL_PASSWORD,MAIL_FROM,MAIL_TO,APPROVE_SECRET,API_BASE_URL,ALLOWED_ORIGINS,ADMIN_TOKEN,GITHUB_TOKEN,GITHUB_REPO,DB_HOST,DB_PORT,DB_USER,DB_PASSWORD,DB_NAME,MYSQL_ROOT_PASSWORD,MYSQL_DATABASE,MYSQL_USER,MYSQL_PASSWORD,MAIL_NOME_ELE
           script: |
             set -eu
             cd /opt/our-story
@@ -57,6 +70,19 @@ jobs:
               printf '%s\n' "ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://66.179.211.195}"
               [ -n "${APPROVE_SECRET:-}" ] && printf '%s\n' "APPROVE_SECRET=$APPROVE_SECRET"
               [ -n "${API_BASE_URL:-}" ]    && printf '%s\n' "API_BASE_URL=$API_BASE_URL"
+              [ -n "${MAIL_NOME_ELE:-}" ]   && printf '%s\n' "MAIL_NOME_ELE=$MAIL_NOME_ELE"
+              [ -n "${ADMIN_TOKEN:-}" ]     && printf '%s\n' "ADMIN_TOKEN=$ADMIN_TOKEN"
+              [ -n "${GITHUB_TOKEN:-}" ]    && printf '%s\n' "GITHUB_TOKEN=$GITHUB_TOKEN"
+              [ -n "${GITHUB_REPO:-}" ]     && printf '%s\n' "GITHUB_REPO=$GITHUB_REPO"
+              [ -n "${DB_HOST:-}" ]         && printf '%s\n' "DB_HOST=$DB_HOST"
+              [ -n "${DB_PORT:-}" ]         && printf '%s\n' "DB_PORT=$DB_PORT"
+              [ -n "${DB_USER:-}" ]         && printf '%s\n' "DB_USER=$DB_USER"
+              [ -n "${DB_PASSWORD:-}" ]     && printf '%s\n' "DB_PASSWORD=$DB_PASSWORD"
+              [ -n "${DB_NAME:-}" ]         && printf '%s\n' "DB_NAME=$DB_NAME"
+              [ -n "${MYSQL_ROOT_PASSWORD:-}" ] && printf '%s\n' "MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD"
+              [ -n "${MYSQL_DATABASE:-}" ]  && printf '%s\n' "MYSQL_DATABASE=$MYSQL_DATABASE"
+              [ -n "${MYSQL_USER:-}" ]      && printf '%s\n' "MYSQL_USER=$MYSQL_USER"
+              [ -n "${MYSQL_PASSWORD:-}" ]  && printf '%s\n' "MYSQL_PASSWORD=$MYSQL_PASSWORD"
             } > api/.env
             chmod 600 api/.env
             bash deploy/update-api.sh

@@ -3,12 +3,17 @@ import helmet from 'helmet'
 import cors from 'cors'
 import rateLimit from 'express-rate-limit'
 import { createHash, createHmac, timingSafeEqual } from 'node:crypto'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import { validateRecado } from './validate.js'
 import { verifyTurnstile } from './turnstile.js'
 import { createMailTransport, sendRecadoMail, firstSiteOriginFromEnv } from './mail.js'
 import { sanitizeText, sanitizeLine } from './sanitize.js'
-import { createPool, initDb, saveRecado, approveRecado, getRecados, countRecados } from './db.js'
+import { createPool, initDb, saveRecado, approveRecado, getRecados, countRecados, getContenido, saveContenido } from './db.js'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const PUBLIC_DIR = join(__dirname, '..', 'public')
 
 /**
  * Genera un hash del IP para almacenamiento: nunca almacena el IP crudo.
@@ -37,6 +42,54 @@ function tokenEqual(a, b) {
     if (ba.length !== bb.length) return false
     return timingSafeEqual(ba, bb)
   } catch {
+    return false
+  }
+}
+
+/**
+ * Valida el header Authorization tipo "Bearer <token>" contra ADMIN_TOKEN.
+ * Comparación timing-safe: sin leak por temporización.
+ */
+function bearerOk(authHeader, adminToken) {
+  if (!adminToken) return false
+  const m = /^Bearer\s+(.+)$/.exec(String(authHeader || '').trim())
+  if (!m) return false
+  return tokenEqual(m[1], adminToken)
+}
+
+/**
+ * Dispara el rebuild del sitio tras un PUT de contenido: llama al workflow
+ * deploy.yml del repo vía GitHub Actions API (workflow_dispatch).
+ * Requiere GITHUB_TOKEN (PAT con scope "workflow") y GITHUB_REPO ("owner/repo").
+ */
+async function dispatchRebuild(env) {
+  const token = env.GITHUB_TOKEN
+  const repo = env.GITHUB_REPO
+  if (!token || !repo) {
+    console.warn('[contenido:rebuild] sin GITHUB_TOKEN/GITHUB_REPO: el sitio se actualizará en el próximo deploy')
+    return false
+  }
+
+  const url = `https://api.github.com/repos/${repo}/actions/workflows/deploy.yml/dispatches`
+  try {
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: {
+        authorization: `Bearer ${token}`,
+        'content-type': 'application/json',
+        'user-agent': 'our-story-api',
+      },
+      body: JSON.stringify({ ref: 'main' }),
+      signal: AbortSignal.timeout(15_000),
+    })
+    if (!r.ok) {
+      console.warn(`[contenido:rebuild] GitHub respondió ${r.status} ${r.statusText}`)
+      return false
+    }
+    console.log('[contenido:rebuild] workflow deploy.yml disparado')
+    return true
+  } catch (e) {
+    console.warn('[contenido:rebuild] fallo al disparar:', e instanceof Error ? e.message : 'unknown')
     return false
   }
 }
@@ -150,7 +203,7 @@ if (process.env.TRUST_PROXY === '1') {
 app.disable('x-powered-by')
 app.use(helmet())
 
-const jsonLimit = process.env.JSON_BODY_LIMIT || '24kb'
+const jsonLimit = process.env.JSON_BODY_LIMIT || '2mb'
 app.use(express.json({ limit: jsonLimit }))
 
 const allowedOrigins = parseOrigins(process.env.ALLOWED_ORIGINS || '')
@@ -168,8 +221,8 @@ app.use(
       if (allowedOrigins.includes(origin)) return callback(null, true)
       return callback(null, false)
     },
-    methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type'],
+    methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     maxAge: 86400,
   }),
 )
@@ -279,6 +332,56 @@ app.get('/api/recados/approve', async (req, res) => {
   }
 })
 
+// GET /api/contenido - contenido editable guardado (lo consume fetch-contenido.mjs en el build).
+// Si la tabla está vacía devuelve content:null y el build usa el JSON del repo como seed/fallback.
+app.get('/api/contenido', async (_req, res) => {
+  if (!dbPool) return res.status(200).json({ ok: true, content: null })
+
+  try {
+    const data = await getContenido(dbPool)
+    res.set('Cache-Control', 'no-store')
+    return res.status(200).json({
+      ok: true,
+      content: data?.content ?? null,
+      updated_at: data?.updated_at ?? null,
+    })
+  } catch (e) {
+    return serverErr(res, 500, `[contenido:get] ${e instanceof Error ? e.message : 'unknown'}`)
+  }
+})
+
+// PUT /api/contenido - guarda el contenido completo (auth Bearer ADMIN_TOKEN)
+// y dispara el rebuild del sitio vía workflow_dispatch.
+app.put('/api/contenido', async (req, res) => {
+  const adminToken = process.env.ADMIN_TOKEN
+  if (!adminToken) {
+    return serverErr(res, 503, '[contenido:put] ADMIN_TOKEN ausente')
+  }
+  if (!dbPool) {
+    return serverErr(res, 503, '[contenido:put] DB no configurada')
+  }
+  if (!bearerOk(req.get('authorization'), adminToken)) {
+    return res.status(401).json({ error: 'unauthorized' })
+  }
+
+  const body = req.body
+  if (!body || typeof body !== 'object' || Array.isArray(body)) {
+    return res.status(400).json({ error: 'invalid_body' })
+  }
+  if (!body.texto && !body.identidad) {
+    return res.status(400).json({ error: 'invalid_body' })
+  }
+
+  try {
+    await saveContenido(body, dbPool)
+  } catch (e) {
+    return serverErr(res, 500, `[contenido:put] ${e instanceof Error ? e.message : 'unknown'}`)
+  }
+
+  const dispatched = await dispatchRebuild(process.env)
+  return res.status(200).json({ ok: true, rebuild_dispatched: dispatched })
+})
+
 // POST /api/recados - envío de recado (guarda en DB → envía e-mail con enlace de aprobación)
 app.post('/api/recados', recadosLimiter, async (req, res) => {
   const secret = process.env.TURNSTILE_SECRET_KEY
@@ -356,6 +459,9 @@ app.post('/api/recados', recadosLimiter, async (req, res) => {
   return res.status(200).json({ ok: true })
 })
 
+// Panel de administración (Fase 3): estático servido por la propia API en /admin.
+app.use('/admin', express.static(PUBLIC_DIR, { index: 'admin.html' }))
+
 app.use((_req, res) => {
   res.status(404).end()
 })
@@ -369,9 +475,9 @@ app.listen(PORT, '0.0.0.0', async () => {
   if (dbPool) {
     try {
       await initDb(dbPool)
-      console.log('[DB] Tabla recados lista.')
+      console.log('[DB] Tablas recados y contenido listas.')
     } catch (e) {
-      console.error('[DB] Fallo al inicializar la tabla:', e instanceof Error ? e.message : 'unknown')
+      console.error('[DB] Fallo al inicializar las tablas:', e instanceof Error ? e.message : 'unknown')
     }
   }
   console.log(`our-story-api listening on :${PORT}`)

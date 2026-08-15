@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import MI from '../ui/MI'
 import Slide from '../ui/Slide'
-import { staggerV, fadeV, scaleV, BUCKET_LIST } from '../../data/constants'
+import { staggerV, fadeV, scaleV, BUCKET_LIST, TEXTO } from '../../data/constants'
 
 const LS_KEY = 'our-story-bucketlist'
 
@@ -32,6 +32,7 @@ function CheckIcon() {
 export default function BucketListSlide() {
   const [feitos, setFeitos] = useState({})
   const [celebrando, setCelebrando] = useState(null)
+  const t = TEXTO.bucket
 
   useEffect(() => {
     setFeitos(loadFeitos())
@@ -61,15 +62,15 @@ export default function BucketListSlide() {
           className="flex flex-col gap-6 w-full max-w-md lg:max-w-2xl mx-auto pb-14"
         >
           <div className="text-center pt-2">
-            <MI v={fadeV} className="chapter-label">Nuestros sueños</MI>
+            <MI v={fadeV} className="chapter-label">{t.label}</MI>
             <MI className="mt-2">
               <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">
-                Lista de cosas para vivir juntos 🌿
+                {t.titulo}
               </h2>
             </MI>
             <MI v={fadeV}>
               <p className="text-rose-200/50 text-xs mt-2 max-w-[300px] mx-auto leading-relaxed">
-                Marca mientras vayan cumpliéndolas - queda guardado aquí para nosotros dos 🤍
+                {t.subtitulo}
               </p>
             </MI>
           </div>
@@ -78,7 +79,7 @@ export default function BucketListSlide() {
           <MI v={scaleV}>
             <div className="card-glass card-gold-border px-4 py-4 space-y-3">
               <div className="flex items-center justify-between">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-rose-200/55">Progreso de los sueños</p>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-rose-200/55">{t.progreso}</p>
                 <span className="font-mono text-xs tabular-nums text-amber-200/85">
                   {qtdFeitos}/{total}
                 </span>
@@ -93,12 +94,12 @@ export default function BucketListSlide() {
               </div>
               <div className="flex items-center justify-between text-xs">
                 <span className="text-rose-200/55">
-                  {Math.round((qtdFeitos / total) * 100)}% cumplidos
+                  {t.cumplidos.replace('{n}', Math.round((qtdFeitos / total) * 100))}
                 </span>
                 <span className="text-amber-100/65">
                   {total - qtdFeitos > 0
-                    ? `${total - qtdFeitos} aún por vivir ✨`
-                    : '¡Todo cumplido! 🥹'}
+                    ? t.porVivir.replace('{n}', total - qtdFeitos)
+                    : t.todoCumplido}
                 </span>
               </div>
             </div>
@@ -181,7 +182,7 @@ export default function BucketListSlide() {
                       </span>
                       {emProgresso && (
                         <span className="block text-[10px] uppercase tracking-[0.16em] text-amber-300/55 mt-0.5">
-                          en progreso
+                          {t.enProgreso}
                         </span>
                       )}
                     </div>
@@ -199,7 +200,7 @@ export default function BucketListSlide() {
             <MI v={fadeV}>
               <div className="text-center py-2">
                 <p className="text-emerald-300/80 text-sm font-medium">
-                  ¡Cumplieron todo! Qué historia linda de contar 🥹
+                  {t.todoCumplidoFinal}
                 </p>
               </div>
             </MI>

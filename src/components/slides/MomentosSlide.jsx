@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import MI from '../ui/MI'
 import Slide from '../ui/Slide'
-import { staggerV, fadeV, FOTOS } from '../../data/constants'
+import { staggerV, fadeV, FOTOS, TEXTO } from '../../data/constants'
 import { useLightbox } from '../../context/LightboxContext'
 
 const INITIAL = 16
@@ -25,6 +25,7 @@ function folderLabel(src) {
 export default function MomentosSlide() {
   const { abrir } = useLightbox()
   const [verTudo, setVerTudo] = useState(false)
+  const t = TEXTO.momentos
 
   const items = useMemo(
     () => FOTOS.map((src, idx) => ({ src, idx, r: seedRot(idx), label: folderLabel(src) })),
@@ -45,15 +46,15 @@ export default function MomentosSlide() {
         >
           {/* Encabezado */}
           <div className="text-center w-full">
-            <MI v={fadeV} className="chapter-label">Nuestros recuerdos</MI>
+            <MI v={fadeV} className="chapter-label">{t.label}</MI>
             <MI className="mt-2">
               <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">
-                Momentos 📸
+                {t.titulo}
               </h2>
             </MI>
             <MI v={fadeV}>
               <p className="text-rose-300/50 text-xs mt-1">
-                {FOTOS.length} fotos en orden cronológico · toca para ampliar
+                {t.subtitulo.replace('{n}', FOTOS.length)}
               </p>
             </MI>
           </div>
@@ -98,7 +99,7 @@ export default function MomentosSlide() {
                 onClick={() => setVerTudo(true)}
                 className="btn-primary rounded-full px-7 py-3 text-sm font-medium tracking-wide"
               >
-                📷 Ver más {restantes} fotos
+                {t.verMas.replace('{n}', restantes)}
               </button>
             </MI>
           )}

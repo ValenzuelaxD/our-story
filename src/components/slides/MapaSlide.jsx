@@ -3,7 +3,7 @@ import { useInView, motion, AnimatePresence } from 'framer-motion'
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import { MAPA_LUGARES } from '../../data/constants'
+import { MAPA_LUGARES, TEXTO } from '../../data/constants'
 
 function criarIcone(selecionado) {
   const cor = selecionado ? '#fbbf24' : '#fb7185'
@@ -47,14 +47,15 @@ export default function MapaSlide() {
   const [selecionado, setSelecionado] = useState(null)
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, amount: 'some' })
+  const t = TEXTO.mapa
 
   return (
     <section id="mapa" ref={ref} className="snap-slide slide-bg-story relative overflow-hidden">
       {/* El mapa ocupa todo */}
       <div className="absolute inset-0">
         <MapContainer
-          center={[-22.274, -51.495]}
-          zoom={14}
+          center={t.centro}
+          zoom={t.zoom}
           zoomControl={false}
           attributionControl={false}
           className="w-full h-full"
@@ -94,12 +95,12 @@ export default function MapaSlide() {
         className="absolute top-0 left-0 right-0 z-[900] px-5 sm:px-8"
         style={{ paddingTop: 'max(2.5rem, env(safe-area-inset-top, 2.5rem))' }}
       >
-        <p className="chapter-label">Nuestra historia</p>
+        <p className="chapter-label">{t.label}</p>
         <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50 mt-1">
-          Mapa de nuestra historia 🗺️
+          {t.titulo}
         </h2>
         <p className="text-rose-200/50 text-xs mt-1.5">
-          {MAPA_LUGARES.length} lugares especiales - toca un punto para saber más
+          {t.subtitulo.replace('{n}', MAPA_LUGARES.length)}
         </p>
       </motion.div>
 
@@ -173,7 +174,7 @@ export default function MapaSlide() {
                   <div className="w-full h-full flex flex-col items-center justify-center gap-1"
                     style={{ background: 'rgba(255,228,230,0.05)' }}>
                     <span className="text-2xl opacity-40">{selecionado.icon}</span>
-                    <span className="text-[9px] text-rose-200/30 text-center leading-tight px-1">foto próximamente</span>
+                    <span className="text-[9px] text-rose-200/30 text-center leading-tight px-1">{t.fotoProximamente}</span>
                   </div>
                 )}
               </div>

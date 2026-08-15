@@ -1,31 +1,9 @@
 import { useState } from 'react'
-import { SLIDE_IDS } from '../../data/constants'
-
-const LABELS = {
-  intro:         '🌹 Inicio',
-  timer:         '⏳ Días juntos',
-  antesdepois:   '🌗 Antes y después',
-  musica:        '🎵 Nuestras canciones',
-  carta:         '💌 Carta',
-  tags:          '✨ Sobre ti',
-  versiculo:     '✝️ Versículos',
-  momentos:      '📸 Momentos',
-  historia:      '📖 Nuestra historia',
-  mapa:          '🗺️ Mapa de la historia',
-  presentefotos: '💐 Flores',
-  promessas:     '🌿 Promesas',
-  motivos:       '🦋 100 motivos',
-  futuro:        '🌅 Futuro',
-  recado:        '💬 Mensajes',
-  creditos:      '🎬 Créditos',
-  cartas:        '📜 Cartas guardadas',
-  bucketlist:    '✅ Lista de sueños',
-  conquistas:    '🏆 Conquistas',
-  final:         '💝 Capítulo I',
-}
+import { SLIDE_IDS, LABELS, TEXTO } from '../../data/constants'
 
 export default function CerimoniaBtn({ activeSlide, setActiveSlide }) {
   const [aberto, setAberto] = useState(false)
+  const ui = TEXTO.ui
 
   const irPara = (idx) => {
     const id = SLIDE_IDS[idx]
@@ -52,7 +30,7 @@ export default function CerimoniaBtn({ activeSlide, setActiveSlide }) {
           fontSize: '1rem',
           letterSpacing: 0,
         }}
-        title="Navegar entre slides"
+        title={ui.navTitle}
         onMouseEnter={e => (e.currentTarget.style.opacity = '1')}
         onMouseLeave={e => { if (!aberto) e.currentTarget.style.opacity = '0.5' }}
       >
@@ -77,7 +55,7 @@ export default function CerimoniaBtn({ activeSlide, setActiveSlide }) {
             {/* Cabecera */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-white/[0.06]">
               <p className="text-[10px] uppercase tracking-[0.22em] text-amber-200/60">
-                Navegar
+                {ui.navegar}
               </p>
               <button
                 onClick={() => setAberto(false)}

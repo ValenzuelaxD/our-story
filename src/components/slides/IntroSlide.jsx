@@ -2,10 +2,11 @@ import { useCallback, useRef } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import MI from '../ui/MI'
 import Slide from '../ui/Slide'
-import { staggerV, fadeV, scaleV } from '../../data/constants'
+import { staggerV, fadeV, scaleV, TEXTO, fill } from '../../data/constants'
 
 export default function IntroSlide() {
   const containerRef = useRef(null)
+  const t = TEXTO.intro
 
   // Valores del ratón suavizados
   const rawX = useMotionValue(0)
@@ -62,7 +63,7 @@ export default function IntroSlide() {
             style={{ x: orb1X, bottom: '10%', left: '5%' }}
           />
 
-          <MI v={fadeV} className="chapter-label">Nuestra historia</MI>
+          <MI v={fadeV} className="chapter-label">{t.label}</MI>
 
           <MI v={scaleV} className="flex gap-3 text-4xl">
             <span style={{ animation: 'heartBeat 1.5s ease-in-out infinite' }}>❤️</span>
@@ -85,8 +86,8 @@ export default function IntroSlide() {
             >
               <div className="polaroid-img w-[180px] sm:w-[210px] aspect-[3/4]">
                 <img
-                  src="/imgs/photos/shopping_com_meus_pais/15.jpg"
-                  alt="Nosotros dos"
+                  src={t.foto}
+                  alt={t.caption}
                   width={600}
                   height={800}
                   className="w-full h-full object-cover"
@@ -95,19 +96,19 @@ export default function IntroSlide() {
                   fetchPriority="high"
                 />
               </div>
-              <p className="polaroid-caption">nosotros dos ❤️</p>
+              <p className="polaroid-caption">{t.caption}</p>
             </motion.div>
           </MI>
 
           <MI className="space-y-1">
             <h1 className="text-hero font-display font-semibold text-rose-50">
-              Para ti, Maysa <span className="inline-block animate-heartBeat">❤️</span>
+              {fill(t.titulo)} <span className="inline-block animate-heartBeat">❤️</span>
             </h1>
-            <p className="font-display text-xl text-rose-200/85">Amor de mi vida</p>
+            <p className="font-display text-xl text-rose-200/85">{t.subtitulo}</p>
           </MI>
 
           <MI>
-            <span className="badge-pill">🌹 Juntos desde 04 de marzo de 2026</span>
+            <span className="badge-pill">{fill(t.badge)}</span>
           </MI>
 
           <MI v={fadeV} className="flex items-center gap-2 text-xl mt-1">

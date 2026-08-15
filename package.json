@@ -9,7 +9,11 @@
     "generate-pwa-icons": "node scripts/generate-pwa-icons.mjs",
     "generate-og-share": "node scripts/generate-og-share.mjs",
     "generate-sitemap": "node scripts/generate-sitemap.mjs",
-    "prebuild": "npm run generate-pwa-icons && npm run generate-og-share && npm run generate-sitemap",
+    "generate-fotos": "node scripts/generate-fotos.mjs",
+    "generate-index": "node scripts/generate-index.mjs",
+    "fetch-contenido": "node scripts/fetch-contenido.mjs",
+    "check": "node scripts/check.mjs",
+    "prebuild": "npm run fetch-contenido && npm run generate-fotos && npm run generate-index && npm run generate-pwa-icons && npm run generate-og-share && npm run generate-sitemap && npm run check",
     "build": "vite build",
     "preview": "vite preview"
   },

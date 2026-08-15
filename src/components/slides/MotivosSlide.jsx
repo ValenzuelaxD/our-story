@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
 import MI from '../ui/MI'
 import Slide from '../ui/Slide'
-import { staggerV, fadeV, scaleV, MOTIVOS_TE_AMO } from '../../data/constants'
+import { staggerV, fadeV, scaleV, MOTIVOS_TE_AMO, TEXTO } from '../../data/constants'
 
 export default function MotivosSlide() {
   const ultimo = MOTIVOS_TE_AMO.length - 1
+  const t = TEXTO.motivos
 
   return (
     <Slide id="motivos" bg="slide-bg-magenta" center={false}>
@@ -17,18 +18,18 @@ export default function MotivosSlide() {
         >
           {/* Encabezado */}
           <div className="text-center pt-2">
-            <MI v={fadeV} className="chapter-label">Para que sepas</MI>
+            <MI v={fadeV} className="chapter-label">{t.label}</MI>
             <MI v={scaleV} className="text-4xl mt-2" style={{ animation: 'pulseSoft 3s ease-in-out infinite' }}>
               🦋
             </MI>
             <MI className="mt-2">
               <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">
-                100 motivos por los que te amo
+                {t.titulo}
               </h2>
             </MI>
             <MI v={fadeV}>
               <p className="text-rose-200/50 text-xs mt-2 max-w-[280px] mx-auto leading-relaxed">
-                Podría escribir mil, pero aquí van los primeros cien. 🤍
+                {t.subtitulo}
               </p>
             </MI>
           </div>
@@ -92,7 +93,7 @@ export default function MotivosSlide() {
           {/* Pie de página */}
           <MI v={fadeV}>
             <p className="text-center text-rose-300/45 text-xs italic">
-              Y cada día que pasa, la lista crece. ❤️
+              {t.pie}
             </p>
           </MI>
         </motion.div>

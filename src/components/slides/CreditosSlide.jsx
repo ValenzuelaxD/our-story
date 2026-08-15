@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
 import MI from '../ui/MI'
 import Slide from '../ui/Slide'
-import { staggerV, fadeV, scaleV, CREDITOS } from '../../data/constants'
+import { staggerV, fadeV, scaleV, CREDITOS, TEXTO } from '../../data/constants'
 
 export default function CreditosSlide() {
+  const t = TEXTO.creditos
   return (
     <Slide id="creditos" bg="slide-bg-dark" center={false}>
       {(inView) => (
@@ -14,16 +15,16 @@ export default function CreditosSlide() {
           className="flex flex-col gap-8 w-full max-w-md lg:max-w-2xl mx-auto allow-select pb-14"
         >
           <div className="text-center pt-2">
-            <MI v={fadeV} className="chapter-label">Nuestra historia</MI>
+            <MI v={fadeV} className="chapter-label">{t.label}</MI>
             <MI v={scaleV} className="text-4xl mt-2" style={{ animation: 'pulseSoft 3s ease-in-out infinite' }}>
               🎬
             </MI>
             <MI className="mt-2">
-              <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">Créditos</h2>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">{t.titulo}</h2>
             </MI>
             <MI v={fadeV}>
               <p className="text-rose-200/45 text-xs mt-1.5 max-w-[280px] mx-auto italic">
-                Toda buena historia tiene personas que fueron parte de ella
+                {t.subtitulo}
               </p>
             </MI>
           </div>
@@ -67,7 +68,7 @@ export default function CreditosSlide() {
             <MI v={fadeV}>
               <div className="flex items-center gap-3 pt-2">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent to-rose-400/20" />
-                <p className="text-rose-300/30 text-[10px] uppercase tracking-widest whitespace-nowrap">fin</p>
+                <p className="text-rose-300/30 text-[10px] uppercase tracking-widest whitespace-nowrap">{t.fin}</p>
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent to-rose-400/20" />
               </div>
             </MI>

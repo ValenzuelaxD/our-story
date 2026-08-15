@@ -2,13 +2,15 @@ import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import MI from '../ui/MI'
 import Slide from '../ui/Slide'
-import { staggerV, fadeV, scaleV, CONQUISTAS } from '../../data/constants'
+import { staggerV, fadeV, scaleV, CONQUISTAS, TEXTO } from '../../data/constants'
 import { getNivelInfo, getTituloNivel } from '../../utils/niveisXp'
+
+const tConq = TEXTO.conquistas
 
 // Raridades en la paleta oro-rosa del sitio (mantiene XP y jerarquía)
 const RARITY_CONFIG = {
   comum: {
-    label: 'Común',
+    label: tConq.rarities.comum,
     color: '#e8b4bc',
     glow: 'rgba(232,180,188,0.20)',
     border: 'rgba(232,180,188,0.28)',
@@ -17,7 +19,7 @@ const RARITY_CONFIG = {
     ring: 'rgba(232,180,188,0.14)',
   },
   especial: {
-    label: 'Especial',
+    label: tConq.rarities.especial,
     color: '#f0a8b8',
     glow: 'rgba(240,168,184,0.24)',
     border: 'rgba(240,168,184,0.36)',
@@ -26,7 +28,7 @@ const RARITY_CONFIG = {
     ring: 'rgba(240,168,184,0.16)',
   },
   raro: {
-    label: 'Raro',
+    label: tConq.rarities.raro,
     color: '#e8c4a0',
     glow: 'rgba(232,196,160,0.24)',
     border: 'rgba(232,196,160,0.36)',
@@ -35,7 +37,7 @@ const RARITY_CONFIG = {
     ring: 'rgba(232,196,160,0.16)',
   },
   epico: {
-    label: 'Épico',
+    label: tConq.rarities.epico,
     color: '#d4a574',
     glow: 'rgba(212,165,116,0.28)',
     border: 'rgba(212,165,116,0.42)',
@@ -44,7 +46,7 @@ const RARITY_CONFIG = {
     ring: 'rgba(212,165,116,0.18)',
   },
   lendario: {
-    label: 'Legendario',
+    label: tConq.rarities.lendario,
     color: '#d4af37',
     glow: 'rgba(212,175,55,0.34)',
     border: 'rgba(212,175,55,0.50)',
@@ -255,7 +257,7 @@ function LockedCard({ conquista, index }) {
           </div>
           <p className="text-xs mt-1 flex items-center gap-1.5 text-rose-200/45">
             <span aria-hidden className="text-[11px] opacity-80">🔒</span>
-            <span>Aún no desbloqueada</span>
+            <span>{tConq.noDesbloqueada}</span>
           </p>
           <p
             className="text-[10px] font-semibold mt-1.5 tabular-nums"
@@ -316,17 +318,17 @@ export default function ConquistasSlide() {
           className="flex flex-col gap-5 w-full max-w-md lg:max-w-2xl mx-auto pb-14"
         >
           <div className="text-center pt-2">
-            <MI v={fadeV} className="chapter-label">Marcos de nuestro amor</MI>
+            <MI v={fadeV} className="chapter-label">{tConq.label}</MI>
             <MI className="mt-2 flex items-center justify-center gap-2">
               <span className="text-2xl" style={{ animation: 'softFloat 5s ease-in-out infinite' }}>🏆</span>
               <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">
-                Conquistas
+                {tConq.titulo}
               </h2>
               <span className="text-2xl" style={{ animation: 'softFloat 5s ease-in-out infinite 0.5s' }}>🤍</span>
             </MI>
             <MI v={fadeV}>
               <p className="text-rose-200/55 text-xs mt-1">
-                {desbloqueadas.length} de {CONQUISTAS.length} momentos desbloqueados
+                {tConq.subtitulo.replace('{desbloqueadas}', desbloqueadas.length).replace('{total}', CONQUISTAS.length)}
               </p>
             </MI>
 
@@ -363,7 +365,7 @@ export default function ConquistasSlide() {
                   </div>
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.2em] text-amber-100/45 font-medium">
-                      Nivel {nivelInfo.nivel}
+                      {tConq.nivel.replace('{nivel}', nivelInfo.nivel)}
                       {!nivelInfo.noMaximo && (
                         <span className="text-rose-200/30"> / {nivelInfo.maxNivel}</span>
                       )}
@@ -380,7 +382,7 @@ export default function ConquistasSlide() {
 
               {nivelInfo.noMaximo ? (
                 <p className="text-xs text-center text-amber-200/70 font-medium py-1">
-                  Nivel máximo — historia completa 🤍
+                  {tConq.nivelMaximo}
                 </p>
               ) : (
                 <>
@@ -404,7 +406,7 @@ export default function ConquistasSlide() {
                       {nivelInfo.xpNoNivel.toLocaleString('es')} / {nivelInfo.xpSpan.toLocaleString('es')} XP
                     </span>
 <span className="text-[9px] text-amber-200/55 font-medium tabular-nums">
-                      faltan {nivelInfo.xpProximoNivel.toLocaleString('es')} XP p/ nv. {nivelInfo.nivel + 1}
+                      {tConq.faltanXp.replace('{n}', nivelInfo.xpProximoNivel.toLocaleString('es')).replace('{nivel}', nivelInfo.nivel + 1)}
                     </span>
                   </div>
                 </>
@@ -422,7 +424,7 @@ export default function ConquistasSlide() {
                   }}
                 />
                 <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-amber-200/65">
-                  ✦ Desbloqueadas · {desbloqueadas.length}
+                  {tConq.desbloqueadas.replace('{n}', desbloqueadas.length)}
                 </span>
                 <div
                   className="h-px flex-1"
@@ -454,7 +456,7 @@ export default function ConquistasSlide() {
                   }}
                 />
                 <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-rose-200/35">
-                  En breve · {bloqueadas.length}
+                  {tConq.enBreve.replace('{n}', bloqueadas.length)}
                 </span>
                 <div
                   className="h-px flex-1"
@@ -478,7 +480,7 @@ export default function ConquistasSlide() {
 
           <MI v={fadeV}>
             <p className="text-center text-[11px] italic text-rose-200/45">
-              Toca una conquista para ver la historia 🤍
+              {tConq.tocaParaVer}
             </p>
           </MI>
         </motion.div>

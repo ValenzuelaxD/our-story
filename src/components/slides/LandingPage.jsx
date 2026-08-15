@@ -1,8 +1,10 @@
 import { createPortal } from 'react-dom'
 import { motion } from 'framer-motion'
 import HeartsRain from '../animations/HeartsRain'
+import { TEXTO } from '../../data/constants'
 
 export default function LandingPage({ onReveal }) {
+  const t = TEXTO.landing
   return (
     <>
       {typeof document !== 'undefined' && createPortal(<HeartsRain />, document.body)}
@@ -20,9 +22,9 @@ export default function LandingPage({ onReveal }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <p className="font-display text-2xl font-light tracking-wide text-rose-100/95">Una sorpresa especial</p>
+            <p className="font-display text-2xl font-light tracking-wide text-rose-100/95">{t.p1}</p>
             <p className="font-display text-2xl font-light tracking-wide text-rose-100/95">
-              te espera <span className="float-emoji inline-block text-xl" style={{ animationDelay: '0.5s' }}>🦋</span>
+              {t.p2} <span className="float-emoji inline-block text-xl" style={{ animationDelay: '0.5s' }}>{t.emoji}</span>
             </p>
           </motion.div>
           <motion.div
@@ -42,7 +44,7 @@ export default function LandingPage({ onReveal }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45, duration: 0.5 }}
           >
-            <span>💕</span> Haz clic aquí, mi amor <span>💕</span>
+            <span>💕</span> {t.boton} <span>💕</span>
           </motion.button>
           <motion.p
             className="text-sm text-rose-300/50 flex items-center gap-1.5"
@@ -50,7 +52,7 @@ export default function LandingPage({ onReveal }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <span>✨</span> Toca para revelar <span>✨</span>
+            <span>✨</span> {t.toca} <span>✨</span>
           </motion.p>
         </div>
       </div>

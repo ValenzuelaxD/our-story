@@ -1,0 +1,2516 @@
+{
+  "meta": {
+    "version": 1,
+    "comentario": "Única fuente de verdad del sitio. Edita este archivo (o el panel admin) para personalizar la página. No edites src/data/contenido.js salvo para derivar formatos."
+  },
+  "identidad": {
+    "nombreEl": "Davi",
+    "nombreElPublico": "Davi Antonaji",
+    "nombreElCompleto": "Davi de Melo Antonaji",
+    "nombreElla": "Maysa",
+    "nombreEllaCompleto": "Maysa Sophia Ferreira da Silva",
+    "nombreEllaFuturo": "Maysa Sophia Ferreira da Silva Antonaji",
+    "inicioNamoro": "2026-03-04T00:00:00",
+    "dataCasamento": "",
+    "siteOrigin": "http://66.179.211.195",
+    "anioInicio": 2026
+  },
+  "slides": {
+    "ids": [
+      "intro",
+      "timer",
+      "antesdepois",
+      "musica",
+      "carta",
+      "tags",
+      "versiculo",
+      "momentos",
+      "historia",
+      "mapa",
+      "presentefotos",
+      "promessas",
+      "motivos",
+      "futuro",
+      "recado",
+      "creditos",
+      "cartas",
+      "bucketlist",
+      "conquistas",
+      "final"
+    ],
+    "ambience": [
+      {
+        "emoji": "🌹",
+        "glow": "rgba(251, 113, 133, 0.42)"
+      },
+      {
+        "emoji": "⏳",
+        "glow": "rgba(212, 175, 55, 0.38)"
+      },
+      {
+        "emoji": "🌗",
+        "glow": "rgba(52, 211, 153, 0.42)"
+      },
+      {
+        "emoji": "🎵",
+        "glow": "rgba(167, 139, 250, 0.4)"
+      },
+      {
+        "emoji": "💌",
+        "glow": "rgba(252, 211, 77, 0.38)"
+      },
+      {
+        "emoji": "✨",
+        "glow": "rgba(244, 114, 182, 0.4)"
+      },
+      {
+        "emoji": "✝️",
+        "glow": "rgba(129, 140, 248, 0.42)"
+      },
+      {
+        "emoji": "📸",
+        "glow": "rgba(167, 139, 250, 0.28)"
+      },
+      {
+        "emoji": "📖",
+        "glow": "rgba(212, 175, 55, 0.36)"
+      },
+      {
+        "emoji": "🗺️",
+        "glow": "rgba(99, 102, 241, 0.38)"
+      },
+      {
+        "emoji": "💐",
+        "glow": "rgba(251, 182, 193, 0.36)"
+      },
+      {
+        "emoji": "🌿",
+        "glow": "rgba(52, 211, 153, 0.38)"
+      },
+      {
+        "emoji": "🦋",
+        "glow": "rgba(244, 114, 182, 0.40)"
+      },
+      {
+        "emoji": "🌅",
+        "glow": "rgba(59, 130, 246, 0.4)"
+      },
+      {
+        "emoji": "💬",
+        "glow": "rgba(244, 114, 182, 0.35)"
+      },
+      {
+        "emoji": "🎬",
+        "glow": "rgba(212, 175, 55, 0.38)"
+      },
+      {
+        "emoji": "📜",
+        "glow": "rgba(212, 175, 55, 0.40)"
+      },
+      {
+        "emoji": "✅",
+        "glow": "rgba(52, 211, 153, 0.38)"
+      },
+      {
+        "emoji": "🏆",
+        "glow": "rgba(251, 191, 36, 0.44)"
+      },
+      {
+        "emoji": "💝",
+        "glow": "rgba(251, 113, 133, 0.45)"
+      }
+    ],
+    "labels": {
+      "intro": "🌹 Inicio",
+      "timer": "⏳ Días juntos",
+      "antesdepois": "🌗 Antes y después",
+      "musica": "🎵 Nuestras canciones",
+      "carta": "💌 Carta",
+      "tags": "✨ Sobre ti",
+      "versiculo": "✝️ Versículos",
+      "momentos": "📸 Momentos",
+      "historia": "📖 Nuestra historia",
+      "mapa": "🗺️ Mapa de la historia",
+      "presentefotos": "💐 Flores",
+      "promessas": "🌿 Promesas",
+      "motivos": "🦋 100 motivos",
+      "futuro": "🌅 Futuro",
+      "recado": "💬 Mensajes",
+      "creditos": "🎬 Créditos",
+      "cartas": "📜 Cartas guardadas",
+      "bucketlist": "✅ Lista de sueños",
+      "conquistas": "🏆 Conquistas",
+      "final": "💝 Capítulo I"
+    }
+  },
+  "texto": {
+    "landing": {
+      "p1": "Una sorpresa especial",
+      "p2": "te espera",
+      "emoji": "🦋",
+      "boton": "Haz clic aquí, mi amor",
+      "toca": "Toca para revelar"
+    },
+    "intro": {
+      "label": "Nuestra historia",
+      "foto": "/imgs/photos/shopping_com_meus_pais/15.jpg",
+      "caption": "nosotros dos ❤️",
+      "titulo": "Para ti, {ella} ❤️",
+      "subtitulo": "Amor de mi vida",
+      "badge": "🌹 Juntos desde {inicio}"
+    },
+    "timer": {
+      "label": "Ya pasó",
+      "diasJuntos": "días juntos",
+      "sub": "y cada uno de ellos valió mucho ❤️",
+      "horas": "horas",
+      "min": "min",
+      "seg": "seg",
+      "badge": "🌹 {meses} {mesesLabel} y {dias} días",
+      "proximoHito": "Próximo hito",
+      "hito": "Hito",
+      "faltanParaProximo": "Faltan {n} {diasLabel} para el próximo hito",
+      "verMas": "Ver más",
+      "mostrarMenos": "Mostrar menos",
+      "nivelExtrañarte": "Nivel de extrañarte",
+      "yaOcurrio": "Ya ocurrió en los mesversarios",
+      "primerAnio": "Primer año - cada mesversario al mismo ritmo de los stories ✨",
+      "anosJuntos": "{anos} {anosLabel} juntos - y seguimos sumando capítulos",
+      "faltanCorto": "Faltan {n} {diasLabel}",
+      "yHoras": " y {h}h",
+      "mesversarioYAniversario": "Mesversario y aniversario de noviazgo · {fecha}",
+      "proximoMesversario": "Próximo mesversario",
+      "proximoAniversario": "Próximo aniversario de noviazgo",
+      "hasta": "hasta {fecha}",
+      "frasesSaudade": [
+        "Empezó suave...",
+        "Ya está pegando fuerte 💗",
+        "Casi al límite...",
+        "¡Socorro, cuánto te extraño! 😭",
+        "100%: Verte es obligatorio ❤️"
+      ]
+    },
+    "musica": {
+      "label": "Nuestra banda sonora",
+      "titulo": "Nuestras Músicas",
+      "subtitulo": "La banda sonora de nuestro amor 💕",
+      "boton": "Escuchar nuestras músicas",
+      "verMas": "Ver más {n} músicas",
+      "mostrarMenos": "Mostrar menos"
+    },
+    "carta": {
+      "label": "Una carta para ti",
+      "saludo": "{ella},",
+      "paras": [
+        "hablar de ti nunca es simple para mí. no es solo sobre gustar, no es solo sobre estar juntos… es algo mucho más profundo de lo que puedo poner en palabras.",
+        "desde que entraste en mi vida, algo cambió dentro de mí. es como si Dios, con todo su cuidado, te hubiera puesto exactamente en mi camino. veo a Cristo en ti - en tu manera, en tu corazón, en tu pureza - y eso es una de las cosas que más me encanta.",
+        "no tienes idea de cuánto bien me haces. con solo pensar en ti, ya me siento mejor. tu sonrisa tiene un poder increíble para cambiar mi día, y tu presencia… es un lugar donde siento paz.",
+        "me acercas a Dios. me inspiras a ser mejor, más firme, más parecido a lo que Él espera de mí. y quiero cuidarte - protegerte, estar a tu lado en todos los momentos… y construir una vida entera contigo.",
+        "soy profundamente agradecido a Dios por ti. todos los días.",
+        "y con todo mi corazón… te amo más de lo que puedo explicar."
+      ],
+      "despedida": "Con amor,",
+      "firma": "{el}"
+    },
+    "tags": {
+      "label": "Sobre ti",
+      "titulo": "Cosas que amo de ti ❤️",
+      "items": [
+        [
+          "✝️",
+          "Tu amor por Dios"
+        ],
+        [
+          "💕",
+          "La manera en que me cuidas"
+        ],
+        [
+          "🕊️",
+          "La paz que siento a tu lado"
+        ],
+        [
+          "💪",
+          "Cómo me motivas"
+        ],
+        [
+          "❤️",
+          "Tu manera de demostrar amor"
+        ],
+        [
+          "✨",
+          "Cómo lo haces todo ligero"
+        ],
+        [
+          "👀",
+          "Tu mirada cuando me ves"
+        ],
+        [
+          "💗",
+          "Tu corazón bondadoso"
+        ],
+        [
+          "😊",
+          "Tu sonrisa y tu risa"
+        ],
+        [
+          "🌹",
+          "Tu manera única de ser"
+        ]
+      ]
+    },
+    "versiculo": {
+      "label": "Una palabra para nosotros",
+      "titulo": "Versículos",
+      "subtitulo": "Pasajes que sostienen nuestra historia - fe y amor juntos",
+      "nuestroVersiculo": "✦ Nuestro versículo ✦",
+      "palabra": "Palabra",
+      "pasaje": "Pasaje",
+      "verMas": "Ver más",
+      "mostrarMenos": "Mostrar menos"
+    },
+    "momentos": {
+      "label": "Nuestros recuerdos",
+      "titulo": "Momentos 📸",
+      "subtitulo": "{n} fotos en orden cronológico · toca para ampliar",
+      "verMas": "📷 Ver más {n} fotos"
+    },
+    "historia": {
+      "label": "Nuestra historia",
+      "titulo": "Nuestra Historia",
+      "subtitulo": "Los momentos que marcaron nuestra trayectoria",
+      "antesDeTodo": "✦ Antes de todo",
+      "momentoEspecial": "✦ Momento especial",
+      "leerMas": "Leer más",
+      "mostrarMenos": "Mostrar menos",
+      "whatsappFecha": "WhatsApp · 09/02/2026"
+    },
+    "mapa": {
+      "label": "Nuestra historia",
+      "titulo": "Mapa de nuestra historia 🗺️",
+      "subtitulo": "{n} lugares especiales - toca un punto para saber más",
+      "fotoProximamente": "foto próximamente",
+      "errorCarga": "El mapa no pudo cargarse.",
+      "centro": [
+        -22.274,
+        -51.495
+      ],
+      "zoom": 14
+    },
+    "promessas": {
+      "label": "Mi compromiso",
+      "titulo": "Mis promesas para ti",
+      "subtitulo": "Con Cristo en el centro, te prometo:",
+      "items": [
+        [
+          "🌱",
+          "Ser paciente contigo siempre"
+        ],
+        [
+          "🤍",
+          "Ser amoroso y gentil en cada momento"
+        ],
+        [
+          "🛡️",
+          "Cuidarte con atención y cariño"
+        ],
+        [
+          "✝️",
+          "Acercarte a Cristo todos los días"
+        ],
+        [
+          "🙏",
+          "Guiar todo con temor a Dios"
+        ],
+        [
+          "🕊️",
+          "Vivir santidad en nuestro noviazgo, honrando a Dios en cada elección"
+        ],
+        [
+          "⏳",
+          "No apresurar etapas - tu tiempo es sagrado"
+        ],
+        [
+          "🧱",
+          "Demostrar con actitudes, no solo palabras"
+        ],
+        [
+          "🌊",
+          "Mantener constancia emocional a tu lado"
+        ],
+        [
+          "🏔️",
+          "Construir una base firme con Cristo en el centro"
+        ],
+        [
+          "🔝",
+          "Dar siempre lo mejor de mí por nosotros"
+        ],
+        [
+          "💬",
+          "Expresarme contigo - siempre, incluso cuando sea difícil"
+        ],
+        [
+          "👁️",
+          "Ser transparente, de verdad, en todo"
+        ],
+        [
+          "🕊️",
+          "Nunca alzar la voz: siempre conversar con calma, entenderte y exponer mi punto con amor"
+        ],
+        [
+          "💛",
+          "Ser comprensivo en tus momentos difíciles"
+        ],
+        [
+          "🌸",
+          "Hacerte al menos un poquito feliz todos los días"
+        ],
+        [
+          "🩹",
+          "Ayudar a sanar, con amor y paciencia, todo el mal que alguna vez te hicieron"
+        ],
+        [
+          "🧷",
+          "Nunca rendirme con nosotros"
+        ],
+        [
+          "💍",
+          "Serte totalmente fiel"
+        ],
+        [
+          "🔒",
+          "Nunca romper tu confianza"
+        ],
+        [
+          "🤣",
+          "No huir cuando te vea toda despeinada (después del matrimonio jaja)"
+        ],
+        [
+          "🏃‍♂️‍➡️",
+          "Cuidar de mi salud y de la tuya, para vivir bien cada etapa"
+        ],
+        [
+          "🤲",
+          "Nunca vas a cargar nada sola: siempre lo llevaremos juntos"
+        ],
+        [
+          "⚔️",
+          "Independientemente de los problemas, seguiré eligiéndote y entregándome por nosotros, como Cristo amó a la Iglesia"
+        ],
+        [
+          "🏡",
+          "Cuando tengamos nuestro hogar, no será solo vivir juntos, sino vivir juntos de verdad"
+        ]
+      ],
+      "pie": "Cada una viene del corazón. ❤️"
+    },
+    "motivos": {
+      "label": "Para que sepas",
+      "titulo": "100 motivos por los que te amo",
+      "subtitulo": "Podría escribir mil, pero aquí van los primeros cien. 🤍",
+      "pie": "Y cada día que pasa, la lista crece. ❤️"
+    },
+    "futuro": {
+      "label": "Lo que está por venir",
+      "titulo": "El futuro que sueño contigo",
+      "items": [
+        {
+          "icon": "💍",
+          "text": "Casarme contigo"
+        },
+        {
+          "icon": "👨‍👩‍👧",
+          "text": "Construir una familia fundada en Cristo"
+        },
+        {
+          "icon": "✝️",
+          "text": "Servir a Dios juntos, siempre"
+        },
+        {
+          "icon": "🏠",
+          "text": "Un hogar seguro, alineado y lleno de amor"
+        },
+        {
+          "icon": "🌍",
+          "text": "Vivir muchas historias más"
+        }
+      ],
+      "broma": {
+        "titulo": "Ya lo combinamos en broma - y quedó ese nombre jaja",
+        "cuerpo": "la broma era un nombre gigante - de este tamaño",
+        "emojiIzq": "🫸🏻",
+        "emojiDer": "🫷🏻",
+        "nombre": "{ellaFuturo}",
+        "nota": "fue de broma, pero fue en serio - lo acordado vale 💍"
+      },
+      "ipe": "Cuando construyamos nuestra casa, tendrá un ipê blanco al frente. 🌸",
+      "tusSueños": "Y tus sueños - que creo contigo 💪",
+      "tusSueñosItems": [
+        {
+          "icon": "👩‍🏫",
+          "text": "Dar charlas en público",
+          "note": "Tienes mucho que decir. El mundo necesita escucharte."
+        },
+        {
+          "icon": "✝️",
+          "text": "Dar palabras en la iglesia",
+          "note": "Dios te va a preparar. Estaré en la primera fila."
+        },
+        {
+          "icon": "🧠",
+          "text": "Psicología",
+          "note": "Tu sensibilidad e inteligencia emocional ya son dones innatos para esto."
+        }
+      ]
+    },
+    "recado": {
+      "label": "Un mensajito",
+      "titulo": "¿Quieres dejar un mensaje para nosotros?",
+      "cuerpo": "Si llegaste hasta aquí como amigo, familia o visitante: siéntete en casa. Cuento esta historia a mi manera, y nos encanta saber que pasaron por aquí."
+    },
+    "creditos": {
+      "label": "Nuestra historia",
+      "titulo": "Créditos",
+      "subtitulo": "Toda buena historia tiene personas que fueron parte de ella",
+      "fin": "fin"
+    },
+    "cartas": {
+      "label": "Para nuestro futuro",
+      "titulo": "Cartas guardadas",
+      "subtitulo": "Palabras escritas hoy, esperando el momento adecuado para ser abiertas",
+      "cartaAbierta": "✦ Carta abierta",
+      "fechaProximamente": "Fecha próximamente",
+      "seAbreEl": "Se abre el {fecha}",
+      "faltan": "Faltan",
+      "dia": "día",
+      "dias": "días"
+    },
+    "bucket": {
+      "label": "Nuestros sueños",
+      "titulo": "Lista de cosas para vivir juntos 🌿",
+      "subtitulo": "Marca mientras vayan cumpliéndolas - queda guardado aquí para nosotros dos 🤍",
+      "progreso": "Progreso de los sueños",
+      "cumplidos": "{n}% cumplidos",
+      "porVivir": "{n} aún por vivir ✨",
+      "todoCumplido": "¡Todo cumplido! 🥹",
+      "enProgreso": "en progreso",
+      "todoCumplidoFinal": "¡Cumplieron todo! Qué historia linda de contar 🥹"
+    },
+    "conquistas": {
+      "label": "Marcos de nuestro amor",
+      "titulo": "Conquistas",
+      "subtitulo": "{desbloqueadas} de {total} momentos desbloqueados",
+      "nivel": "Nivel {nivel}",
+      "nivelMaximo": "Nivel máximo — historia completa 🤍",
+      "noDesbloqueada": "Aún no desbloqueada",
+      "desbloqueadas": "✦ Desbloqueadas · {n}",
+      "enBreve": "En breve · {n}",
+      "tocaParaVer": "Toca una conquista para ver la historia 🤍",
+      "faltanXp": "faltan {n} XP p/ nv. {nivel}",
+      "rarities": {
+        "comum": "Común",
+        "especial": "Especial",
+        "raro": "Raro",
+        "epico": "Épico",
+        "lendario": "Legendario"
+      },
+      "titulosNivel": [
+        "Inicio de la jornada",
+        "Primer capítulo",
+        "Conversando de corazón",
+        "Primeros pasos juntos",
+        "Creciendo juntos",
+        "Compañeros de camino",
+        "Historia bonita de contar",
+        "Alianza en construcción",
+        "Corazones conectados",
+        "Compañeros de vida",
+        "Amor que madura",
+        "Construyendo el futuro",
+        "Compañeros de alma",
+        "Historia épica",
+        "Casi allí",
+        "Leyenda del amor"
+      ]
+    },
+    "final": {
+      "label": "Capítulo 1 de muchos",
+      "etiqueta": "El fin del comienzo",
+      "titulo": "Este fue solo nuestro Capítulo 1.",
+      "subtitulo": "Seguimos escribiendo nuestra historia todos los días, con amor y con Dios en el centro.",
+      "proximoCapitulo": "Próximo capítulo",
+      "boda": "Nuestra boda",
+      "preparando": "Ya se está soñando, orando y preparando. En breve, comienza en:",
+      "continua": "Y así continúa...",
+      "teAmo": "Te amo para siempre, {ella} ♥",
+      "siempre": "Siempre contigo, amor",
+      "boton": "Haz clic aquí si llegaste hasta el final ❤️",
+      "mensaje1": "Gracias por vivir esta historia conmigo.",
+      "mensaje2": "Eres el amor que siempre soñé.",
+      "hechoCon": "Hecho con mucho ☕ y amor por Davi Antonaji",
+      "hechoConNota": "(tu amor)",
+      "copyright": "© {rango} {elCompleto} y {ellaCompleto}. Todos los derechos reservados."
+    },
+    "ui": {
+      "navTitle": "Navegar entre slides",
+      "navegar": "Navegar",
+      "cerrar": "Cerrar",
+      "anterior": "Anterior",
+      "siguiente": "Siguiente",
+      "slide": "Slide {n}"
+    }
+  },
+  "pasajes": [
+    {
+      "id": "1cor13",
+      "titulo": "1 Coríntios 13:4–7",
+      "principal": true,
+      "tipo": "numerados",
+      "versiculos": [
+        {
+          "n": "4",
+          "texto": "El amor es paciente, el amor es bondadoso. No tiene envidia, no se jacta, no se enorgullece."
+        },
+        {
+          "n": "5",
+          "texto": "No maltrata, no busca sus propios intereses, no se irrita fácilmente, no guarda rencor."
+        },
+        {
+          "n": "6",
+          "texto": "El amor no se alegra de la injusticia, sino que se alegra con la verdad."
+        },
+        {
+          "n": "7",
+          "texto": "Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta."
+        }
+      ],
+      "nota": "Este es uno de los versículos más importantes de nuestra historia, grabado en nuestra alianza."
+    },
+    {
+      "id": "ec4",
+      "titulo": "Eclesiastes 4:9–12",
+      "tipo": "numerados",
+      "versiculos": [
+        {
+          "n": "9",
+          "texto": "Mejores son dos que uno, porque tienen mejor paga de su trabajo."
+        },
+        {
+          "n": "10",
+          "texto": "Porque si uno cae, el otro levanta a su compañero; pero ¡ay del que está solo! Pues si cae, no habrá otro que lo levante."
+        },
+        {
+          "n": "11",
+          "texto": "También, si dos duermen juntos, se calientan; pero uno solo, ¿cómo se calentará?"
+        },
+        {
+          "n": "12",
+          "texto": "Y si alguien prevalece contra uno, los dos le resistirán; y el cordón de tres dobleces no se rompe tan pronto."
+        }
+      ],
+      "nota": "Contigo, nunca camino solo. Somos más fuertes juntos."
+    },
+    {
+      "id": "col314",
+      "titulo": "Colossenses 3:14",
+      "tipo": "destaque",
+      "citacao": "Por encima de todo, vístanse de amor, que es el vínculo perfecto.",
+      "reflexao": "El amor como aquello que sostiene y mantiene firme la relación."
+    },
+    {
+      "id": "ef528",
+      "titulo": "Efésios 5:28",
+      "tipo": "destaque",
+      "citacao": "Así deben los maridos amar a sus propias mujeres, como a sus propios cuerpos. Quien ama a su mujer, se ama a sí mismo.",
+      "reflexao": "Mi promesa es amarte como Cristo amó a la Iglesia, con entrega, cuidado y fidelidad."
+    },
+    {
+      "id": "pv1914",
+      "titulo": "Provérbios 19:14",
+      "tipo": "destaque",
+      "citacao": "La casa y los bienes son herencia de los padres; pero del Señor viene la esposa prudente.",
+      "reflexao": "Lo que se hereda puede medirse; lo que Dios une, no. Tú no eres una casualidad en mi vida - eres regalo de Él, sabiduría que bendice el hogar y el camino. Gratitud por cuidar nuestro amor con el corazón y con la fe."
+    },
+    {
+      "id": "gn224",
+      "titulo": "Gênesis 2:24",
+      "tipo": "destaque",
+      "citacao": "Por tanto, el hombre dejará a su padre y a su madre, y se unirá a su mujer, y serán ambos una sola carne.",
+      "reflexao": "El diseño de Dios para el amor: prioridad el uno en el otro, vínculo que no se divide. Eso es lo que quiero vivir contigo - unidad de verdad, con Cristo en el centro."
+    },
+    {
+      "id": "1pe37",
+      "titulo": "1 Pedro 3:7",
+      "tipo": "destaque",
+      "citacao": "De igual modo, ustedes, maridos, sean sabios en la convivencia con sus mujeres y trátenlas con honra, como a la parte más frágil y coherederas del don de la gracia de la vida, para que sus oraciones no sean interrumpidas.",
+      "reflexao": "El honor y el cuidado no son opcionales - son la manera de amar que abre espacio a Dios en medio de nosotros. Quiero ser ese esposo: presente, respetuoso y agradecido por caminar contigo en la misma herencia."
+    },
+    {
+      "id": "sl128",
+      "titulo": "Salmos 128:1–4",
+      "tipo": "numerados",
+      "versiculos": [
+        {
+          "n": "1",
+          "texto": "Bienaventurado aquel que teme al Señor y anda en sus caminos."
+        },
+        {
+          "n": "2",
+          "texto": "Pues comerás del trabajo de tus manos; feliz serás y te irá bien."
+        },
+        {
+          "n": "3",
+          "texto": "Tu mujer será como vid frutífera a los lados de tu casa; tus hijos, como plantas de olivo alrededor de tu mesa."
+        },
+        {
+          "n": "4",
+          "texto": "He aquí que así será bendecido el hombre que teme al Señor."
+        }
+      ],
+      "nota": "Cuando leo esto, solo consigo imaginar nuestro futuro con Dios en el centro."
+    }
+  ],
+  "musicas": [
+    "https://open.spotify.com/embed/track/3pinR9iFoRAZvqirrRm4os",
+    "https://open.spotify.com/embed/track/7FOPTUmEJ3ByYW9ag9cZJ3",
+    "https://open.spotify.com/embed/track/0uwaiApk6k7k9POyFjTKeR",
+    "https://open.spotify.com/embed/track/6ccKu0LwJzOhLAxBwP2PTk",
+    "https://open.spotify.com/embed/track/2WViLEKp7hWDJQbowxqzba",
+    "https://open.spotify.com/embed/track/0A8K5i1KBtY3ztMETimVCK",
+    "https://open.spotify.com/embed/track/1DLKuppSYytOuxhtI6KBGu",
+    "https://open.spotify.com/embed/track/352FuGmGJClPjojSYjNrXG",
+    "https://open.spotify.com/embed/track/1og6YRY01JKaIDjSGVM8FZ",
+    "https://open.spotify.com/embed/track/3PlKQNlbL4767rND3HnqSI",
+    "https://open.spotify.com/embed/track/6eDApnV9Jdb1nYahOlbbUh"
+  ],
+  "motivosTeAmo": [
+    "Porque me acercas a Dios.",
+    "Porque tu sonrisa cambia mi día.",
+    "Porque cuidas de quienes amas.",
+    "Porque me haces querer ser mejor.",
+    "Porque me traes paz.",
+    "Porque crees en mí.",
+    "Porque me animas a crecer.",
+    "Porque tu abrazo parece casa.",
+    "Porque eres amable con las personas.",
+    "Porque tienes un corazón enorme.",
+    "Porque me haces reír hasta en los días difíciles.",
+    "Porque me escuchas de verdad.",
+    "Porque eres fuerte incluso cuando crees que no lo eres.",
+    "Porque estoy seguro de que serás la madre más increíble del mundo.",
+    "Porque amas a Dios por encima de todo.",
+    "Porque me haces sentir amado.",
+    "Porque eres cariñosa en los detalles.",
+    "Porque te preocupas por mí.",
+    "Porque oras por mí.",
+    "Porque me inspiras.",
+    "Porque eres hermosa por dentro y por fuera.",
+    "Porque eres sincera.",
+    "Porque me entiendes.",
+    "Porque me acoges en mis días malos.",
+    "Porque celebras mis logros.",
+    "Porque me ayudas a ver el lado bueno de las cosas.",
+    "Porque tienes una sonrisa encantadora.",
+    "Porque tu voz me calma.",
+    "Porque eres dedicada.",
+    "Porque eres determinada.",
+    "Porque eres una mujer admirable.",
+    "Porque me haces sentir especial.",
+    "Porque me haces soñar con el futuro.",
+    "Porque eres mi puerto seguro.",
+    "Porque eres paciente conmigo.",
+    "Porque tienes un corazón sensible.",
+    "Porque valoras a la familia.",
+    "Porque me aceptas tal como soy.",
+    "Porque me ayudas a ser una mejor versión de mí.",
+    "Porque eres compañera.",
+    "Porque me apoyas en mis proyectos.",
+    "Porque me haces creer en el amor.",
+    "Porque me enseñas cosas nuevas.",
+    "Porque te importan los pequeños detalles.",
+    "Porque no te rindes fácilmente.",
+    "Porque eres valiente.",
+    "Porque tienes una fe inspiradora.",
+    "Porque me haces sentir en paz.",
+    "Porque cuidas tan bien a tus hermanas.",
+    "Porque tienes una manera única de demostrar amor.",
+    "Porque alegras mis días.",
+    "Porque me haces sonreír sin que lo notes.",
+    "Porque eres verdadera.",
+    "Porque me tratas con respeto.",
+    "Porque eres dulce.",
+    "Porque tienes un corazón puro.",
+    "Porque eres una bendición en mi vida.",
+    "Porque me haces sentir en casa.",
+    "Porque compartes tus sueños conmigo.",
+    "Porque me permites compartir los míos.",
+    "Porque eres mi mejor amiga.",
+    "Porque me entiendes hasta cuando no logro explicarme.",
+    "Porque me muestras el amor de Dios a través de tus actitudes.",
+    "Porque te preocupas por quienes están a tu alrededor.",
+    "Porque tienes una mirada que transmite cariño.",
+    "Porque eres especial de una manera imposible de explicar.",
+    "Porque eres fuerte en los momentos difíciles.",
+    "Porque me das motivos para agradecer todos los días.",
+    "Porque me ayudas a ver propósito en las cosas.",
+    "Porque me animas espiritualmente.",
+    "Porque eres humilde.",
+    "Porque me haces sentir importante.",
+    "Porque te importan mis sentimientos.",
+    "Porque me ayudas a enfrentar los desafíos.",
+    "Porque eres dedicada a lo que amas.",
+    "Porque tienes un corazón de sierva.",
+    "Porque me inspiras a amar más.",
+    "Porque me inspiras a perdonar más.",
+    "Porque me inspiras a confiar más en Dios.",
+    "Porque tienes una forma hermosa de demostrar gratitud.",
+    "Porque te alegras con las cosas simples.",
+    "Porque haces que cualquier lugar sea mejor.",
+    "Porque me ayudas a encontrar calma en el caos.",
+    "Porque eres una mujer virtuosa.",
+    "Porque me haces querer construir una vida a tu lado.",
+    "Porque me haces creer que vale la pena luchar por el amor.",
+    "Porque me haces sentir orgullo.",
+    "Porque eres una respuesta a mis oraciones.",
+    "Porque me haces ver belleza en la rutina.",
+    "Porque eres paciente con la Duda.",
+    "Porque tienes un amor genuino por las personas.",
+    "Porque me enseñas con el ejemplo.",
+    "Porque me haces sentir amado incluso en mis días más difíciles.",
+    "Porque nunca dejas de intentar.",
+    "Porque eres una guerrera.",
+    "Porque me ayudas a ser un mejor hombre.",
+    "Porque hiciste mi vida más hermosa.",
+    "Porque formas parte de mis mejores sueños.",
+    "Porque admiro a la mujer que eres.",
+    "Porque, después de todo esto, sigo encontrando nuevos motivos para amarte todos los días. ❤️"
+  ],
+  "creditosLista": [
+    {
+      "categoria": "Un mensaje que lo cambió todo",
+      "itens": [
+        {
+          "papel": "La madre que no dejó ignorar al pobrecito",
+          "nome": "Su madre",
+          "nota": "Sin esa respuesta, nada de esto habría comenzado. Gracias desde el fondo del corazón."
+        }
+      ]
+    },
+    {
+      "categoria": "El pedido de noviazgo",
+      "itens": [
+        {
+          "papel": "La cómplice que hizo todo posible",
+          "nome": "Talita",
+          "nota": "Ayudó a acercarnos, ayudó a elegir las alianzas, los lugares, y estuvo en cada detalle que hizo posible este amor"
+        },
+        {
+          "papel": "Camarero que entró en el plan sin dudarlo",
+          "nome": "Camarero del João Julhão",
+          "nota": "Por hacer que la escena más especial sucediera de la manera correcta"
+        }
+      ]
+    },
+    {
+      "categoria": "Parte de nuestra historia",
+      "itens": [
+        {
+          "papel": "Donde dos corazones comenzaron a acercarse",
+          "nome": "Comunidade Apascentar",
+          "nota": "El campamento de febrero de 2026 que sembró todo esto"
+        }
+      ]
+    },
+    {
+      "categoria": "Dirección general",
+      "itens": [
+        {
+          "papel": "Autor, Director y Realizador",
+          "nome": "Dios",
+          "nota": "Que escribió esta historia mucho antes que nosotros y cuidó cada detalle del camino"
+        }
+      ]
+    }
+  ],
+  "antesDepois": {
+    "antesTitulo": "Antes de ti",
+    "depoisTitulo": "Después de ti",
+    "antes": [
+      "Corría tras mis objetivos, pero muchas veces en automático",
+      "La fe existía, pero no siempre guiaba mis decisiones",
+      "Los logros eran importantes, pero faltaba algo que de verdad me llenara",
+      "Días buenos… pero sin alguien con quien compartirlo todo de forma completa",
+      "Sabía a dónde quería llegar, pero no con quién construir"
+    ],
+    "depois": [
+      "Mi vida ganó sentido, dirección y propósito de verdad",
+      "Empecé a vivir con Dios en el centro y con el corazón más alineado",
+      "Ya no se trata solo de lograr… se trata de construir juntos",
+      "Encontré paz, ligereza y un amor que me acerca a quien quiero ser",
+      "Hoy no camino solo… te tengo a ti, y eso lo cambia todo",
+      "Los sueños dejaron de ser solo míos - ahora son nuestros 💍"
+    ]
+  },
+  "timeline": [
+    {
+      "data": "09 de febrero de 2026",
+      "titulo": "El mensaje que cambió todo",
+      "icon": "💬",
+      "tipo": "chat",
+      "destaque": true,
+      "paras": [
+        "Antes de ese mensaje, hubo dos intentos míos. Dos.",
+        "El primero: intenté sacar tema en un story que publicaste con un regalo para una amiga - hablé de CBJR. Bloqueo.",
+        "El segundo: te elogié en un pós-culto. Bloqueo de nuevo.",
+        "Dos cortes secos. Sin chance, sin piedad.",
+        "Pero unos días antes del campamento, lo intenté una tercera vez - te mandé un mensaje simple preguntando cómo estabas. Quisiste ignorarme. Y fue ahí que tu mamá entró en escena, diciendo, con otras palabras: \"Responde al pobrecito por educación, al menos.\"",
+        "Esa respuesta salvó todo. Entonces, mirando hoy, solo tengo una cosa que decir: gracias, tu mamá. Desde el fondo del corazón. 🤍"
+      ],
+      "mensagens": [
+        {
+          "de": "eu",
+          "hora": "22:36",
+          "texto": "Oii Maysa, ¿todo bien?\n\nPasaba para saber si estás mejor, vi que habías publicado que no estabas muy bien estos días"
+        },
+        {
+          "de": "voce",
+          "hora": "23:04",
+          "texto": "Hola Davi, ¿todo bien y tú? Bueno, realmente estuve bastante enferma desde el jueves pasado, pero hoy me estoy sintiendo mejor"
+        },
+        {
+          "de": "eu",
+          "hora": "23:07",
+          "texto": "Qué bueno entonces 🙂\n\nConmigo todo bien también. Qué bueno que ya te estás sintiendo mejor."
+        },
+        {
+          "de": "eu",
+          "hora": "23:07",
+          "texto": "Ah, y solo para avisar, estoy terminando de editar el video que grabamos el miércoles con la Talita jaja"
+        },
+        {
+          "de": "voce",
+          "hora": "23:08",
+          "texto": "Qué bueno entonces 😊"
+        }
+      ]
+    },
+    {
+      "data": "13–15 de febrero de 2026",
+      "titulo": "Donde todo comenzó",
+      "icon": "⛺",
+      "paras": [
+        "Fue en el campamento de la Comunidad Apascentar que empezamos a acercarnos de verdad, conversando más y conociendo mejor el estilo del otro."
+      ]
+    },
+    {
+      "data": "20 de febrero de 2026",
+      "titulo": "Cuando te enamoraste de mí",
+      "icon": "💕",
+      "paras": [
+        "No sabía lo mal que estabas ese día... Estabas tan mal que cualquier cosa te hacía llorar...",
+        "Solo dijiste: \"estoy medio desanimada hoy...\" No revelaste el peso real que estabas sintiendo...",
+        "Y cuando empecé a conversar contigo sobre Dios, y sobre pasajes de no desanimarse, de no cansarse... Lloraste en el momento - y fue recién después, ya de novios, que me contaste que fue ahí que te diste cuenta de que estabas enamorada de mí."
+      ]
+    },
+    {
+      "data": "04 de marzo de 2026",
+      "destaque": true,
+      "titulo": "Inicio de nuestro noviazgo",
+      "icon": "💍",
+      "paras": [
+        "Comenzó cuando quedamos en salir en el João Julhão a las 18h. Llegué exactamente a las 18:00 y ya había combinado con el camarero todo el guion de lo que iba a pasar. Cuando llegaste con la Talita, estabas hermosa... y ahí mi corazón ya se aceleró.",
+        "Fuimos hasta la mesa que ya había dejado separada, planeando dejarte sentada de espaldas a la cocina, para que no vieras nada de lo que estaba preparando.",
+        "Fue una conversación natural y distendida, sobre todo con las preguntas que empezaste a hacer - sobre familia, estabilidad, educación financiera... todo eso mientras comíamos filete mignon a la parmesana.",
+        "Hasta que llegó el momento que había combinado con los camareros. Terminamos de comer, pedí el postre, y el camarero llegó trayendo junto el buqué y las alianzas.",
+        "Tus ojos brillando como si quisieras llorar, tu mejilla temblando de alegría... estabas tan feliz. Y en ese instante me hiciste el hombre más feliz del mundo.",
+        "Después de eso, te llevé por primera vez hasta tu casa a solas. Cuando me abrazaste, sentí que ese abrazo era demasiado bueno... y me di cuenta de que era exactamente ahí donde siempre quiero estar."
+      ]
+    },
+    {
+      "data": "07 de marzo de 2026",
+      "titulo": "Nuestro primer beso",
+      "icon": "🌹",
+      "paras": [
+        "Fue la noche en que hablé con tus padres. Hicieron una tarta de pollo que estaba simplemente maravillosa - sin duda una de las mejores que comí en la vida.",
+        "Tuvimos una conversación muy buena, y en ese momento nos autorizaron a ser novios de verdad. Fue un momento muy especial para mí. Y fue también ese día que nos dimos nuestro primer beso.",
+        "Después fuimos al cumpleaños del Wagner. Nos recibieron al sonido de \"Aquilo que Parecia Impossível\" - eso dejó la noche aún más memorable.",
+        "Ese día también te entregué tus regalos del Día de la Mujer: un libro, dos girasoles, un portarretrato con nuestra foto favorita del pedido, fotos reveladas y polaroids para la funda del celular."
+      ]
+    },
+    {
+      "data": "08 de marzo de 2026",
+      "titulo": "Conociste a mis padres",
+      "icon": "👨‍👩‍👧",
+      "paras": [
+        "Fuimos al shopping a las 12h, comimos papa rellena, vimos libros en la librería, la tienda de artículos coreanos, tomamos helado... fue un momento increíble contigo.",
+        "Mis padres te amaron, te encontraron muy hermosa, carismática, y se pusieron muy felices por nuestro noviazgo.",
+        "De vuelta, con mi papá manejando, me quedé arreglando tu cabello, apoyándote con el brazo para que descansaras y haciendo cariño... Cada momento fue memorable."
+      ]
+    },
+    {
+      "data": "09 de marzo de 2026",
+      "titulo": "Un cuidado simple ❤️",
+      "icon": "🍫",
+      "paras": [
+        "El domingo por la noche empezaste a sentir un dolorcito. El lunes, comentaste que te estaba molestando bastante, pero te daba vergüenza decirme qué era.",
+        "Cuando lo dijiste, ya me imaginé y pregunté si podía pasar por ahí después del trabajo, solo para verte un poquito.",
+        "Pasé rapidito: llevé una cajita de bombones, nos quedamos conversando, te abracé, te di algunos besitos e hice cariño. Dijiste que fue un momento muy feliz y que te ayudó a sentirte mejor."
+      ]
+    },
+    {
+      "data": "11 de marzo de 2026",
+      "titulo": "Nuestra primera Santa Cena juntos",
+      "icon": "✝️",
+      "paras": [
+        "Tuvimos una alineación con todos los ministerios de la iglesia y, durante el encuentro, también ocurrió la Santa Cena. Sin haber sido algo planeado, terminó siendo la primera Santa Cena en la que participamos juntos.",
+        "Durante el día estuve preocupado pensando en cómo llevarte, porque estuvo lloviendo todo el día. Al final, tu papá nos dio un voto de confianza y dejó que fuéramos normalmente - lo que hizo todo aún más especial.",
+        "Poder estar ahí contigo, participando de un momento tan importante en la presencia de Dios, marcó mucho mi corazón.",
+        "Y también hubo una \"peleíta\" porque no te dejé abrir la puerta del auto - quería abrírtela yo. Salí todo entusiasmado para abrir la puerta y sostener tu mano cuando bajaras. Fue un gesto pequeño, pero cuidarte así me hace muy feliz. ❤️"
+      ]
+    },
+    {
+      "data": "14 de marzo de 2026",
+      "titulo": "Nuestra primera cafetería ☕",
+      "icon": "☕",
+      "paras": [
+        "Fui a buscarte en auto un sábado por la tarde, como me gusta: estar contigo, llevarte y cuidarte. Y además fue nuestra primera vez yendo juntos a una cafetería.",
+        "Pasamos un poco de frío por el aire acondicionado helado jaja, pero hasta eso terminó siendo bueno para estar más cerquita. Tomamos cappuccino, compartimos un pan con manteca en la plancha y un pan con requesón y panceta en la plancha también. Para cerrar, una panqueca de Nutella con frutillas que estaba riquísima.",
+        "Después, fuimos a la plaza de la iglesia y nos sentamos en un banquito, abrazados, conversando, haciendo cariño y riendo juntos. Fue de esos momentos simples, pero que hacen que todo valga la pena.",
+        "De vuelta, pasamos por el The Best Açaí y armamos un vaso para la Duda. Cuando fuimos a entregarlo, la Duda se puso tímida, pero después me contaste que le gustó mucho y agradeció. Lo encontré muy tierno."
+      ]
+    },
+    {
+      "data": "15 de marzo de 2026",
+      "titulo": "Nuestro primer pós-culto 🙏",
+      "icon": "✝️",
+      "paras": [
+        "Fue un culto muy bendecido. Y fue la primera vez que fui a buscarte a ti y a la Duda en auto para ir juntos a la iglesia. Cuando llegué a tu casa, me diste un regalo hermoso, hecho completamente a mano - un librito hecho a mano que se va volteando página por página, lleno de mensajes tiernos, con tus dibujos en cada parte... Y adentro todavía tenía una carta enorme que abría en acordeón, palabra por palabra escrita con tanto amor. Leí cada tramo con un cariño inmenso, y me puse tan feliz - porque ningún dinero del mundo compra un regalo así. Tan perfecto, tan detallado, tan tú. Solo de acordarme de ese momento me emociono. Guardé cada detalle en el corazón.",
+        "Tuvimos la Santa Cena, y esta vez pudimos intercambiar el pan y el jugo bien, sin que nadie estorbe jaja.",
+        "El culto terminó un poco más tarde, avisaste a tus padres y entonces tuvimos nuestro primer pós-culto juntos: yo, tú y nuestra llaverito jajaja. Fuimos al Tips cerca de la iglesia, elegimos nuestros snacks y pedimos juntos, y nos quedamos ahí comiendo, conversando y riendo mucho.",
+        "Fue especial de una forma única - ¡el primero de muchos pós-cultos!"
+      ]
+    },
+    {
+      "data": "22 de marzo de 2026",
+      "titulo": "Un día lleno de gracia",
+      "icon": "🙏",
+      "paras": [
+        "El día empezó de forma especial: pasamos prácticamente todo el día en la casa de tus abuelos, en un almuerzo que fue muy divertido, gracioso y lleno de alegría. Comida buena, buenas risas, exactamente el tipo de día que hace que todo valga la pena.",
+        "En el culto, hubo un mensaje que te marcó mucho... Noté que estabas casi llorando, abatida por dentro. Te abracé y oramos juntos ahí mismo - fue un momento lindo y muy real entre nosotros.",
+        "Al final del culto, tuvimos una conversación con el pastor: explicamos cómo comenzó nuestro noviazgo, y él oró y bendijo lo que estamos construyendo juntos. Sentir esa aprobación y cobertura espiritual fue algo que quedó grabado en mi corazón.",
+        "Después fuimos al The Best Açaí con las dos llaveritas - Amanda y Duda. Las dos se hicieron buenas amigas ese día, y fue tan lindo verlo pasar. Tomamos açaí, nos divertimos mucho, y fue de esos momentos simples que guardan un calor especial.",
+        "De vuelta, te noté bien preocupada... Preferiste hablar conmigo por WhatsApp después, e hice lo posible por consolarte. La preocupación era por el tiempo, la sensación de no estar dando abasto con todo. Me alegra poder estar a tu lado incluso en esas horas - y que confíes en mí con lo que sientes."
+      ]
+    },
+    {
+      "data": "28 de marzo de 2026",
+      "titulo": "Un día de primeras veces",
+      "icon": "🏠",
+      "paras": [
+        "Hoy fue un día muy especial, lleno de primeras veces y momentos simples que terminaron volviéndose inolvidables.",
+        "Fue la primera vez que viniste a mi casa. Tomamos un café de la tarde con mis padres, conversamos, reímos... ese clima ligero, rico, que da una sensación buena solo de acordarse. Y además trajimos a la Duda para que se quedara jugando con la Amanda, lo que dejó todo aún más divertido.",
+        "Más tarde, fuimos a visitar el culto de jóvenes de la IPI, de la Naomi. No fue solo una visita... fue de esos momentos que marcan por dentro.",
+        "La palabra fue en Isaías 59:1-4, y hablaba sobre cómo nada puede separarnos del amor de Dios, a no ser el pecado. Fue fuerte oír y recordar que Dios sigue siendo el mismo, que su mano no está encogida y que siempre escucha nuestro clamor... pero que el pecado sí puede alejarnos de su presencia.",
+        "Habló también sobre qué es el pecado - todo aquello que hacemos o dejamos de hacer que entristece el corazón de Dios. Y aunque sabemos lo correcto, muchas veces elegimos mal. Pero también trajo algo muy importante: siempre existe el camino de vuelta.",
+        "Arrepentimiento de verdad, reconocer que lo necesitamos, y volver a su presencia... porque es ahí donde encontramos todo. Fue un culto que me movió mucho. Sentí a Dios tocando mi corazón de una forma muy real.",
+        "Después de eso, fuimos a comer pastel... y fue un momento ligero después de algo tan profundo. Pedí de pollo con queso y tú de palmito con queso. Fue gracioso (y tierno) verte quemando la boca con el pastel al principio, aunque después intentaras disimular jajaja.",
+        "Al final, hasta aprendimos una lección: el pastel de palmito con queso puede ser medio empalagoso de verdad 😅",
+        "Fue un día completo. Empezó ligero, se puso profundo, terminó divertido... y todo eso a tu lado."
+      ]
+    },
+    {
+      "data": "29 de marzo de 2026",
+      "titulo": "Nuestro primer viaje con la familia",
+      "icon": "🌊",
+      "paras": [
+        "Hoy fue uno de esos días que uno sabe, en el fondo, que va a guardar para siempre.",
+        "Y lo más loco es que todo pasó de la nada. Como a las 11:00 me mandaste mensaje avisando que iban a viajar y preguntaste si quería ir también. Dije que iba a ver con mis padres, resolví todo rápido, y cuando vi ya estaba ahí a las 12:00, listo para ir. Sin pensarlo mucho... y, con seguridad, fue la mejor decisión que tomé hoy.",
+        "Fue nuestro primer viaje juntos con tu familia. Estaban tus padres, la Valentina, tu tío y tus abuelos en un auto... y en el otro, yo, tú y la Duda. Solo eso ya hacía que todo pareciera especial, pero el día logró ser aún más.",
+        "Pasamos la tarde en la represa de Sandovalina, y fue simplemente increíble. Hubo risas, vóley, esos momentos simples que, cuando son con la persona correcta, se vuelven todo.",
+        "Pero, sin duda, una de las partes más lindas del día fue ahí en el agua... cuando hiciste tus giros de princesa. Puede parecer algo pequeño para quien mira de afuera, pero para mí fue uno de esos momentos que quedan marcados. Ver tu sonrisa, ligera, feliz, siendo tú... es el tipo de cosa que hace que todo valga la pena.",
+        "A la noche tuvimos nuestro primer pós-culto con todo el grupo: fuimos a la Pizzadoro a comer porción de pollo, pescado, arroz, vinagreta y el resto que pidió la mesa. Simple, rico, con todos juntos.",
+        "Fue un día ligero, divertido, lleno de vida... y que sin duda merece un espacio especial en nuestra historia.",
+        "Un día simple, inesperado... pero perfecto como tenía que ser: contigo."
+      ]
+    },
+    {
+      "data": "03 de abril de 2026",
+      "titulo": "Nuestro primer cine juntos <3",
+      "icon": "🎬",
+      "paras": [
+        "Hoy fue uno de esos días que dan ganas de guardar para siempre 🤍",
+        "Empecé yendo a buscarte a las 14:00, y ya ahí el corazón estaba feliz solo de verte. Te entregué tus regalitos de Pascua y también de nuestro primer mesversario (aunque fuera al día siguiente jeje). Preparé todo con cariño: una canastita con osito de peluche, flores artificiales para que duren bastante (igual que lo que quiero con nosotros), chocolates, un llavero a juego con nuestras iniciales y la fecha de nuestro comienzo... y claro, un huevo de Pascua 🍫",
+        "Después estuvimos un ratito en la plaza de la entrada de la ciudad, conversando y disfrutando ese momento tranquilo juntos. Como a las 15:00 fuimos al PrudenShopping, donde caminamos bastante, pasamos por el Carrefour y tomamos un cucurucho mixto 🍦",
+        "Más tarde, a las 16:30, fuimos a buscar pochoclo y refresco para vivir un momento especial: nuestro primer cine juntos 🎬 Vimos Super Mario Galaxy con la familia de la Talita y de la Kelli también por ahí, lo que dejó todo aún más ligero y divertido.",
+        "Después de la película, dimos otra vuelta (ya que el Carrefour era prácticamente la única tienda abierta por el feriado), y entonces volvimos a Pirapó. El acuerdo inicial era que estuvieras en casa a las 21:30, pero tu mamá nos autorizó a quedarnos hasta las 23:00 - con una condición especial: llevar un sándwich de 30cm del Subway para tu mamá jajaja.",
+        "Para cerrar el día, nos quedamos en la plaza del centro conversando con el grupo, comiendo un churro y aprovechando cada segundo.",
+        "Fue un día simple, pero a la vez increíble... lleno de risas, cariño y momentos que hicieron que todo valiera la pena. 🤍"
+      ]
+    },
+    {
+      "data": "04 de abril de 2026",
+      "destaque": true,
+      "titulo": "Nuestro primer mes juntos 🤍",
+      "icon": "🤍",
+      "paras": [
+        "Hoy fue un día especial... nuestro primer mes juntos. Y, una vez más, solo puedo empezar agradeciendo a Dios por todo lo que vivimos hoy - por las cosas buenas, por los aprendizajes y hasta por los momentos más difíciles, que también formaron parte de nuestro crecimiento.",
+        "El día comenzó conmigo yendo a buscarte a las 9:00 para hacer nuestro piquenique en la plaza de la entrada de la ciudad. Ya ahí empezaron nuestros \"imprevistos\" jajaja... olvidé el perfume que habíamos quedado en usar en el osito para que quedara con mi olor, y cuando estábamos llegando te diste cuenta de que habías olvidado la alianza.",
+        "Volvimos a tu casa a buscarla, y en ese momento vi que te pusiste mal... más aún con la reacción de tu mamá. Pero ahí, conversando contigo, solo quería que entendieras una cosa: la alianza nunca fue sobre algo físico. Es un símbolo, pero lo más importante es lo que llevamos en el corazón - nuestro compromiso, nuestra promesa y lo que tenemos delante de Dios. Y si alguien \"podría\" molestarse con eso, sería yo... pero no lo estaba. Ver tu sonrisa después de eso calentó mucho mi corazón 🤍",
+        "Después volvimos y armamos nuestro piquenique. Y una vez más, este Davi se las ingenió jajaja... a la hora de hacer el té, simplemente traje la hierba equivocada (para colar, en vez de saquito). Resultado: fui corriendo al restaurante de ahí cerca a buscar una coca de 1 litro para salvar nuestro momento 😂 Igual, todo salió bien. Comimos nuestro pan de brioche con lechuga, tomate, jamón y queso, y disfrutamos ese ratito juntos.",
+        "Y entonces vino uno de los momentos más especiales de mi día... el regalo que me diste. La \"Biblia cargada\". En serio... nunca recibí algo tan significativo en mi vida. Una Biblia personalizada, con nuestra foto, con versículos marcados, con intención, con cuidado... con amor. Aunque pensaras que no estaba \"lista\", para mí ya era perfecta.",
+        "Y nuestro acuerdo de que \"cargues\" la Biblia durante la semana, y que la intercambiemos antes y después de los cultos... eso es simplemente hermoso. Porque demuestra que nuestro noviazgo no es solo sobre nosotros, es sobre Dios en el centro de todo. Y el momento que tuvimos ahí, compartiendo la Palabra el uno con el otro, fue único.",
+        "También tuvimos un momento más delicado... pero que, a la vez, mostró mucho sobre quiénes somos y quiénes queremos ser. Nos dimos cuenta, a tiempo, y elegimos hacer lo correcto. Y más que eso, elegimos la verdad. Cuando me preguntaste si debías contar o no, para mí quedó muy claro: todo lo que está escondido puede generar una ruptura mucho más grande más adelante. Y nuestro noviazgo no fue hecho para basarse en el miedo, sino en la verdad, el respeto y la transparencia.",
+        "Me puse muy preocupado en ese momento... pero ahí también ocurrió algo muy especial: fue la primera vez que nos consolamos en persona. Y eso me marcó mucho. Porque demostró que, incluso en las dificultades, cuidamos el uno del otro, nos apoyamos y permanecemos juntos.",
+        "Hoy no fue un día \"perfecto\"... pero fue real. Y quizás sea exactamente eso lo que lo hace tan especial. Porque no se trata de vivir solo momentos buenos, sino de vivir todo juntos, con Dios en el centro, aprendiendo, creciendo y fortaleciéndonos cada día.",
+        "Gracias por este primer mes. Gracias por ser quien eres. Y gracias, Dios, por permitirme vivir todo esto contigo 🤍"
+      ]
+    },
+    {
+      "data": "06 de abril de 2026",
+      "titulo": "Nuestro propósito de crecimiento espiritual",
+      "icon": "📖",
+      "paras": [
+        "Ese día, comenzamos un propósito espiritual juntos: una decisión intencional de crecer con Dios en alianza, fortaleciendo nuestra fe individual y nuestro noviazgo al mismo tiempo.",
+        "Lo asumimos como una alianza espiritual, no solo emocional. Nuestro objetivo quedó claro: vivir el noviazgo con Dios en el centro, con fundamento y dirección.",
+        "Definimos un propósito de 40 días (06/04/2026 a 15/05/2026), con devocional conjunto, ayuno los sábados y domingos (de 7h a 9h), oración diaria a las 3h de la madrugada y gratitud al final de cada día.",
+        "También colocamos nuestros temas de oración: intimidad con Dios, comunión entre nosotros, santidad, futuro, propósito, principios, constancia, blindaje espiritual, sanidad de heridas y cuidado mutuo.",
+        "Y dejamos dos acuerdos en el corazón: si fallamos algún día, retomamos al día siguiente; y esto no sería solo por 40 días, sino el comienzo de un estilo de vida con Dios en el centro."
+      ]
+    },
+    {
+      "data": "09 de abril de 2026",
+      "titulo": "Cuando la voz se volvió hogar",
+      "icon": "📞",
+      "paras": [
+        "Ese día estabas un poco preocupada... y nuestro buenas noches fue diferente. En vez de mensaje, nos quedamos en llamada, escuchando la voz del otro.",
+        "Fue simple, pero tuvo algo especial ahí. La calma llegó, el cariño se quedó... y sin darnos cuenta, a partir de ese día, nuestras buenas noches nunca más fueron solo escritos. Se volvieron rutina en llamada, dejando todo aún más cercano, más nuestro."
+      ]
+    },
+    {
+      "data": "10–12 de abril de 2026",
+      "titulo": "Cuando elegimos confiar",
+      "icon": "🤝",
+      "paras": [
+        "En esos días, dimos un paso importante.",
+        "En la madrugada del jueves al viernes, tuvimos nuestra llamada más larga hasta entonces... 2 horas y media juntos, hasta las 03:09. Fue un momento intenso, un poco difícil al principio, pero necesario. Aunque había miedo e inseguridades, no corrimos - nos quedamos.",
+        "Y en la madrugada del sábado al domingo, fuimos aún más lejos... hasta casi las 5 de la mañana, abriendo nuestros pasados, nuestras heridas y, sobre todo, nuestras ganas de hacerlo funcionar.",
+        "Ahí no solo nos conocimos mejor... empezamos a cuidarnos de verdad. Fortaleciendo algo que ya estaba naciendo fuerte: nosotros."
+      ]
+    },
+    {
+      "data": "12 de abril de 2026",
+      "titulo": "Nuestro primer pós-culto con tus padres",
+      "icon": "🍕",
+      "paras": [
+        "Después del culto, tuvimos nuestro primer momento juntos con tus padres... y fue ligero como tenía que ser. Salimos, fuimos a la pizzería, reímos bastante y aprovechamos cada segundo.",
+        "Hubo pizza de catufrango, pizzadoro... pero lo mejor fue el clima. Tu hermana menor más preocupada en jugar en el inflable que en comer dejó todo aún más gracioso y especial.",
+        "Fue una noche simple, pero muy buena. De esas que calientan el corazón sin esfuerzo.",
+        "Y para mejorar, todavía ganamos unos minutitos más juntos... era para estar en casa a las 22:30, pero nos quedamos hasta las 23:05 jeje. Pequeños detalles que hicieron que todo fuera aún más especial."
+      ]
+    },
+    {
+      "data": "20 de abril de 2026",
+      "titulo": "Nuestro primer filmecito juntos en casa",
+      "icon": "🤍",
+      "paras": [
+        "Vimos Cómo Era Antes de Ti, con pochoclo de microondas, refresco, fini... y un brigadeiro simplemente absurdo de rico que hiciste (y al que yo, claro, le hice desaparecer la mitad en 2 segundos 😅).",
+        "La película fue hermosa... solo ese final que pegó fuerte ¿no? jajaja, pero igual quedó aún más especial por ser contigo.",
+        "Mientras tanto, nuestras hermanas haciendo fiesta de pijamas, dejando todo aún más ligero y lleno de alegría.",
+        "Fue simple, fue tranquilo... pero fue perfecto. Película de romance con mi amor, con besitos y comidita rica - como me gusta, como somos nosotros. 🤍"
+      ]
+    },
+    {
+      "data": "01 de mayo de 2026",
+      "titulo": "Nuestro 2º mesversario 🤍",
+      "icon": "💍",
+      "paras": [
+        "Nuestro segundo mes se cumpliría el 04 de mayo, pero decidimos celebrar el viernes, día 01 - adelantamos tres días para no esperar hasta el lunes. Y fue la mejor decisión.",
+        "Empezamos en la plaza de la entrada de la ciudad, donde hicimos el intercambio de regalos. Ahí paramos, conversamos, respiramos juntos... fue uno de esos momentos simples que cargan mucho peso.",
+        "Te entregué una cajita llena de significado: flores, una cartita escrita a mano - la primera mía - un montón de dulces y, en el fondo de todo, tu anillo solitario. Una promesa real de que eres única, y de que te elijo todos los días.",
+        "Me diste un regalo que jamás voy a olvidar: una cartita llena de amor y un potecito lleno de besitos tuyos, marcados en papeles con mensajes tiernos. Simple, cuidadoso, completamente tú - amé cada detalle.",
+        "Después fuimos a la avenida a comer tapioca, todavía en ese clima ligero de quien acaba de intercambiar algo tan especial. Aún pasé y compré unos dulces para ti, porque te lo mereces.",
+        "Cerramos el día en la plaza, en el cantero central de la avenida - solo nosotros, el atardecer y todo lo que ya construimos en dos meses.",
+        "Dos meses que parecen mucho más por todo lo que ya vivimos. Y ese anillo en tu dedo es solo el comienzo de todo lo que viene. 🤍"
+      ]
+    },
+    {
+      "data": "07 de mayo de 2026",
+      "destaque": true,
+      "titulo": "Tu primer cumpleaños a mi lado",
+      "icon": "🎂",
+      "paras": [
+        "Tu primer cumpleaños siendo mío - y el primero que viví siendo tuyo. Un día que esperé con el corazón lleno, queriendo que cada minuto te recordara lo amada que eres.",
+        "Todo comenzó a las 00:00 en punto. Apenas giró el reloj, te mandé un textito de cumpleaños escrito como lo sentía en ese momento - e hice un story solo para ti, para que todo el mundo supiera que ese día tenía dueña. Quería ser el primero en felicitarte. Quería que durmieras ya sabiendo lo especial que eres para mí.",
+        "A la mañana, todavía medio dormido, recibí tu mensaje afligido: ibas a perder el colectivo para la escuela. No lo pensé dos veces - me arreglé en 5 minutos (literalmente), tomé el auto y te avisé que ya estaba saliendo a buscarte. Te llevé a la escuela, ganamos un ratito solo nuestro en el camino, y por más apurado que haya sido, fue uno de los pedacitos más lindos del día. Cuidarte en tu cumpleaños, incluso en las cosas pequeñas, fue un privilegio que no cambiaría por nada.",
+        "A la noche, antes del culto, llegó el momento que venía guardando. Te entregué tus regalos, uno por uno, viendo tu rostro iluminarse con cada cajita. El primero: un collar con la frase \"Para mi futura esposa\" - porque no quería que fuera solo una joya, quería que fuera una promesa. Para que lo uses cerca del pecho y recuerdes que mi sí ya está decidido hace mucho tiempo. Luego, un par de aros delicados y un collar más pequeño que combina con el primero - dos caminando juntos, igual que nosotros. Y fue recién después, de camino al culto, que realmente lo noté: estabas a mi lado, con la felicidad todavía fresca en el rostro, y esa mirada que ya conocía - los ojos brillando como si quisieras llorar, igual que el día en que empezamos a ser novios. La misma alegría de aquella noche en el João Julhão, ahora devuelta desde el otro lado del auto - y fue en ese instante que entendí: ese era el regalo que Dios me había guardado para tu cumpleaños.",
+        "Y todavía había más: el regalo de mi mamá para ti. Ese cuidado que va más allá de mí - una familia entera eligiendo recibirte, celebrarte, llamarte nuestra. Sé cuánto te marcó, y me marcó aún más verte siendo amada por quienes yo amo.",
+        "Fuimos al culto juntos, y ahí, en la presencia de Dios, agradecí por un año más de tu vida y por la gracia de poder estar a tu lado en este. No hay regalo material que se compare a esto - poder orar por ti el día en que Dios te trajo al mundo es algo que voy a guardar para siempre.",
+        "Y cuando el día ya parecía perfecto, todavía llegó lo mejor para el final: nuestra primera videollamada. La primera de todas. Fuiste mostrándome tu cuartito mientras ordenabas tus cosas, después fuiste a comer algo y te fuiste acomodando para dormir...",
+        "Terminamos durmiendo en llamada - yo me apagué primero jajaja, y tú colgaste después, con ese cuidado que solo tú tienes. Fue simple y gigante a la vez. Porque el \"buenas noches\" dejó de ser distancia ese día: se volvió presencia, se volvió abrazo, se volvió la sensación de que nunca más íbamos a dormir solos de verdad.",
+        "Fue tu primer cumpleaños conmigo, pero en mi corazón fue como si ya hiciera tiempo. Y que vengan todos los demás - cada 7 de mayo, quiero ser el primero en abrazarte, el primero en felicitarte, el primero en recordarte lo amada que eres por mí y por Dios. 🤍"
+      ]
+    },
+    {
+      "data": "10 de mayo de 2026",
+      "titulo": "El tipo de día que nunca quiero olvidar",
+      "icon": "🤍",
+      "paras": [
+        "Hoy fue uno de esos días simples... pero que se volvieron gigantes para mí.",
+        "Llegué a tu casa a las 12:40 y, sin darme cuenta, pasamos prácticamente 12 horas juntos. Fuimos al cumpleaños de tu bisabuelo, después visitamos a tu abuela por parte de papá, luego a tu abuela por parte de mamá, e íbamos a terminar el día de la forma más \"nosotros\" posible: juntitos, viendo Enredados.",
+        "Pero como siempre, los mejores momentos aparecen de la nada.",
+        "A la hora de irnos, vimos que la Carreta Furacão estaba en su último día. Te pregunté si querías ir... y cuando tu mamá dio el permiso, eso que sería solo un programa improvisado terminó volviéndose uno de los momentos más especiales de nuestro día. Nuestra primera vez andando en moto juntos. Tu primera vez en un trencito. La última vuelta del último día.",
+        "Fue rápido, fue simple... y fue completamente inolvidable. Las bromas de la carreta, el desorden, nosotros dos riendo juntos - parecía uno de esos recuerdos tontos que terminan volviéndose favoritos sin que nos demos cuenta.",
+        "Y creo que fue exactamente eso lo que fue este día: un recuerdo simple... pero perfecto a nuestra manera. 🤍"
+      ]
+    },
+    {
+      "data": "30 de mayo de 2026",
+      "titulo": "Conociste a mi familia y fuiste mi refugio 🤍",
+      "icon": "🤍",
+      "paras": [
+        "Hoy fue un día intenso... de esos que mezclan momentos ligeros y felices con un corazón apretado al final. Pero aun así fue un día muy especial para guardar aquí 🤍",
+        "Fue el día en que conociste a mi familia por parte de papá, en el cumpleaños de mi abuela. Y me gustó tanto vivirlo contigo.",
+        "Conociste a mis tías, estuviste ahí conmigo en medio de todos, y todo pasó de una forma tan ligera y tranquila. Verte ahí con mi familia me trajo una sensación tan buena. Parecía una escena simple, pero para mí tuvo mucho significado.",
+        "Tenerte ahí, viviendo ese momento conmigo, fue demasiado especial.",
+        "La noche fue rica, llena de esas cositas buenas que dejan recuerdos tan cálidos: saladitos, torta, canjica, conversación y un clima ligero. Fue tan bueno estar contigo y compartir un pedacito más de mi vida con alguien tan importante para mí.",
+        "Pero la noche terminó volviéndose más tensa.",
+        "Mi hermana empezó a sentirse mal... tenía alergia y después terminó empeorando, con fiebre y taquicardia. Mi corazón se apretó demasiado. Me puse muy mal y me culpé mucho, con miedo y pensando en todo.",
+        "Y en medio de todo eso... te quedaste conmigo.",
+        "Estuviste a mi lado cuando más lo necesitaba. Me ayudaste a mantener la cabeza en su lugar, me trajiste calma cuando me estaba perdiendo en los pensamientos y me recordaste orar cuando mi corazón estaba pesado.",
+        "Me ayudaste a respirar mejor en ese momento.",
+        "Estoy muy agradecido por eso.",
+        "Gracias por quedarte conmigo incluso en un día difícil. Gracias por calmarme, por recordarme poner en manos de Dios lo que no podía controlar y por ser ese abrazo que me trae paz incluso cuando todo dentro de mí está revuelto.",
+        "Hoy fue un día tenso, sí... pero también fue un día más en el que tuve la certeza de lo agradecido que estoy por tenerte a mi lado.",
+        "Gracias por ser mi refugio 🤍"
+      ]
+    },
+    {
+      "data": "31 de mayo de 2026",
+      "titulo": "Verte venciendo el miedo 🤍",
+      "icon": "🤍",
+      "paras": [
+        "Hoy fue uno de esos domingos que calientan el corazón de una forma tan ligera y especial 🤍",
+        "A la mañana fuimos al culto y, aunque el culto del domingo fue diferente, fue muy rico estar contigo ahí. Después hubo pós-culto en la iglesia, con strogonoff, dulces y un ratito juntos con la Ana (tu amiga). Fue poco tiempo, pero fue tan bueno... me gustan esos momentos simples contigo, de ir viviendo de a poco y acostumbrándonos a esas pequeñas rutinas lado a lado.",
+        "Después dejamos a la Duda en casa y fuimos a estar un ratito solo nosotros. Nos quedamos en la plaza de la entrada, en nuestros banquitos de cariño, y pude ayudarte con la tarea del curso técnico. Después fuimos más hacia el medio de la plaza y empezaste a cuidarme, reventando los puntitos negros de mi nariz toda concentrada y feliz, y yo también me sentí feliz por sentirte tan tranquila conmigo en esos detalles tan simples y tan nuestros.",
+        "Pero el momento que más marcó mi corazón fue otro.",
+        "Ahí en la plaza, mientras conversábamos, te expliqué cómo funciona para salir con el auto y te pregunté si querías intentarlo. Aunque tenías miedo, quisiste. Y me pareció tan lindo.",
+        "Fuimos ahí cerca del fórum, a ese lugar más vacío, y te fui mostrando de a poco. Y lo lograste. Hiciste que el auto saliera, lo pusiste en movimiento y fuiste doblando con todo el cuidado. Puede parecer algo simple, pero para mí fue muy especial verte enfrentando ese miedo y lográndolo.",
+        "Me sentí tan orgulloso de ti.",
+        "Más que aprender a salir con el auto, fue ver aparecer tu coraje a pesar del corazón acelerado. Y eso me hizo feliz de una forma difícil de explicar. Saber que estás aprendiendo algo tan importante, que puede ayudarte en momentos necesarios y darte más seguridad, me trajo una paz enorme.",
+        "Hoy guardé en mi corazón la imagen de ti ahí, nerviosa y valiente a la vez... y pensé en cuánto amo vivir estas primeras veces contigo.",
+        "Gracias por este domingo tan nuestro.",
+        "Amo estar a tu lado en cada detalle 🤍"
+      ]
+    },
+    {
+      "data": "04 de junio de 2026",
+      "destaque": true,
+      "titulo": "Nuestro 3º mesversario 🤍",
+      "icon": "💍",
+      "paras": [
+        "Tres meses juntos - y una fecha más que guardamos con cariño.",
+        "Cayó en un jueves de Corpus Christi, feriado, y el día pidió calma. Antes de ir a la iglesia, estuvimos un ratito en la plaza de la entrada, en el auto mismo, intercambiando regalos y cariño. Sin apuro, solo nosotros dos en ese rinconcito que ya se volvió nuestro.",
+        "Te regalé un perfume, junto con una cartita con un dibujo hecho a mano - mi primera cartita nuestra así, dibujada con todo el cuidado del mundo. Me diste una cartita hermosa, escrita como solo tú sabes hacerlo, y que quedó guardada en el corazón.",
+        "Fue simple, íntimo, como nos gusta: regalo, palabra, presencia - y después culto, con un mes más de historia para agradecer a Dios.",
+        "Como el feriado apretó la rutina del día, estiramos la celebración para el día siguiente. El viernes, armamos una porción juntos a nuestra manera: papas fritas, pollo, alita de pollo, calabresa, salame, aceituna, refresco y pan de ajo. Nada fancy - pero completamente nuestro.",
+        "Tres meses que ya parecen mucho más por lo que vivimos. Gracias por un capítulo más contigo. 🤍"
+      ]
+    },
+    {
+      "data": "12 de junio de 2026",
+      "destaque": true,
+      "titulo": "Primer Día de los Enamorados + 100 días ❤️",
+      "icon": "💘",
+      "paras": [
+        "Nuestro primer Día de los Enamorados juntos - y también nuestros 100 días de noviazgo. Dos hitos en un solo día, como solo nosotros podemos transformar en algo aún más especial.",
+        "Entre seis rosas rojas, una caja de bombones, una cena solo nuestra en el Tips Lanches, porciones de papas con cheddar y panceta, tilapia, conversaciones sin apuro y risas que solo nosotros entendemos, construimos un recuerdo más que va a quedar guardado para siempre.",
+        "Quizás para otras personas haya sido solo una cena. Para mí, fue uno de esos días que nunca se olvidan.",
+        "Gracias por cada sonrisa, cada abrazo, cada conversación y por transformar momentos simples en recuerdos tan especiales.",
+        "100 días de nosotros. Nuestro primer Día de los Enamorados. Y la certeza de que no importa dónde estemos, mi lugar favorito siempre será a tu lado. ❤️"
+      ]
+    },
+    {
+      "data": "13 de junio de 2026",
+      "destaque": true,
+      "titulo": "Nuestro primer culto de parejas 🤍",
+      "icon": "🤍",
+      "paras": [
+        "Te busqué a las 19h15 y, pocos minutos después, ya estábamos de camino a la iglesia para vivir uno más de esos momentos que quedan guardados para siempre en la memoria. Llegamos al culto de parejas, que empezó a las 19h30, y escuchamos un mensaje muy lindo sobre las fases del matrimonio.",
+        "El predicador explicó sobre la miel, la sal, el agua, la leche y el aceite. La miel representa la fase dulce, donde todo parece perfecto. La sal representa los conflictos y las discusiones, que terminan generando sed del agua - que simboliza el amor y la reconciliación. La leche representa la llegada de los hijos, cuando todo cambia y surgen nuevas responsabilidades. Y el aceite representa aquello que purifica, fortalece y mantiene a la pareja firme ante las dificultades.",
+        "Incluso, terminaron usándonos de ejemplo cuando hablaron sobre la sal. Creo que nadie esperaba eso. 😂",
+        "Estabas usando la misma ropa del día del pedido de noviazgo. Yo estaba de social. Y, como siempre, estabas hermosa, perfumada e iluminando cualquier lugar donde estuvieras.",
+        "Después del culto tuvimos la cena. Estaba todo delicioso y, sin duda, valió cada real invertido. Entre conversaciones, risas y momentos especiales, una escena quedó marcada para mí: ya habías comido tu plato, pero decidiste agarrar un poquito más. Solo que notaste que no podrías terminarlo - y, aun con vergüenza, seguiste intentando comer y terminaste empezando a sentirte mal.",
+        "Fue ahí que mi corazón se preocupó. Solo quería cuidarte. Aunque no te sentías muy bien, no quisiste irte antes de que yo comiera mi postre. Mientras tanto, me quedé a tu lado, observándote, cuidándote y esperando que mejoraras.",
+        "Cuando nos fuimos, pasamos un tiempo en la plaza. El aire fresco ayudó y empezaste a sentirte mejor. Nos quedamos ahí conversando, aprovechando esos minutos juntos, y pude notar una vez más cuánto amo cuidarte y lo especial que es compartir momentos simples a tu lado.",
+        "Nuestro primer culto de parejas fue mucho más que una programación de la iglesia. Fue un recuerdo más que guardaré con cariño, porque cada momento a tu lado se transforma en algo especial.",
+        "Que Dios siga guiando nuestro camino, enseñándonos a vivir cada fase de nuestra historia y preparándonos para todo aquello que todavía vamos a construir juntos. 🤍"
+      ]
+    },
+    {
+      "data": "19 de junio de 2026",
+      "destaque": true,
+      "titulo": "Nuestro primer partido del Mundial juntos ⚽",
+      "icon": "⚽",
+      "paras": [
+        "Recuerdo perfectamente nuestro primer partido del Mundial visto juntos.",
+        "Llegué a tu casa ese viernes como a las 19h y, antes del partido, fuimos al Avenida a comprar algunas cosas para intentar hacer esa receta que vimos en internet. Era un pancito sellado en manteca con relleno de requesón, mozzarella, jamón y tomate, todo bien picadito y mezclado. Lo hicimos todo juntos, entre conversaciones, desorden y risas - y al final alcanzó para que todos en tu casa probaran.",
+        "Después nos acomodamos para ver el partido. Y, para ser sincero, lo que más recuerdo ni siquiera es el marcador o las jugadas. Lo que quedó marcado fue estar ahí contigo.",
+        "Estabas recostadita en mí, casi durmiéndote en mi brazo en algunos momentos, y notaba que el Mundial todavía no te entusiasmaba tanto. Aun así, lo veías conmigo, comentabas algunas cosas, me hacías compañía y transformabas algo simple en un recuerdo especial.",
+        "Ese día además gané 30 minutitos extra además del horario en el que normalmente debía irme. Puede parecer poco para quien mira de afuera, pero para mí significó mucho. Fue tiempo suficiente para ver el final del partido a tu lado y guardar un recuerdo más nuestro.",
+        "Es gracioso cómo, cuando pienso en ese día, no me acuerdo del Mundial. Me acuerdo de ti. Me acuerdo de la receta que hicimos juntos, de tu manera de casi dormitando en mi brazo y de la sensación buena de estar exactamente donde quería estar.",
+        "Fue nuestro primer partido del Mundial juntos. Y eso lo hizo especial. ⚽"
+      ]
+    },
+    {
+      "data": "20 de julio de 2026",
+      "destaque": true,
+      "titulo": "Nuestro primer entrenamiento juntos 🤍",
+      "icon": "🏋️",
+      "paras": [
+        "Hay cosas que parecen pequeñas en el momento... y solo después vemos que se volvieron uno de los mejores recuerdos.",
+        "Hoy fue nuestro primer entrenamiento juntos. Conseguí el Gympass para nosotros dos y finalmente empezamos esto lado a lado. Estabas toda tímida, diciendo que nunca habías ido a un gimnasio, sin saber bien cómo funcionaban las máquinas, hasta un poco avergonzada. Me parecía lo más tierno del mundo.",
+        "Salimos de tu casa caminando hasta la Academia Elite. En el camino conversamos, reímos y quedamos con esa expectativa de cómo sería. Al llegar, fuimos descubriendo todo juntos - te mostré algunas máquinas, hicimos el entrenamiento a nuestro ritmo, y de a poco la timidez se fue volviendo sonrisa.",
+        "No fue el entrenamiento más pesado del mundo, ni el más perfecto. Pero fue especial porque era nuestro.",
+        "De vuelta, caminando a casa, fuimos conversando y riendo de cómo había sido. Parecía que el camino pasaba más rápido contigo al lado.",
+        "Lo que no imaginaba es que ese día iba a ser el comienzo de una de nuestras rutinas favoritas. Entrenar dejó de ser solo ejercicio. Se volvió nuestro momento: la caminata, las conversaciones en el camino, los incentivos, las bromas entre serie y serie, el cansancio compartido y la alegría de volver a casa sabiendo que habíamos ganado un día más.",
+        "No fue un viaje, ni una fiesta grande. Fue una caminata hasta la Elite, un entrenamiento y la vuelta a casa. Pero contigo, el \"solo eso\" nunca existía. 🤍"
+      ]
+    }
+  ],
+  "historiaDataCorte": "08 de marzo de 2026",
+  "mesesversarios": [
+    {
+      "id": 1,
+      "data": "2026-04-04T00:00:00",
+      "titulo": "1º mes 🤍",
+      "resumo": [
+        "Sábado por la mañana, piquenique en la plaza de la entrada de la ciudad - solo nosotros dos, comida buena y ese clima ligero que amamos."
+      ]
+    },
+    {
+      "id": 2,
+      "data": "2026-05-01T00:00:00",
+      "titulo": "2º mes 🤍",
+      "resumo": [
+        "Viernes en la plaza de la entrada - adelantamos tres días para celebrar. Intercambio de regalos con mucho significado: flores, cartita hecha a mano, dulces y un anillo solitario como promesa. Me diste un potecito lleno de besitos marcados y una cartita hermosa. Tapioca en la avenida, dulces y el cantero central para cerrar el día."
+      ]
+    },
+    {
+      "id": 3,
+      "data": "2026-06-04T00:00:00",
+      "titulo": "3º mes 🤍",
+      "resumo": [
+        "Jueves de Corpus Christi: intercambio de regalos en el auto, en la plaza de la entrada, antes del culto - perfume, cartita con dibujo a mano y una cartita hermosa tuya. El viernes, porción completa juntos: papas fritas, pollo, alita, calabresa, salame, aceituna, refresco y pan de ajo."
+      ]
+    },
+    {
+      "id": 4,
+      "data": "2026-07-04T00:00:00",
+      "titulo": "4º mes 🤍",
+      "resumo": [
+        "En la víspera, viernes día 3, fuimos a tomar açaí y comer pastel - forma simple y rica de empezar la celebración.",
+        "El sábado, día 4, la primera vez que fuimos a Presidente Prudente solo nosotros dos. Fuimos al PrudenShopping, y como estábamos en ayuno de carne, la pedida fue papa rellena: elegiste brócoli, yo fui de crema de maíz. Después un helado, paseo por las tiendas, terminé comprando una camiseta, y el mejor hallazgo del día: un libro que querías mucho, en una liquidación donde todo costaba solo R$ 10."
+      ]
+    }
+  ],
+  "fotos": [
+    "/imgs/photos/pedido_namoro/1.jpg",
+    "/imgs/photos/pedido_namoro/2.jpg",
+    "/imgs/photos/pedido_namoro/3.jpg",
+    "/imgs/photos/pedido_namoro/4.jpg",
+    "/imgs/photos/pedido_namoro/5.jpg",
+    "/imgs/photos/pedido_namoro/6.jpg",
+    "/imgs/photos/pedido_namoro/7.jpg",
+    "/imgs/photos/pedido_namoro/8.jpg",
+    "/imgs/photos/pedido_namoro/9.jpg",
+    "/imgs/photos/conversa_com_seus_pais/10.jpeg",
+    "/imgs/photos/conversa_com_seus_pais/11.jpeg",
+    "/imgs/photos/conversa_com_seus_pais/12.jpeg",
+    "/imgs/photos/conversa_com_seus_pais/13.jpeg",
+    "/imgs/photos/shopping_com_meus_pais/14.jpg",
+    "/imgs/photos/shopping_com_meus_pais/15.jpg",
+    "/imgs/photos/primeira_santa_ceia/16.jpg",
+    "/imgs/photos/momentos_aleatorios/17.jpg",
+    "/imgs/photos/momentos_aleatorios/IMG_3026.jpg",
+    "/imgs/photos/cafeteria_koike/18.jpg",
+    "/imgs/photos/cafeteria_koike/19.jpg",
+    "/imgs/photos/cafeteria_koike/20.jpg",
+    "/imgs/photos/cafeteria_koike/21.jpg",
+    "/imgs/photos/cafeteria_koike/22.jpg",
+    "/imgs/photos/primeiro-pos-culto/23.jpg",
+    "/imgs/photos/primeira-vez-no-tips-pizzaria-juntos/24.jpg",
+    "/imgs/photos/primeira-vez-no-tips-pizzaria-juntos/25.jpg",
+    "/imgs/photos/primeira-vez-no-tips-pizzaria-juntos/26.jpg",
+    "/imgs/photos/primeira-vez-no-tips-pizzaria-juntos/27.jpg",
+    "/imgs/photos/primeira-vez-no-tips-pizzaria-juntos/28.jpg",
+    "/imgs/photos/primeira-vez-no-tips-pizzaria-juntos/29.jpg",
+    "/imgs/photos/primeira-vez-no-tips-pizzaria-juntos/30.jpg",
+    "/imgs/photos/primeira-vez-no-tips-pizzaria-juntos/31.jpg",
+    "/imgs/photos/primeira-vez-no-tips-pizzaria-juntos/32.jpg",
+    "/imgs/photos/almoco_nos_seus_avos/33.jpg",
+    "/imgs/photos/pos_culto_com_nossas_irmas/34.jpg",
+    "/imgs/photos/pos_culto_com_nossas_irmas/35.jpg",
+    "/imgs/photos/pos_culto_com_nossas_irmas/36.jpg",
+    "/imgs/photos/pos_culto_com_nossas_irmas/37.jpg",
+    "/imgs/photos/pos_culto_com_nossas_irmas/38.jpg",
+    "/imgs/photos/pos_culto_com_nossas_irmas/39.jpg",
+    "/imgs/photos/pos_culto_com_nossas_irmas/40.jpg",
+    "/imgs/photos/pos_culto_com_nossas_irmas/41.jpg",
+    "/imgs/photos/pos_culto_com_nossas_irmas/42.jpg",
+    "/imgs/photos/primeira_visita_sua_na_minha_casa/43.jpg",
+    "/imgs/photos/primeira_visita_sua_na_minha_casa/44.jpg",
+    "/imgs/photos/visita_culto_ipi/45.jpg",
+    "/imgs/photos/visita_culto_ipi/46.jpg",
+    "/imgs/photos/primeiro_cinema/47.jpg",
+    "/imgs/photos/primeiro_cinema/48.jpg",
+    "/imgs/photos/primeiro_cinema/49.jpg",
+    "/imgs/photos/primeiro_mesversario_piquinique/50.jpg",
+    "/imgs/photos/primeiro_mesversario_piquinique/51.jpg",
+    "/imgs/photos/primeiro_mesversario_piquinique/52.jpg",
+    "/imgs/photos/primeiro_mesversario_piquinique/53.jpg",
+    "/imgs/photos/posculto_combinando_na_praca/54.jpg",
+    "/imgs/photos/posculto_combinando_na_praca/55.jpg",
+    "/imgs/photos/posculto_combinando_na_praca/56.jpg",
+    "/imgs/photos/posculto_combinando_na_praca/57.jpg",
+    "/imgs/photos/posculto_combinando_na_praca/58.jpg",
+    "/imgs/photos/posculto_combinando_na_praca/59.jpg",
+    "/imgs/photos/posculto_combinando_na_praca/60.jpg",
+    "/imgs/photos/segundo_mesversario/IMG_2835.jpg",
+    "/imgs/photos/segundo_mesversario/IMG_2849.jpg",
+    "/imgs/photos/segundo_mesversario_dia2/IMG_2868.jpg",
+    "/imgs/photos/segundo_mesversario_dia2/IMG_2870.jpg",
+    "/imgs/photos/segundo_mesversario_dia2/IMG_2872.jpg",
+    "/imgs/photos/segundo_mesversario_dia2/IMG_2879.jpg",
+    "/imgs/photos/segundo_mesversario_dia2/IMG_2882.jpg",
+    "/imgs/photos/aniversario_douglas/ee025cb9-e25b-437b-b0b8-5636c5fc24e5.jpg",
+    "/imgs/photos/conhecendo_sua_avo_paterna/b0e9cd4e-dd7c-41e1-804c-427c4907c2a5.jpg",
+    "/imgs/photos/conhecendo_sua_avo_paterna/e3d2ec46-d34d-45db-b35c-923e05759553.jpg",
+    "/imgs/photos/conhecendo_sua_avo_paterna/f3c89a02-c19a-49e1-a5b3-4b697ea9f17c.jpg",
+    "/imgs/photos/1x_carreta_furacao/IMG_3086.jpg",
+    "/imgs/photos/1x_carreta_furacao/IMG_3089.jpg",
+    "/imgs/photos/1x_carreta_furacao/IMG_3090.jpg",
+    "/imgs/photos/conferencia_buscarmeeis/IMG_3435.jpg",
+    "/imgs/photos/conhecendo_minha_familia/7ffe1b30-aa11-45a8-9ef0-4e1d47df6089.jpg",
+    "/imgs/photos/conhecendo_minha_familia/8f27e0c4-836f-4e58-8e22-c98afda03b13.jpg",
+    "/imgs/photos/conhecendo_minha_familia/dbd499d2-eec7-4132-bf9d-5fbde250aeed.jpg",
+    "/imgs/photos/conhecendo_minha_familia/de6b600e-0f0d-4cb5-b53b-1ba68654aa14.jpg",
+    "/imgs/photos/tips_maio_2026/IMG_3652.jpg",
+    "/imgs/photos/tips_maio_2026/IMG_3654.jpg",
+    "/imgs/photos/tips_maio_2026/IMG_3655.jpg",
+    "/imgs/photos/tips_maio_2026/IMG_3657.jpg",
+    "/imgs/photos/tips_maio_2026/IMG_3658.jpg",
+    "/imgs/photos/primeiro_dia_namorados/IMG_3960.jpg",
+    "/imgs/photos/primeiro_dia_namorados/IMG_3971.jpg",
+    "/imgs/photos/primeiro_dia_namorados/IMG_3973.jpg",
+    "/imgs/photos/primeiro_dia_namorados/IMG_3981.jpg",
+    "/imgs/photos/primeiro_jantar_de_casais/IMG_4023.jpg",
+    "/imgs/photos/primeiro_jantar_de_casais/2CAA734F-5E9C-436E-9013-F165A44F669E.jpg",
+    "/imgs/photos/primeiro_jantar_de_casais/725362f0-0a91-410b-a1da-61d4a6fe24e1.jpg",
+    "/imgs/photos/primeiro_jantar_de_casais/6fbf823f-8850-4ec9-9973-9c4c36b67fad.jpg",
+    "/imgs/photos/primeira_copa/IMG_4167.jpg",
+    "/imgs/photos/primeira_copa/IMG_4170.jpg",
+    "/imgs/photos/primeira_copa/IMG_4172.jpg",
+    "/imgs/photos/primeira_copa/IMG_4176.jpg",
+    "/imgs/photos/fejupi_2026/IMG_4194.png",
+    "/imgs/photos/primeiro_treino/IMG_4828.jpg",
+    "/imgs/photos/primeiro_treino/IMG_4833.jpg",
+    "/imgs/photos/filme na sua casa/IMG_3083.jpg",
+    "/imgs/photos/sabado_de_filme_na_minha_casa/IMG_3053.jpg",
+    "/imgs/photos/sabado_de_filme_na_minha_casa/IMG_3061.jpg",
+    "/imgs/photos/sabado_de_filme_na_minha_casa/IMG_3067.jpg"
+  ],
+  "flores": {
+    "label": "Te di",
+    "titulo": "Flores que te di",
+    "subtitulo": "Te di cada ramo con un significado. Es solo el comienzo: quiero darte muchas flores más.",
+    "itens": [
+      {
+        "id": "sf1",
+        "data": "4 de marzo de 2026",
+        "imagens": [
+          "/imgs/flowers/Rosa%201.jpeg",
+          "/imgs/flowers/Rosa%202.jpeg"
+        ],
+        "titulo": "Rosas rojas",
+        "paras": [
+          "Te di rosas rojas porque dicen lo que muchas veces solo consigo sentir en el pecho: amor profundo, pasión, deseo y admiración. Es el símbolo clásico del romance: \"te amo\", encanto, respeto y gratitud.",
+          "Quise que supieras de mi pasión de verdad y del amor que pretendo hacer durar. El rojo vivo es deseo y entrega; el más cerrado, la pasión que siento en lo profundo de mí.",
+          "Ese ramo fue el de la pedida de noviazgo: uno de los momentos más especiales de nuestra historia, y te lo di de corazón."
+        ]
+      },
+      {
+        "id": "sf2",
+        "data": "7 de marzo de 2026",
+        "imagens": [
+          "/imgs/flowers/Girassol%201.jpeg",
+          "/imgs/flowers/Girassol%202.jpeg",
+          "/imgs/flowers/Girassol%203.jpeg",
+          "/imgs/flowers/Girassol%204.jpeg"
+        ],
+        "titulo": "Dos girasoles",
+        "paras": [
+          "Te di dos girasoles: dos flores a propósito, porque el número importaba: dos para decir amor recíproco, lealtad y unión.",
+          "Existe la \"teoría del girasol\": en ausencia de sol, se vuelven una hacia la otra en lugar de quedarse solo mirando hacia arriba. Regalar dos girasoles lleva eso: lealtad y compañerismo. El significado que quise transmitirte es ese: incluso en la oscuridad, tú eres mi luz. Nos apoyamos y nos iluminamos en los días más difíciles.",
+          "Cuando falta luz, me vuelvo hacia ti, y quiero que sepas que puedes volverte hacia mí. Adoración, fidelidad, complicidad; reciprocidad de verdad y amor que permanece. Dos juntos recuerdan una unión rara, fuerza y vida compartida: así quise regalártelo.",
+          "Te los di el Día de las Mujeres: el mismo día en que fui a hablar con tus padres sobre el noviazgo. Dos hitos que guardé en el mismo día."
+        ]
+      },
+      {
+        "id": "sf3",
+        "data": "13 de marzo de 2026",
+        "imagens": [
+          "/imgs/flowers/Orquidea%201.jpeg",
+          "/imgs/flowers/Orquidea%202.jpeg"
+        ],
+        "titulo": "Orquídea blanca",
+        "paras": [
+          "Te di una orquídea blanca porque lleva pureza, paz, inocencia, elegancia y un aire de sofisticación ligera. Quise decirte eternidad, amor duradero y sinceridad: gratitud y cariño puro, sin artificio.",
+          "Fue en un día común, sin fecha especial en el calendario: te la di solo porque quería ver tu alegría."
+        ]
+      },
+      {
+        "id": "sf4",
+        "data": "10 de abril de 2026",
+        "imagens": [
+          "/imgs/flowers/Azaleia%201.jpeg",
+          "/imgs/flowers/Azaleia%202.jpeg",
+          "/imgs/flowers/Azaleia%203.jpeg",
+          "/imgs/flowers/Azaleia%204.jpeg"
+        ],
+        "titulo": "Azalea rosa",
+        "paras": [
+          "Te di una azalea rosa porque habla de delicadeza, gracia, feminidad, amor a la naturaleza y afecto tierno. Quise decirte admiración y aprecio sincero, y un poco de equilibrio y renovación.",
+          "En el Feng Shui suele asociarse a la suavidad; por aquí aparece bastante en los jardines: ligera y viva, como quería que llegara hasta ti.",
+          "Te la di también en un día común, sin ocasión especial en el calendario."
+        ]
+      },
+      {
+        "id": "sf5",
+        "imagens": [
+          "/imgs/flowers/Fortuna%201.jpg",
+          "/imgs/flowers/Fortuna%202.jpg"
+        ],
+        "titulo": "Flor de la fortuna roja",
+        "paras": [
+          "Te di una flor de la fortuna roja porque reúne dos significados que quería transmitirte al mismo tiempo: el rojo habla de amor intenso, pasión, deseo de estar cerca, cariño sincero y la fuerza de lo que estamos construyendo juntos.",
+          "Y la flor de la fortuna en sí lleva prosperidad, buena suerte, alegría dentro de casa y esa resistencia bonita de quien florece mucho cuando es cuidado con constancia.",
+          "Uniendo los dos, quise decirte algo simple y verdadero: quiero que nuestro amor florezca y dure. Te amo, deseo cosas buenas para los dos y quiero cuidarte y verte feliz por mucho tiempo.",
+          "Fue en un día común, sin fecha especial en el calendario; te la di solo porque quería verte sonreír y porque mereces flores incluso cuando no hay más motivo que el amor."
+        ]
+      },
+      {
+        "id": "sf6",
+        "data": "11 de junio de 2026",
+        "imagem": "/imgs/flowers/hibisco-vermelho-na-rua.jpg",
+        "titulo": "Hibisco rojo - encontrado en la calle",
+        "paras": [
+          "Yendo a buscarte a la escuela, encontré una flor roja en un árbol por el camino. Me pareció bonita, paré el carro, la tomé y te la entregué.",
+          "En ese momento no sabía su nombre ni su significado. Fue solo un gesto simple, de esos que ocurren naturalmente cuando algo hace que uno recuerde a alguien especial.",
+          "Días después, investigando para registrar esta foto aquí, descubrí que era un hibisco rojo: una flor que simboliza amor, pasión, cariño y admiración.",
+          "De todas las flores que podían estar allí, era justamente una con un significado tan parecido a todo lo que siento por ti.",
+          "Y lo más gracioso es que no tenía la menor idea de eso cuando te la di. Fue una coincidencia de las buenas, ¿verdad? ❤️🌺"
+        ]
+      },
+      {
+        "id": "sf7",
+        "data": "12 de junio de 2026",
+        "imagens": [
+          "/imgs/flowers/buque-dia-dos-namorados-1.jpg",
+          "/imgs/flowers/buque-dia-dos-namorados-2.jpg"
+        ],
+        "titulo": "Seis rosas rojas - nuestro primer Día de los Enamorados",
+        "paras": [
+          "Elegí un ramo con seis rosas rojas en nuestro primer Día de los Enamorados juntos, y en el mismo día en que cumplimos 100 días de noviazgo. Rojo de pasión y admiración, de la manera en que quiero mirarte y elegirte todos los días.",
+          "No armé el ramo: lo compré listo, pero cuando vi ese arreglo ya hecho me encantó: margaritas blancas con centro amarillo y ramitos amarillos delicados entre las rosas, todo envuelto en papel rojo. Pureza, ligereza y alegría mezcladas con el rojo intenso del amor, como el día pedía.",
+          "Junto con él llevé una cajita de bombones Nestlé Especialidades: flores y dulce en el mismo gesto: lo romántico y lo rico de compartir, como hicimos después en Tips Lanches, con porciones, conversación sin prisa y risas solo nuestras.",
+          "Fue el primer 12 de junio de nuestra historia. Tal vez para otras personas haya sido solo un ramo; para mí fue una forma más de decir que mi lugar favorito es a tu lado, y que quiero darte muchas flores todavía."
+        ]
+      },
+      {
+        "id": "sf8",
+        "data": "18 de julio de 2026",
+        "imagens": [
+          "/imgs/flowers/rosa_artificial_1.jpg",
+          "/imgs/flowers/rosa_artificial_2.jpg",
+          "/imgs/flowers/rosa_artificial_3.jpg"
+        ],
+        "titulo": "Rosa roja artificial",
+        "paras": [
+          "Fue un sábado. Te llevé a trabajar al salón de mi tía y te gustó muchísimo el día. Cuando fui a buscarte, te di esta rosa: artificial, para que dure, tal como quiero con nosotros.",
+          "La rosa roja sigue siendo \"te amo\": pasión, cariño, admiración. Aunque fuera de tela, el gesto era real: quería entregarte algo bonito al final de un día que vivimos juntos.",
+          "Por la noche todavía vimos nuestra primera comedia romántica: Esposa de Mentirinha. Después de eso nos enganchamos: la comedia romántica se volvió plan nuestro."
+        ]
+      }
+    ]
+  },
+  "cartasLacradasLista": [
+    {
+      "id": "carta-1ano",
+      "titulo": "Nuestro 1 año juntos",
+      "icon": "💍",
+      "dataAbertura": "2027-03-04T00:00:00",
+      "dataTexto": "04 de marzo de 2027",
+      "descricao": "Escrita hoy, guardada para nuestro primer aniversario de novios. Un año entero de nuestra historia.",
+      "conteudo": [
+        "Mi amor,",
+        "Un año.",
+        "Escribir esto hace sonreír a mi corazón.",
+        "Porque mirar nuestra historia y darme cuenta de todo lo que hemos construido hasta aquí es una de las cosas más hermosas que he vivido.",
+        "Un año de nosotros.",
+        "Un año aprendiendo más el uno del otro.\nCreando recuerdos.\nViviendo momentos simples que se hicieron enormes en el corazón.\nSuperando días difíciles.\nRiendo de cosas tontas.\nSoñando juntos.\nEligiendo permanecer.",
+        "Y soy muy feliz por eso.",
+        "Soy muy feliz por tenerte.",
+        "Cuando pienso en todo lo que hemos vivido hasta aquí, siento una gratitud tan grande.",
+        "Porque nuestra historia se fue construyendo en los detalles:\nen las conversaciones,\nen los abrazos,\nen las miradas,\nen las veces en que uno estuvo ahí por el otro,\nen los momentos ligeros y hasta en los días más difíciles.",
+        "Todo eso fue formando algo tan precioso.",
+        "Te convertiste en parte de mi día a día de una manera tan hermosa.",
+        "Estás en mis pensamientos más espontáneos.\nEn las músicas.\nEn los recuerdos.\nEn las cosas que veo y pienso \"tengo que contarte esto\".",
+        "Y más que todo: te volviste un hogar para mí.",
+        "Gracias por este primer año.",
+        "Gracias por cada cariño.\nPor cada cuidado.\nPor cada momento en que tomaste mi mano.\nPor permitirme conocer tu corazón más de cerca.",
+        "Amo nuestra conexión.",
+        "Amo la forma en que consigo sentirme en paz contigo.\nAmo la forma en que me haces sonreír.\nAmo cómo hasta los momentos simples se vuelven especiales cuando son contigo.",
+        "Y quiero seguir eligiéndote.",
+        "Hoy.\nMañana.\nY en los próximos capítulos de nuestra historia.",
+        "Quiero seguir aprendiendo a amarte mejor.\nQuiero seguir construyendo recuerdos.\nQuiero seguir siendo refugio y encontrando refugio en ti.",
+        "Sé que todavía tenemos muchas cosas por vivir.",
+        "Y eso me hace feliz.",
+        "Porque si un año ya trajo tantas cosas hermosas… imaginar todo lo que aún viene me llena de esperanza.",
+        "Vales mucho para mí.",
+        "Nuestra historia vale mucho para mí.",
+        "Y espero que, leyendo esto hoy, sientas la misma certeza que siento ahora: te elegiría de nuevo. Con aún más certeza.",
+        "Feliz nuestro primer año, mi amor. 🤍",
+        "Gracias por caminar conmigo hasta aquí.",
+        "Te amo profundamente.",
+        "Y soy muy feliz de vivir este \"nosotros\" contigo."
+      ]
+    },
+    {
+      "id": "carta-aniversario",
+      "titulo": "Tu próximo cumpleaños",
+      "icon": "🎂",
+      "dataAbertura": "2027-05-07T00:00:00",
+      "dataTexto": "07 de mayo de 2027",
+      "descricao": "Una carta guardada para tu cumpleaños de 2027, para que sepas lo mucho que eres amada.",
+      "conteudo": [
+        "Mi amor,",
+        "Feliz cumpleaños. 🤍",
+        "Imaginé muchas veces que abrías esta carta y pensé en cuántas cosas pueden haber cambiado hasta ese día… pero una cosa quise dejarte guardada desde ahora: lo mucho que te amo y lo agradecido que estoy por tu vida.",
+        "Hoy es tu día.",
+        "Y quisiera que estas palabras llegaran como un abrazo mío bien apretado, de esos largos, que hacen sentir paz solo por estar ahí.",
+        "Mereces un cumpleaños lleno de cariño, lleno de ligereza y lleno de la presencia de Dios cuidando cada detalle de tu corazón.",
+        "Agradezco mucho que existas.",
+        "Agradezco tu manera.\nTu corazón.\nTu delicadeza.\nTu fuerza.\nLa forma en que logras hacer mi vida más hermosa solo por estar en ella.",
+        "Hay tantas cosas en ti que admiro.",
+        "Admiro la persona que eres.\nLa manera en que cuidas.\nLa forma en que sientes.\nTu manera única de ver las cosas.\nTu presencia que calma.\nTu sonrisa que cambia por completo mi día.",
+        "Y espero que hoy logres ver un poquito de lo preciosa que eres.",
+        "Porque lo eres.",
+        "Mereces ser recordada, celebrada, cuidada y amada.",
+        "Y quisiera mucho estar recordándotelo bien cerquita, mirándote a los ojos y deseándote lo más hermoso.",
+        "Que Dios cuide de tu nuevo año.\nQue te dé paz en los días difíciles.\nQue fortalezca tu corazón.\nQue te llene de alegría en las pequeñas cosas.\nQue realice sueños hermosos en el tiempo correcto.\nY que siga escribiendo una historia linda en tu vida.",
+        "Oro para que seas feliz de verdad.\nQue nunca te falte amor.\nQue nunca te falte esperanza.\nQue nunca te falte descanso en el corazón.",
+        "Y egoístamente… agradezco porque tengo el honor de vivir a tu lado.",
+        "Eres una de las personas más especiales que conozco.",
+        "Y espero que en este cumpleaños sientas esto: que eres muy amada.",
+        "Por Dios.",
+        "Y por mí.",
+        "Mucho más de lo que quizá puedas imaginar.",
+        "Feliz cumpleaños, mi niña. 🤍",
+        "Gracias por existir.\nGracias por ser tú.\nGracias por permitir que yo sea parte de tu vida.",
+        "Te amo.",
+        "Y seguiré celebrando tu existencia con el corazón lleno de gratitud en cada año que pueda vivir a tu lado.",
+        "Con todo mi amor."
+      ]
+    },
+    {
+      "id": "carta-casamento",
+      "titulo": "Nuestra boda",
+      "icon": "💒",
+      "dataAbertura": null,
+      "dataTexto": "Fecha siendo planejada con amor",
+      "descricao": "Esta carta solo se abre el día de nuestra boda. Ya existe, ya fue escrita con amor... y te está esperando.",
+      "conteudo": [
+        "Mi amor,",
+        "El día llegó.",
+        "Quizá mientras lees esto todo esté apurado.\nQuizá haya emoción por todos lados.\nQuizá yo esté a pocos pasos de encontrar tu mirada y vivir uno de los momentos más importantes de nuestra historia.",
+        "Y solo de imaginar eso, mi corazón se llena.",
+        "Porque después de todo lo que vivimos… estamos aquí.",
+        "Llegamos.",
+        "Llegamos a este día que quizá pareció lejano tantas veces.\nEn los sueños.\nEn las conversaciones.\nEn los planes silenciosos.\nEn las oraciones.",
+        "Y ahora se volvió realidad.",
+        "Hoy te miro y mi corazón sigue reconociendo la misma certeza que sintió hace tiempo: eres tú.",
+        "Entre tantas posibilidades de la vida… fuiste tú.",
+        "La persona que me trajo paz.\nLa persona con quien aprendí sobre el amor de una manera más profunda.\nLa persona con quien quiero compartir lo común y lo extraordinario.",
+        "Quiero vivir la vida contigo.",
+        "Quiero los días grandes.\nLos días simples.\nLas conquistas.\nLos desafíos.\nLas mañanas apuradas.\nLas noches tranquilas.\nLos planes.\nLos imprevistos.",
+        "Quiero construir un hogar contigo.",
+        "Un lugar lleno de respeto.\nDe cariño.\nDe compañerismo.\nDe perdón.\nDe conversación.\nDe fe.\nDe abrazos después de los días difíciles.\nDe risas sinceras.",
+        "Quiero seguir eligiéndote.",
+        "Incluso cuando sea fácil.",
+        "Sobre todo cuando no lo sea.",
+        "Quiero seguir recordándote que eres amada.\nQuiero seguir cuidando tu corazón.\nQuiero seguir admirando quien eres.",
+        "Y prometo hacer todo lo posible para que nunca dudes de que tienes a alguien a tu lado dispuesto a quedarse.",
+        "Hoy no es solo un día hermoso.",
+        "Hoy es un compromiso.",
+        "Hoy te elijo públicamente con la misma verdad con la que ya te elegía en silencio.",
+        "Elijo caminar contigo.",
+        "Elijo construir.",
+        "Elijo quedarme.",
+        "Elijo amarte con paciencia, con cariño y con verdad en cada etapa.",
+        "Y sobre todo, le agradezco a Dios.",
+        "Porque Él escribió nuestra historia hasta aquí.\nPorque Él cuidó del camino.\nPorque Él nos sostuvo.\nY porque ahora me permite mirarte y vivir este momento tan especial.",
+        "Si en algún momento del futuro la vida se vuelve apurada y la rutina pesa… vuelve a esta carta.",
+        "Y recuerda lo que mi corazón quiso guardar exactamente para hoy:",
+        "Te amo.",
+        "Con certeza.\nCon alegría.\nCon paz.\nCon gratitud.",
+        "Y con la felicidad de finalmente poder llamarte mi esposa.",
+        "Hoy comienza un capítulo más.",
+        "Y soy muy feliz de vivir cada uno de ellos a tu lado.",
+        "Te amo.",
+        "Para siempre. 🤍"
+      ]
+    },
+    {
+      "id": "carta-primeiro-filho",
+      "titulo": "Cuando llegue nuestro primer hijo",
+      "icon": "👶",
+      "dataAbertura": null,
+      "dataTexto": "Para abrir cuando llegue nuestro primer hijo",
+      "descricao": "Escrita hoy, guardada para el día más transformador de nuestras vidas - cuando nos volvamos papá y mamá.",
+      "conteudo": [
+        "Mi amor,",
+        "Si estás leyendo esto, significa que una de las mayores aventuras de nuestras vidas comenzó.",
+        "Quizá en este momento estemos cansados, durmiendo poco, aprendiendo todo en la práctica y descubriendo que ningún consejo del mundo realmente prepara a alguien para ser papá y mamá. Quizá la casa esté desordenada, quizá la rutina sea diferente, pero de una cosa estoy seguro: nuestro amor ganó una nueva forma.",
+        "Te imagino sosteniendo a nuestro hijo o a nuestra hija en los brazos y sonriendo de esa manera que me hace enamorarme todos los días.",
+        "Quiero que recuerdes algo importante: antes de ser papá y mamá, fuimos nosotros. Dos personas que eligieron caminar juntas, construir sueños juntas y enfrentar la vida lado a lado. No dejes que el ajetreo apague eso.",
+        "En los días difíciles, cuando el cansancio parezca más grande que todo, recuerda que estamos del mismo lado. No somos adversarios tratando de sobrevivir a la rutina. Somos un equipo construyendo una familia.",
+        "Y cuando mires a nuestro hijo, espero que veas en él un pedacito de cada momento que vivimos hasta aquí. Cada conversación, cada oración, cada plan y cada muestra de amor nos trajo hasta este instante.",
+        "Gracias por ser la persona con quien elegí construir una familia.",
+        "Que nuestro hijo crezca viendo el amor de Dios en nosotros y aprendiendo a través de nuestro ejemplo que amar es permanecer, cuidar y elegir a la misma persona todos los días.",
+        "Te amo.",
+        "Con amor,\nTu eterno compañero de vida."
+      ]
+    },
+    {
+      "id": "carta-10anos-casados",
+      "titulo": "10 años de casados",
+      "icon": "💎",
+      "dataAbertura": null,
+      "dataTexto": "Para abrir en el décimo aniversario de matrimonio",
+      "descricao": "Una carta guardada para celebrar una década entera cumpliendo la promesa que nos hicimos el uno al otro.",
+      "conteudo": [
+        "Mi amor,",
+        "Diez años.",
+        "Si estás leyendo esto, significa que pasamos una década entera cumpliendo la promesa que nos hicimos el uno al otro.",
+        "Diez años de risas, desafíos, victorias, cambios, planes que salieron bien y otros que tuvieron que rehacerse. Diez años eligiendo permanecer.",
+        "No sé exactamente cómo estará nuestra vida ahora. Quizá tengamos hijos corriendo por la casa. Quizá estemos realizando sueños que hoy parecen lejanos. Quizá todavía existan objetivos esperando el momento adecuado para hacerse realidad.",
+        "Pero hay una cosa que espero que siga exactamente igual: el brillo en tus ojos cuando me miras.",
+        "Porque fue ese brillo el que me hizo creer que valía la pena construir una vida entera a tu lado.",
+        "Si en algún momento la rutina intentó robarnos la atención, espero que hayamos aprendido a volver el uno hacia el otro. Que todavía existan conversaciones de madrugada, chistes internos, abrazos largos y esa sensación de estar en casa cuando estamos juntos.",
+        "Quiero que sepas que, mientras escribo esta carta, todavía solo estamos soñando con ese futuro. Y aunque no sepa cómo serán los próximos diez años, haría la misma elección otra vez.",
+        "Sigues siendo mi oración respondida, mi puerto seguro y mi mejor amiga.",
+        "Que Dios siga siendo el centro de nuestra historia y que los próximos diez años sean aún más hermosos que los primeros.",
+        "Y si pudiera pedir un deseo para nosotros dos, sería este:",
+        "Que nunca dejemos de enamorarnos.\nQue nunca dejemos de agradecer el uno por el otro.\nQue nunca dejemos de recordar lo bendecidos que fuimos al encontrarnos.",
+        "Feliz 10 años de matrimonio, mi amor.",
+        "Te elegiría mil veces.",
+        "Con todo mi amor,\nTu esposo. ❤️"
+      ]
+    }
+  ],
+  "bucketLista": [
+    {
+      "id": "bl01",
+      "texto": "Ver el amanecer juntos"
+    },
+    {
+      "id": "bl02",
+      "texto": "Viajar juntos",
+      "feito": true
+    },
+    {
+      "id": "bl03",
+      "texto": "Ver películas en el sofá juntos",
+      "feito": true
+    },
+    {
+      "id": "bl04",
+      "texto": "Cocinar juntos",
+      "feito": true
+    },
+    {
+      "id": "bl05",
+      "texto": "Hacer un pícnic esmerado, con canastita y todo"
+    },
+    {
+      "id": "bl06",
+      "texto": "Visitar un lugar que ninguno de los dos conoce"
+    },
+    {
+      "id": "bl07",
+      "texto": "Sacarse fotos juntos en cada lugar que visitemos",
+      "feito": true
+    },
+    {
+      "id": "bl08",
+      "texto": "Plantar algo juntos y cuidarlo hasta que crezca"
+    },
+    {
+      "id": "bl09",
+      "texto": "Escribir una carta el uno al otro y guardarla por 10 años"
+    },
+    {
+      "id": "bl10",
+      "texto": "Ver un atardecer juntos"
+    },
+    {
+      "id": "bl11",
+      "texto": "Pasar un día entero explorando un lugar nuevo"
+    },
+    {
+      "id": "bl12",
+      "texto": "Ir a un concierto o evento especial juntos"
+    },
+    {
+      "id": "bl13",
+      "texto": "Tener una noche de juegos, solo nosotros dos"
+    },
+    {
+      "id": "bl14",
+      "texto": "Hacer un álbum de fotos impreso de nuestros momentos",
+      "progresso": true
+    },
+    {
+      "id": "bl15",
+      "texto": "Pasar un fin de semana sin salir de casa, solo disfrutando"
+    }
+  ],
+  "conquistasLista": [
+    {
+      "id": "c01",
+      "titulo": "Primera Conversación",
+      "subtitulo": "El mensaje que lo salvó todo - gracias, tu mamá",
+      "descricao": "Dos intentos ignorados antes. En el tercero, tu mamá te dijo que respondieras por educación al menos. Aquella respuesta simple cambió el rumbo de todo.",
+      "icon": "💬",
+      "raridade": "comum",
+      "data": "09 de feb de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c02",
+      "titulo": "Donde Todo Comenzó",
+      "subtitulo": "Acercamiento real en el Campamento Apascentar",
+      "descricao": "Fue en el campamento de febrero de 2026 que la conversación fluyó de verdad. Sin la presión de la rutina, apareció la forma de ser de cada uno - y la cercanía creció.",
+      "icon": "⛺",
+      "raridade": "especial",
+      "data": "13 de feb de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c03",
+      "titulo": "Amor a Primera Vista",
+      "subtitulo": "Te enamoraste sin siquiera darte cuenta",
+      "descricao": "En un día difícil en el que estabas muy mal, hablé de Dios, de no desanimarse. Lloraste - y fue solo después, ya de novios, que me contaste: fue ahí que te enamoraste.",
+      "icon": "💕",
+      "raridade": "especial",
+      "data": "20 de feb de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c04",
+      "titulo": "Inicio del Noviazgo",
+      "subtitulo": "Filete mignon, ramo sorpresa y anillos en João Julhão",
+      "descricao": "Planeé cada detalle: mesa separada, mesero en el plan, el ramo llegando en el momento justo. Tus ojos brillando, tu mejilla temblando de alegría - en ese instante me convertí en el hombre más feliz del mundo.",
+      "icon": "💍",
+      "raridade": "epico",
+      "data": "04 de mar de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c05",
+      "titulo": "Primer Beso",
+      "subtitulo": "En la noche más especial - después de la conversación con los padres",
+      "descricao": "En la misma noche en que tus padres autorizaron el noviazgo. Pastel de pollo increíble, el sonido de \"Aquilo que Parecia Impossível\" en el cumpleaños del Wagner - y nuestro primer beso.",
+      "icon": "🌹",
+      "raridade": "epico",
+      "data": "07 de mar de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c06",
+      "titulo": "Conociste a tus Suegros",
+      "subtitulo": "Shopping, papa rellena y mucho cariño",
+      "descricao": "Shopping, papa rellena, librería, tienda coreana, helado - mis padres te quisieron de inmediato, te encontraron linda y carismática y se pusieron muy felices por nuestra relación.",
+      "icon": "👨‍👩‍👧",
+      "raridade": "especial",
+      "data": "08 de mar de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c07",
+      "titulo": "Primera Cafetería",
+      "subtitulo": "Cappuccino, panqueque de Nutella y aire acondicionado frío",
+      "descricao": "Cappuccino, pan a la plancha, panqueque de Nutella con fresa - y el aire acondicionado frío que se volvió excusa para quedarnos bien juntitos. Después: banquito en la plaza, abrazados y riendo.",
+      "icon": "☕",
+      "raridade": "comum",
+      "data": "14 de mar de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c08",
+      "titulo": "Primer Pos-Culto",
+      "subtitulo": "Tips Lanches con la chaveirinha",
+      "descricao": "El primero de muchos. Yo, tú y nuestra chaveirinho en el Tips de la iglesia - bocadillos, conversación, risas. Un comienzo de tradición muy especial.",
+      "icon": "🙏",
+      "raridade": "comum",
+      "data": "15 de mar de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c09",
+      "titulo": "Primer Viaje",
+      "subtitulo": "Balneário Babaquá - de última hora y perfecto",
+      "descricao": "Me llamaste a las 11h, y a las 12h yo ya estaba ahí. Tarde en la represa, vóleibol, tus giros de princesa en el agua - el tipo de día simple que queda para siempre.",
+      "icon": "🌊",
+      "raridade": "especial",
+      "data": "29 de mar de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c10",
+      "titulo": "Primer Cine",
+      "subtitulo": "Super Mario Galaxy con palomitas y refresco",
+      "descricao": "Shopping, Carrefour, cono mixto, cine con palomitas y refresco viendo Super Mario Galaxy. Después: churros en la plaza del centro. Un día simple y absolutamente especial.",
+      "icon": "🎬",
+      "raridade": "especial",
+      "data": "03 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c11",
+      "titulo": "1er Mesversario",
+      "subtitulo": "Pícnic, Biblia forrada y un día muy real",
+      "descricao": "Pícnic en la plaza, pan de brioche, té improvisado, la Biblia forrada de regalo - y un día que no fue perfecto, pero fue real. Mostrando que cuidarse el uno al otro en las dificultades también es parte.",
+      "icon": "🤍",
+      "raridade": "epico",
+      "data": "04 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c12",
+      "titulo": "Propósito Espiritual",
+      "subtitulo": "Alianza de 40 días con Dios en el centro",
+      "descricao": "40 días de devocional conjunto, ayuno, oración a las 3h y gratitud diaria. Una alianza no solo emocional - espiritual. El comienzo de un estilo de vida juntos.",
+      "icon": "📖",
+      "raridade": "especial",
+      "data": "06 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c13",
+      "titulo": "Familia Reunida",
+      "subtitulo": "Primer pos-culto con tus padres",
+      "descricao": "Pizza de catufrango, la hermana menor en la cama elástica y un clima ligero que calentó el corazón. Y además se quedaron más allá del horario acordado - pequeños detalles que quedan.",
+      "icon": "🍕",
+      "raridade": "especial",
+      "data": "12 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c14",
+      "titulo": "Primera Peliculita en Casa",
+      "subtitulo": "\"Como Eu Era Antes de Você\" + brigadeiro increíble",
+      "descricao": "Palomitas de microondas, refresco, fini y un brigadeiro tan increíblemente bueno que desaparecí con la mitad en segundos. Película hermosa, nuestras hermanas haciendo pijamada, besitos - tal como somos.",
+      "icon": "🎥",
+      "raridade": "comum",
+      "data": "20 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c15",
+      "titulo": "2do Mesversario",
+      "subtitulo": "Anillo solitario + potecito de beijinhos",
+      "descricao": "Intercambio de regalos en la plaza: flores, cartita manuscrita, dulces y el anillo solitario en el fondo de la cajita. Me diste un potecito lleno de beijinhos marcados. Dos meses que parecen mucho más.",
+      "icon": "💍",
+      "raridade": "lendario",
+      "data": "01 de may de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c16",
+      "titulo": "Tu Primer Cumpleaños Conmigo",
+      "subtitulo": "Collar \"Para minha futura esposa\" + 1ª videollamada",
+      "descricao": "Felicitaciones a las 00:00 en punto. Collar con promesa, aretes, carrera en auto para no perder el bus, y la primera videollamada de todas - dormimos en llamada por primera vez.",
+      "icon": "🎂",
+      "raridade": "epico",
+      "data": "07 de may de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c17",
+      "titulo": "Primera Vez Andando en Moto Juntos",
+      "subtitulo": "Carreta Furacão - improvisado e inolvidable",
+      "descricao": "Casi no íbamos. En el último día, en el último horario - anduvimos en moto juntos por primera vez. Tu primera vez en el trencito. Riendo de todo, completamente felices.",
+      "icon": "🎡",
+      "raridade": "comum",
+      "data": "10 de may de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c18",
+      "titulo": "Conociste a Mi Familia",
+      "subtitulo": "Cumpleaños de la abuela - un día tenso y muy especial",
+      "descricao": "Mis tías, la familia de mi papá, canjica y pastel - y luego la noche se puso tensa cuando mi hermana se sintió mal. Te quedaste. Me ayudaste a respirar, a orar, a mantener la cabeza en su lugar. Fuiste refugio.",
+      "icon": "👨‍👩‍👧",
+      "raridade": "especial",
+      "data": "30 de may de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c19",
+      "titulo": "Primera Clase de Manejo",
+      "subtitulo": "Enfrentaste el miedo y lo lograste",
+      "descricao": "Con miedo, pero valiente. Fórum, lugar vacío, yo guiándote con cuidado. Pusiste el auto en movimiento, fuiste girando despacio - y lo lograste. Un orgullo que no cabe en el pecho.",
+      "icon": "🚗",
+      "raridade": "especial",
+      "data": "31 de may de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "c20",
+      "titulo": "3er Mesversario",
+      "subtitulo": "Perfume, cartita con dibujo y porción el viernes",
+      "descricao": "Corpus Christi en la plaza de la entrada: intercambio de regalos en el auto antes del culto - perfume y mi primera cartita con dibujo a mano, y una cartita linda tuya. El viernes, porción completa juntos a nuestro estilo.",
+      "icon": "🤍",
+      "raridade": "epico",
+      "data": "04 de jun de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "b01",
+      "titulo": "Compromiso",
+      "subtitulo": "El próximo gran paso",
+      "icon": "💑",
+      "raridade": "lendario",
+      "desbloqueada": false
+    },
+    {
+      "id": "b02",
+      "titulo": "Matrimonio",
+      "subtitulo": "El día más esperado",
+      "icon": "💒",
+      "raridade": "lendario",
+      "desbloqueada": false
+    },
+    {
+      "id": "b03",
+      "titulo": "Luna de Miel",
+      "subtitulo": "El primer viaje como esposo y esposa",
+      "icon": "🌙",
+      "raridade": "epico",
+      "desbloqueada": false
+    },
+    {
+      "id": "b04",
+      "titulo": "Primera Casa",
+      "subtitulo": "Con ipê blanco al frente 🌸",
+      "icon": "🏠",
+      "raridade": "epico",
+      "desbloqueada": false
+    },
+    {
+      "id": "b05",
+      "titulo": "Ipê Blanco Plantado",
+      "subtitulo": "La promesa se volvió realidad",
+      "icon": "🌳",
+      "raridade": "especial",
+      "desbloqueada": false
+    },
+    {
+      "id": "b06",
+      "titulo": "Primer Hijo",
+      "subtitulo": "La mayor aventura de nuestras vidas",
+      "icon": "👶",
+      "raridade": "lendario",
+      "desbloqueada": false
+    },
+    {
+      "id": "b07",
+      "titulo": "Primer Viaje Internacional",
+      "subtitulo": "Ver el mundo juntos",
+      "icon": "🌍",
+      "raridade": "epico",
+      "desbloqueada": false
+    },
+    {
+      "id": "b08",
+      "titulo": "10 Años Juntos",
+      "subtitulo": "Una década de historia",
+      "icon": "💎",
+      "raridade": "lendario",
+      "desbloqueada": false
+    },
+    {
+      "id": "b09",
+      "titulo": "Primer Día de los Enamorados Juntos",
+      "subtitulo": "12 de junio - el primero de muchos",
+      "descricao": "Seis rosas rojas, una caja de bombones y una cena solo nuestra en Tips Lanches - porciones de papa con cheddar y tocino, tilapia, conversaciones sin apuro y risas que solo nosotros entendemos. Quizás para otras personas haya sido solo una cena; para mí, fue uno de esos días que uno nunca olvida.",
+      "icon": "💘",
+      "raridade": "especial",
+      "data": "12 de jun de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-oracao",
+      "titulo": "Primera Oración Juntos",
+      "subtitulo": "Dos voces, una fe y el mismo Dios escuchando",
+      "descricao": "Bajar la cabeza, cerrar los ojos y hablar con Dios al lado de quien amas - ese momento simple es uno de los más íntimos que existen. Y nosotros ya lo vivimos.",
+      "icon": "🏆",
+      "raridade": "comum",
+      "data": "22 de mar de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-videocall",
+      "titulo": "Primera Videollamada",
+      "subtitulo": "Horas mirando la pantalla sin ganas de colgar",
+      "descricao": "En tu cumpleaños, la primera videollamada de todas - fuiste mostrándome la habitación, comiendo algo y acomodándote para dormir. Dormimos en llamada. Yo me apagué primero kkk.",
+      "icon": "📱",
+      "raridade": "comum",
+      "data": "07 de may de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-cartinha",
+      "titulo": "Primera Cartita",
+      "subtitulo": "Palabras que quedaron guardadas para siempre",
+      "descricao": "Me diste un librito hecho a mano en el primer pos-culto, y yo te di la primera cartita manuscrita en el 2do mesversario. Dos corazones que prefieren escribir antes que guardar solo para sí.",
+      "icon": "💌",
+      "raridade": "comum",
+      "data": "15 de mar de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-nascer-sol",
+      "titulo": "Primer Amanecer Juntos",
+      "subtitulo": "Levantarse temprano valió la pena",
+      "icon": "🌅",
+      "raridade": "especial",
+      "desbloqueada": false
+    },
+    {
+      "id": "x-por-sol",
+      "titulo": "Primer Atardecer Juntos",
+      "subtitulo": "El cielo bonito quedó en segundo plano",
+      "icon": "🌇",
+      "raridade": "especial",
+      "desbloqueada": false
+    },
+    {
+      "id": "x-natal",
+      "titulo": "Primera Navidad Juntos",
+      "subtitulo": "Regalos, familia y un motivo más para agradecer",
+      "icon": "🎄",
+      "raridade": "epico",
+      "desbloqueada": false
+    },
+    {
+      "id": "x-ano-novo",
+      "titulo": "Primer Año Nuevo Juntos",
+      "subtitulo": "La primera Nochevieja de muchas",
+      "icon": "🎆",
+      "raridade": "epico",
+      "desbloqueada": false
+    },
+    {
+      "id": "x-100-fotos",
+      "titulo": "100 Fotos Juntos",
+      "subtitulo": "Una galería entera de recuerdos",
+      "icon": "📸",
+      "raridade": "comum",
+      "desbloqueada": false
+    },
+    {
+      "id": "x-caminhada",
+      "titulo": "Primera Caminata Sin Destino",
+      "subtitulo": "Cuando el lugar no importaba, solo la compañía",
+      "descricao": "Sin destino, sin apuro - solo caminando juntos porque estar uno al lado del otro ya era el plan.",
+      "icon": "🚶",
+      "raridade": "comum",
+      "data": "17 de jul de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-refeicao",
+      "titulo": "Primera Comida Hecha Juntos",
+      "subtitulo": "Desorden en la cocina y felicidad en la mesa",
+      "descricao": "Armamos un plato de fríos gigante juntos - simple, improvisado y completamente nuestro. La primera vez cocinando (o armando) como pareja.",
+      "icon": "🍳",
+      "raridade": "especial",
+      "data": "05 de jun de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-biblia",
+      "titulo": "Primera Lectura Bíblica Juntos",
+      "subtitulo": "Aprendiendo más de Dios lado a lado",
+      "descricao": "En el pícnic del 1er mesversario, con la Biblia forrada que me diste de regalo - nuestra primera lectura bíblica juntos, en la plaza, con calma y con Dios en el medio.",
+      "icon": "📖",
+      "raridade": "especial",
+      "data": "04 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-piquenique",
+      "titulo": "Primer Pícnic Juntos",
+      "subtitulo": "Plaza de la entrada, en el 1er mesversario",
+      "descricao": "Pan de brioche, té improvisado (y coca de 1 litro cuando el té salió mal kkk), imprevistos y risas - nuestro primer pícnic en la plaza de la entrada, el día en que cumplimos un mes juntos.",
+      "icon": "🧺",
+      "raridade": "especial",
+      "data": "04 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-consolo",
+      "titulo": "Primera Vez que Nos Consolamos Mutuamente en Persona",
+      "subtitulo": "Cuidar de cerca, no solo por mensaje",
+      "descricao": "El mismo día del pícnic, en un momento más delicado - la primera vez que nos consolamos en persona. Mostró que, incluso en las dificultades, nos cuidamos el uno al otro, nos apoyamos y permanecemos juntos.",
+      "icon": "🤍",
+      "raridade": "especial",
+      "data": "04 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-ligacao-longa",
+      "titulo": "Primera Llamada Larga",
+      "subtitulo": "Cuando la voz se volvió refugio",
+      "descricao": "En la madrugada del jueves al viernes, 2h y media juntos hasta las 03:09 - intenso, algo difícil al comienzo, pero necesario. Aun con miedo e inseguridades, no corrimos. Nos quedamos.",
+      "icon": "📞",
+      "raridade": "especial",
+      "data": "10 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-combinando",
+      "titulo": "Primera Vez que Salimos Combinando",
+      "subtitulo": "Look de pareja en el primer culto de domingo",
+      "descricao": "En la misma semana del pedido de noviazgo, en el primer culto de domingo - la primera vez que salimos combinando. Un detalle pequeño, pero que marcó el comienzo de una tradición nuestra.",
+      "icon": "👫",
+      "raridade": "comum",
+      "data": "08 de mar de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-10-buques",
+      "titulo": "10º Ramo Entregado",
+      "subtitulo": "Porque una flor nunca es solo una flor",
+      "icon": "🌹",
+      "raridade": "epico",
+      "desbloqueada": false
+    },
+    {
+      "id": "x-100-oracoes",
+      "titulo": "100 Oraciones Uno por el Otro",
+      "subtitulo": "Amor presentado delante de Dios todos los días",
+      "icon": "🙏",
+      "raridade": "epico",
+      "desbloqueada": false
+    },
+    {
+      "id": "x-10k-msgs",
+      "titulo": "10.000 Mensajes Intercambiados",
+      "subtitulo": "Una historia escrita línea por línea",
+      "icon": "💬",
+      "raridade": "especial",
+      "desbloqueada": false
+    },
+    {
+      "id": "x-100-dias",
+      "titulo": "100 Días Juntos",
+      "subtitulo": "El primer gran hito de nuestra caminata",
+      "descricao": "Cien días de nosotros - y cayó el mismo día de nuestro primer Día de los Enamorados. Cada sonrisa, cada abrazo, cada conversación transformando momentos simples en recuerdos especiales. No importa dónde estemos, mi lugar favorito siempre será a tu lado.",
+      "icon": "🤍",
+      "raridade": "especial",
+      "data": "12 de jun de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-borboletas",
+      "titulo": "Alianzas Eternizadas",
+      "subtitulo": "Incluso después de tanto tiempo, todavía acelera el corazón",
+      "icon": "💍",
+      "raridade": "lendario",
+      "desbloqueada": false
+    },
+    {
+      "id": "x-cristo-centro",
+      "titulo": "Cristo en el Centro",
+      "subtitulo": "Una relación construida sobre la Roca",
+      "descricao": "Alianza de 40 días, devocional conjunto, oración y gratitud diaria - elegimos construir todo con Dios en el medio, no solo al comienzo.",
+      "icon": "✝️",
+      "raridade": "lendario",
+      "data": "06 de abr de 2026",
+      "desbloqueada": true
+    },
+    {
+      "id": "x-escolha-diaria",
+      "titulo": "Elección Diaria",
+      "subtitulo": "Seguimos eligiéndonos todos los días",
+      "descricao": "No es solo sentimiento - es decisión. Todos los días, de nuevo, nos elegimos con intención.",
+      "icon": "👑",
+      "raridade": "lendario",
+      "data": "Desde 04 de mar de 2026",
+      "dataOrdem": "2026-03-04",
+      "desbloqueada": true
+    }
+  ],
+  "lugares": [
+    {
+      "id": "joao-julhao",
+      "nome": "João Julhão",
+      "icon": "💍",
+      "categoria": "El comienzo de todo",
+      "coords": [
+        -22.273592,
+        -51.494738
+      ],
+      "foto": "/imgs/photos/pedido_namoro/1.jpg",
+      "data": "04 de marzo de 2026",
+      "descricao": "Fue aquí donde ocurrió nuestro pedido de noviazgo. Filé mignon, un ramo sorpresa traído por el mesero y tu mirada brillando como si quisieras llorar de alegría. El instante en que me convertí en el hombre más feliz del mundo."
+    },
+    {
+      "id": "praca-entrada",
+      "nome": "Praça da Entrada",
+      "icon": "🌿",
+      "categoria": "Nuestro rinconcito",
+      "coords": [
+        -22.271323,
+        -51.488805
+      ],
+      "foto": "/imgs/photos/primeiro_mesversario_piquinique/51.jpg",
+      "data": "Varios momentos especiales",
+      "descricao": "Nuestro lugar favorito para todo: pícnic del 1er mes, intercambio de regalos y anillo del 2º mes, conversaciones en la banca después del culto, y tantos otros momentos simples que se volvieron nuestros favoritos."
+    },
+    {
+      "id": "apascentar",
+      "nome": "Comunidade Apascentar",
+      "icon": "✝️",
+      "categoria": "Donde todo comenzó",
+      "coords": [
+        -22.276429,
+        -51.498121
+      ],
+      "foto": "/imgs/photos/conferencia_buscarmeeis/IMG_3435.jpg",
+      "data": "Febrero de 2026 en adelante",
+      "descricao": "Fue en el campamento aquí donde nos acercamos de verdad. Primera Santa Cena juntos, cultos de domingo, conferencia Buscarme-eis... el lugar donde Dios plantó esta historia. Y el día 13 de junio de 2026, nuestro primer culto de parejas."
+    },
+    {
+      "id": "chacara-acampamento-apascentar",
+      "nome": "Chácara do Acampamento Apascentar",
+      "icon": "⛺",
+      "categoria": "Donde todo comenzó",
+      "coords": [
+        -22.275694,
+        -51.555806
+      ],
+      "foto": null,
+      "data": "13–15 de feb de 2026",
+      "descricao": "La chácara donde ocurrió el campamento de febrero - fue allí donde nos acercamos de verdad, conversando más y conociendo la manera del otro. El comienzo de todo."
+    },
+    {
+      "id": "prudenshopping",
+      "nome": "PrudenShopping",
+      "icon": "🎬",
+      "categoria": "Paseos por la ciudad",
+      "coords": [
+        -22.116498,
+        -51.406759
+      ],
+      "foto": "/imgs/photos/shopping_com_meus_pais/15.jpg",
+      "data": "08/03 y 03/04 de 2026",
+      "descricao": "Dos momentos marcantes: cuando conociste a mis padres (papa rellena, librería, helado), y nuestro primer cine juntos viendo Super Mario Galaxy con palomitas y refresco."
+    },
+    {
+      "id": "tips-lanches",
+      "nome": "Tips Lanches",
+      "icon": "🍔",
+      "categoria": "Después de los cultos",
+      "coords": [
+        -22.275257,
+        -51.498021
+      ],
+      "foto": "/imgs/photos/primeiro_dia_namorados/IMG_3981.jpg",
+      "data": "Varios momentos especiales",
+      "descricao": "Nuestro primer después de culto juntos el 15 de marzo - yo, tú y nuestra chaveirinho. Fue aquí donde comenzó lo que se volvió una tradición muy especial nuestra. Y el 12 de junio, nuestro primer Día de los Enamorados y 100 días de noviazgo: seis rosas rojas, caja de bombones y cena solo nuestra - papa con cheddar y tocino, tilapia, conversaciones sin prisa y risas que solo nosotros entendemos."
+    },
+    {
+      "id": "tips-pizzaria",
+      "nome": "Tips Pizzaria",
+      "icon": "🍕",
+      "categoria": "Familia reunida",
+      "coords": [
+        -22.275925,
+        -51.500398
+      ],
+      "foto": "/imgs/photos/tips_maio_2026/IMG_3654.jpg",
+      "data": "Abril y mayo de 2026",
+      "descricao": "Nuestro primer después de culto con tus padres - pizza de catufrango, tu hermana menor en el brincolín y un ambiente ligero que calentó el corazón. Y otros momentos de risas y compañerismo después."
+    },
+    {
+      "id": "ipi",
+      "nome": "Igreja IPI",
+      "icon": "🕊️",
+      "categoria": "Visita especial",
+      "coords": [
+        -22.276032,
+        -51.497901
+      ],
+      "foto": "/imgs/photos/visita_culto_ipi/45.jpg",
+      "data": "28 de marzo de 2026",
+      "descricao": "Visitamos el culto de jóvenes de la IPI con la Naomi. La palabra en Isaías 59 tocó mucho el corazón de nosotros. Un día que comenzó ligero, se volvió profundo y terminó con pastel de palmito (que era un poco empalagoso jaja)."
+    },
+    {
+      "id": "sandovalina",
+      "nome": "Balneário Babaquá",
+      "icon": "🌊",
+      "categoria": "Nuestro primer viaje",
+      "coords": [
+        -22.458277,
+        -51.758335
+      ],
+      "foto": null,
+      "data": "29 de marzo de 2026",
+      "descricao": "Nuestro primer viaje juntos, todo de última hora - me llamaste a las 11h y a las 12h yo ya estaba allí. Tarde en la represa, vóley, risas y tus giros de princesa en el agua. El tipo de día simple que quedó para siempre."
+    },
+    {
+      "id": "pastelaria-avenida",
+      "nome": "Pastelaria Avenida",
+      "icon": "🥟",
+      "categoria": "Momentos simples",
+      "coords": [
+        -22.279601,
+        -51.506736
+      ],
+      "foto": "/imgs/photos/segundo_mesversario/IMG_2835.jpg",
+      "data": "28/03 y 01/05 de 2026",
+      "descricao": "Dos momentos marcantes aquí: después del culto de la IPI, con pastel de pollo con queso (y tú quemándote la boca y tratando de disimular jaja). Y en nuestro 2º mes, tapioca en la avenida justo después del intercambio de regalos y del anillo. Y un viernes de Copa, paramos en el Avenida antes del juego para comprar lo que faltaba de la receta de pancito sellado que vimos en internet."
+    },
+    {
+      "id": "pizzadoro",
+      "nome": "Pizzadoro",
+      "icon": "🍕",
+      "categoria": "Primer viaje en grupo",
+      "coords": [
+        -22.278489,
+        -51.489111
+      ],
+      "foto": null,
+      "data": "29 de marzo de 2026",
+      "descricao": "El cierre perfecto del día de nuestro primer viaje juntos: después de culto con todo el grupo, porción de pollo, pescado, arroz y vinagreta. Simple, rico, todos juntos."
+    },
+    {
+      "id": "the-best-acai",
+      "nome": "The Best Açaí",
+      "icon": "🍧",
+      "categoria": "Con las chaveirinhas",
+      "coords": [
+        -22.275706,
+        -51.500768
+      ],
+      "foto": "/imgs/photos/pos_culto_com_nossas_irmas/36.jpg",
+      "data": "22 de marzo de 2026",
+      "descricao": "Después del culto y de la conversación con el pastor que bendijo nuestra relación, fuimos a tomar açaí con la Amanda y la Duda. Las dos se hicieron muy amigas ese día - fue tan lindo ver eso suceder."
+    },
+    {
+      "id": "cafeteria-koike",
+      "nome": "Cafeteria Koike",
+      "icon": "☕",
+      "categoria": "Nuestra primera cafetería",
+      "coords": [
+        -22.273813,
+        -51.494068
+      ],
+      "foto": "/imgs/photos/cafeteria_koike/18.jpg",
+      "data": "14 de marzo de 2026",
+      "descricao": "Nuestra primera vez en una cafetería juntos. Cappuccino, pan con mantequilla a la plancha, panqueque de Nutella con fresa - y el aire acondicionado helado que nos hizo quedarnos bien cerquita."
+    },
+    {
+      "id": "gaulista-lanches",
+      "nome": "Gaulista Lanches",
+      "icon": "🍔",
+      "categoria": "Después de culto especial",
+      "coords": [
+        -22.275697,
+        -51.496619
+      ],
+      "foto": null,
+      "data": "Culto \"Buscarme-eis\" de 2026",
+      "descricao": "Después del culto de jóvenes del \"Buscarme-eis\", fue aquí donde fuimos a parar - y fue donde probamos smash burger juntos por primera vez. Un después de culto simple que quedó guardado con cariño."
+    },
+    {
+      "id": "praca-igreja-catolica",
+      "nome": "Praça da Igreja Católica",
+      "icon": "💑",
+      "categoria": "Nuestro rinconcito",
+      "coords": [
+        -22.275575,
+        -51.500484
+      ],
+      "foto": "/imgs/photos/posculto_combinando_na_praca/57.jpg",
+      "data": "Varios momentos especiales",
+      "descricao": "Vamos y nos quedamos allí algunas veces - sentados en la banquita conversando, acariciándonos, besitos... uno de esos lugares simples que se volvió nuestro sin necesitar de mucho."
+    },
+    {
+      "id": "caique-lanches",
+      "nome": "Caique Lanches",
+      "icon": "🌭",
+      "categoria": "Fin de semana",
+      "coords": [
+        -22.276625,
+        -51.501683
+      ],
+      "foto": null,
+      "data": "Fin de semana de 2026",
+      "descricao": "Fuimos a probar el sándwich allí una vez, en un sábado de salida. Pediste un hot dog con pollo desmenuzado que venía tan grande que ni se podía comer bien jaja - pero quedó en la memoria."
+    },
+    {
+      "id": "ran-temakeria",
+      "nome": "Ran Temakeria",
+      "icon": "🍣",
+      "categoria": "Mesversario",
+      "coords": [
+        -22.279492,
+        -51.506468
+      ],
+      "foto": "/imgs/photos/segundo_mesversario_dia2/IMG_2879.jpg",
+      "data": "2º mes - segundo día (mayo de 2026)",
+      "descricao": "Fuimos dos veces, pero lo marcante fue en el segundo día de nuestro 2º mesversario - cena juntos, los dos de rojo, con ese clima de quien todavía está celebrando lo que construimos."
+    },
+    {
+      "id": "chacara-orlando-bertasso",
+      "nome": "Chácara do Orlando Bertasso",
+      "icon": "✝️",
+      "categoria": "Primera vigilia",
+      "coords": [
+        -22.337359,
+        -51.554697
+      ],
+      "foto": null,
+      "data": "2026",
+      "descricao": "Tu primera vigilia en la vida. Terminó bien temprano, pero aun así fue divertido - llevaste una palabra, yo tocando cajón. Fuimos en el Fiesta de mi papá porque mi carro estaba con el amortiguador malo, pero fue muy bueno."
+    },
+    {
+      "id": "academia-elite",
+      "nome": "Academia Elite",
+      "icon": "🏋️",
+      "categoria": "Nuestra rutina",
+      "coords": [
+        -22.28206,
+        -51.495868
+      ],
+      "foto": "/imgs/photos/primeiro_treino/IMG_4828.jpg",
+      "data": "20 de julio de 2026",
+      "descricao": "Nuestro primer entrenamiento juntos. Salimos de tu casa caminando hasta aquí, tú toda tímida descubriendo los aparatos - y de a poco eso se volvió una de nuestras rutinas favoritas: caminata, conversación, entrenamiento y la vuelta a casa lado a lado."
+    }
+  ]
+}

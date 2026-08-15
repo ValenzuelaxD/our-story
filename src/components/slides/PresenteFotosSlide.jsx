@@ -104,7 +104,7 @@ function PresenteFotoMosaico({ urls, blockEager, idPrefix, onImageClick }) {
 }
 
 export default function PresenteFotosSlide() {
-  const { titulo, subtitulo, itens } = SESSAO_FOTOS_PRESENTE
+  const { label, titulo, subtitulo, itens } = SESSAO_FOTOS_PRESENTE
   const { abrir } = useLightbox()
 
   return (
@@ -117,7 +117,7 @@ export default function PresenteFotosSlide() {
           className="flex flex-col gap-6 w-full max-w-sm lg:max-w-xl mx-auto allow-select pb-14"
         >
           <div className="text-center pt-2">
-            <MI v={fadeV} className="chapter-label">Te di</MI>
+            <MI v={fadeV} className="chapter-label">{label}</MI>
             <MI className="mt-2 flex items-center justify-center gap-2">
               <span className="text-2xl" style={{ animation: 'softFloat 5s ease-in-out infinite' }}>💐</span>
               <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">{titulo}</h2>

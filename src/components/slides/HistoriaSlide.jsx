@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import MI from '../ui/MI'
 import Slide from '../ui/Slide'
-import { staggerV, fadeV, TIMELINE, HISTORIA_DATA_CORTE } from '../../data/constants'
+import { staggerV, fadeV, TIMELINE, HISTORIA_DATA_CORTE, TEXTO } from '../../data/constants'
+
+const tHistoria = TEXTO.historia
 
 /** Fecha hasta donde los cards aparecen sin interacción (inclusive). */
 const idxCorte = TIMELINE.findIndex(i => i.data === HISTORIA_DATA_CORTE)
@@ -40,7 +42,7 @@ function CardBody({ paras }) {
           onClick={() => setAberto(v => !v)}
           className="text-xs font-medium text-amber-300/90 hover:text-amber-200 underline underline-offset-2 decoration-amber-400/40 mt-0.5"
         >
-          {aberto ? 'Mostrar menos' : 'Leer más'}
+          {aberto ? tHistoria.mostrarMenos : tHistoria.leerMas}
         </button>
       )}
     </div>
@@ -66,7 +68,7 @@ function ChatCard({ item, idx, total }) {
       />
       <div className={`rounded-2xl overflow-hidden border ${destaque ? 'border-amber-300/40 shadow-[0_0_24px_rgba(212,175,55,0.18)]' : 'border-rose-300/18'} bg-white/[0.04]`}>
         <div className={`p-4 space-y-1 border-b border-white/[0.06] ${destaque ? 'bg-gradient-to-br from-amber-200/8 to-transparent' : ''}`}>
-          <p className={`text-[9px] uppercase tracking-[0.22em] ${destaque ? 'text-amber-200/70' : 'text-rose-300/55'}`}>✦ Antes de todo</p>
+          <p className={`text-[9px] uppercase tracking-[0.22em] ${destaque ? 'text-amber-200/70' : 'text-rose-300/55'}`}>{tHistoria.antesDeTodo}</p>
           <span className="timeline-date-pill">{item.data}</span>
           <h3 className="font-display text-lg font-semibold text-rose-100 mt-2 mb-2 leading-snug">
             {item.icon} {item.titulo}
@@ -76,7 +78,7 @@ function ChatCard({ item, idx, total }) {
 
         <div className="bg-[#0d1f16]/70 p-4 space-y-2.5">
           <div className="flex items-center gap-2 pb-2 border-b border-white/[0.07]">
-            <span className="text-[10px] text-green-300/60 tracking-wide">WhatsApp · 09/02/2026</span>
+            <span className="text-[10px] text-green-300/60 tracking-wide">{tHistoria.whatsappFecha}</span>
           </div>
           {item.mensagens.map((msg, i) => (
             <div key={i} className={`flex ${msg.de === 'eu' ? 'justify-end' : 'justify-start'}`}>
@@ -127,7 +129,7 @@ function TimelineCard({ item, idx, total }) {
         }`}
       >
         {destaque && (
-          <p className="text-[9px] uppercase tracking-[0.22em] text-amber-200/70 mb-1.5">✦ Momento especial</p>
+          <p className="text-[9px] uppercase tracking-[0.22em] text-amber-200/70 mb-1.5">{tHistoria.momentoEspecial}</p>
         )}
         <span className="timeline-date-pill">{item.data}</span>
         <h3 className={`font-display font-semibold mt-2 mb-2 leading-snug ${destaque ? 'text-xl text-rose-50' : 'text-lg text-rose-100'}`}>
@@ -152,14 +154,14 @@ export default function HistoriaSlide() {
           className="flex flex-col gap-6 w-full max-w-sm lg:max-w-xl mx-auto allow-select"
         >
           <div className="text-center">
-            <MI v={fadeV} className="chapter-label">Nuestra historia</MI>
+            <MI v={fadeV} className="chapter-label">{tHistoria.label}</MI>
             <MI className="mt-2 flex items-center justify-center gap-2">
               <span className="text-2xl" style={{ animation: 'softFloat 5s ease-in-out infinite' }}>🌹</span>
-              <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">Nuestra Historia</h2>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">{tHistoria.titulo}</h2>
               <span className="text-2xl" style={{ animation: 'softFloat 5s ease-in-out infinite 0.5s' }}>📖</span>
             </MI>
             <MI v={fadeV}>
-              <p className="text-rose-200/55 text-xs mt-1">Los momentos que marcaron nuestra trayectoria</p>
+              <p className="text-rose-200/55 text-xs mt-1">{tHistoria.subtitulo}</p>
             </MI>
           </div>
 
@@ -198,7 +200,7 @@ export default function HistoriaSlide() {
                   className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-amber-400/10 border border-amber-400/25 text-amber-200 font-sans text-sm font-medium tracking-wide hover:bg-amber-400/18 active:scale-95 transition-all duration-200"
                 >
                   <span>✦</span>
-                  <span>{expandido ? 'Mostrar menos' : 'Leer más'}</span>
+                  <span>{expandido ? tHistoria.mostrarMenos : tHistoria.leerMas}</span>
                   <span
                     className="text-xs transition-transform duration-300"
                     style={{ transform: expandido ? 'rotate(180deg)' : 'rotate(0deg)' }}

@@ -58,6 +58,18 @@ export async function initDb(p = pool) {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
   `)
 
+  // Tabla de contenido editable (Fase 3): una sola fila (id=1) con el JSON completo.
+  // MEDIUMTEXT porque MySQL 5.7 no soporta columnas JSON nativas.
+  await p.execute(`
+    CREATE TABLE IF NOT EXISTS contenido (
+      id          TINYINT(1)   NOT NULL DEFAULT 1,
+      body        MEDIUMTEXT   NOT NULL,
+      updated_at  DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP
+                               ON UPDATE CURRENT_TIMESTAMP,
+      PRIMARY KEY (id)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+  `)
+
   // Diagnóstico de arranque: confirma qué base de datos y cuántos recados visibles hay
   try {
     const [[info]] = await p.query(
@@ -67,6 +79,46 @@ export async function initDb(p = pool) {
   } catch (e) {
     console.error('[DB] error en el diagnóstico de arranque:', e instanceof Error ? e.message : e)
   }
+}
+
+/**
+ * Devuelve el contenido editable guardado (objeto parseado) o null si la
+ * tabla está vacía (el sitio usa entonces el JSON del repo como seed/fallback).
+ *
+ * @param {import('mysql2/promise').Pool} [p]
+ * @returns {Promise<{ content: unknown, updated_at: string } | null>}
+ */
+export async function getContenido(p = pool) {
+  if (!p) return null
+
+  const [rows] = await p.query(
+    'SELECT body, DATE_FORMAT(updated_at, \'%Y-%m-%dT%H:%i:%sZ\') AS updated_at FROM contenido WHERE id = 1',
+  )
+  const row = /** @type {any[]} */ (rows)[0]
+  if (!row) return null
+
+  try {
+    return { content: JSON.parse(row.body), updated_at: row.updated_at }
+  } catch (e) {
+    console.error('[DB:getContenido] JSON inválido en la tabla:', e instanceof Error ? e.message : e)
+    return null
+  }
+}
+
+/**
+ * Guarda (o reemplaza) el contenido completo como JSON en la fila id=1.
+ *
+ * @param {unknown} body objeto de contenido a persistir
+ * @param {import('mysql2/promise').Pool} [p]
+ * @returns {Promise<boolean>} true si se guardó
+ */
+export async function saveContenido(body, p = pool) {
+  if (!p) return false
+  await p.execute(
+    'INSERT INTO contenido (id, body) VALUES (1, ?) ON DUPLICATE KEY UPDATE body = VALUES(body)',
+    [JSON.stringify(body)],
+  )
+  return true
 }
 
 /**

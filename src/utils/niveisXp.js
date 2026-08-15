@@ -2,6 +2,10 @@
  * Curva de níveis: começa fácil (pouco XP por nível), cada nível exige mais.
  * thresholds[i] = XP acumulado mínimo para estar no nível i + 1
  */
+import { TEXTO } from '../data/constants'
+
+const TITULOS = TEXTO.conquistas.titulosNivel
+
 export function buildLevelThresholds(maxXp) {
   const thresholds = [0]
   let increment = 100
@@ -48,26 +52,7 @@ export function getNivelInfo(xp, maxXp) {
   }
 }
 
-const TITULOS = [
-  'Início da jornada',
-  'Primeiro capítulo',
-  'Conversando de coração',
-  'Primeiros passos juntos',
-  'Crescendo juntos',
-  'Companheiros de caminho',
-  'História bonita de contar',
-  'Aliança em construção',
-  'Corações conectados',
-  'Parceiros de vida',
-  'Amor que amadurece',
-  'Construindo o futuro',
-  'Companheiros de alma',
-  'História épica',
-  'Quase lá',
-  'Lenda do amor',
-]
-
 export function getTituloNivel(nivel) {
   if (nivel <= TITULOS.length) return TITULOS[nivel - 1]
-  return `Nível ${nivel}`
+  return `Nivel ${nivel}`
 }

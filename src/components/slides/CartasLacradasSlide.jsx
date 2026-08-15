@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import MI from '../ui/MI'
 import Slide from '../ui/Slide'
-import { staggerV, fadeV, scaleV, CARTAS_LACRADAS } from '../../data/constants'
+import { staggerV, fadeV, scaleV, CARTAS_LACRADAS, TEXTO } from '../../data/constants'
+
+const tCartas = TEXTO.cartas
 
 function diasRestantes(dataAlvo) {
   if (!dataAlvo) return null
@@ -23,7 +25,7 @@ function CartaCard({ carta }) {
         <div className="flex items-center gap-3">
           <span className="text-3xl">{carta.icon}</span>
           <div className="text-left flex-1">
-            <p className="text-[9px] uppercase tracking-[0.22em] text-amber-200/70">✦ Carta abierta</p>
+            <p className="text-[9px] uppercase tracking-[0.22em] text-amber-200/70">{tCartas.cartaAbierta}</p>
             <h3 className="font-display text-lg font-semibold text-rose-50 leading-snug">{carta.titulo}</h3>
           </div>
         </div>
@@ -43,7 +45,7 @@ function CartaCard({ carta }) {
         <span className="text-3xl opacity-50">{carta.icon}</span>
         <div className="text-left flex-1">
           <p className="text-[9px] uppercase tracking-[0.22em] text-rose-200/45">
-            {semData ? 'Fecha próximamente' : `Se abre el ${carta.dataTexto}`}
+            {semData ? tCartas.fechaProximamente : tCartas.seAbreEl.replace('{fecha}', carta.dataTexto)}
           </p>
           <h3 className="font-display text-lg font-semibold text-rose-100/75 leading-snug">{carta.titulo}</h3>
         </div>
@@ -52,9 +54,9 @@ function CartaCard({ carta }) {
 
       {!semData && dias !== null && dias > 0 && (
         <div className="flex items-center justify-center gap-1.5 rounded-xl bg-amber-200/8 border border-amber-200/15 px-3 py-2">
-          <span className="text-amber-200/60 text-xs">Faltan</span>
+          <span className="text-amber-200/60 text-xs">{tCartas.faltan}</span>
           <span className="font-display font-semibold text-amber-100/90 text-sm">{dias.toLocaleString('es')}</span>
-          <span className="text-amber-200/60 text-xs">{dias === 1 ? 'día' : 'días'}</span>
+          <span className="text-amber-200/60 text-xs">{dias === 1 ? tCartas.dia : tCartas.dias}</span>
         </div>
       )}
 
@@ -74,16 +76,16 @@ export default function CartasLacradasSlide() {
           className="flex flex-col gap-6 w-full max-w-md lg:max-w-2xl mx-auto allow-select pb-14"
         >
           <div className="text-center pt-2">
-            <MI v={fadeV} className="chapter-label">Para nuestro futuro</MI>
+            <MI v={fadeV} className="chapter-label">{tCartas.label}</MI>
             <MI v={scaleV} className="text-4xl mt-2" style={{ animation: 'pulseSoft 3s ease-in-out infinite' }}>
               📜
             </MI>
             <MI className="mt-2">
-              <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">Cartas guardadas</h2>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold text-rose-50">{tCartas.titulo}</h2>
             </MI>
             <MI v={fadeV}>
               <p className="text-rose-200/55 text-xs mt-1.5 max-w-[260px] mx-auto">
-                Palabras escritas hoy, esperando el momento adecuado para ser abiertas
+                {tCartas.subtitulo}
               </p>
             </MI>
           </div>
