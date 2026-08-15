@@ -26,5 +26,8 @@ mkdir -p "$WEB_ROOT"
 cp -r dist/. "$WEB_ROOT/"
 # Sincroniza la config de Nginx (incluye el proxy de /admin a la API)
 cp "$REPO_DIR/deploy/nginx.conf" /etc/nginx/sites-available/our-story
+echo "--- nginx conf /admin (diag) ---"
+grep -n "admin" /etc/nginx/sites-available/our-story || echo "sin /admin en la config"
+ls -la /etc/nginx/sites-enabled/
 nginx -t && systemctl reload nginx
 echo "Sitio actualizado."
