@@ -24,5 +24,7 @@ export API_CONTEUDO_URL="${API_CONTEUDO_URL:-http://127.0.0.1:7000/api/contenido
 npm run build
 mkdir -p "$WEB_ROOT"
 cp -r dist/. "$WEB_ROOT/"
+# Sincroniza la config de Nginx (incluye el proxy de /admin a la API)
+cp "$REPO_DIR/deploy/nginx.conf" /etc/nginx/sites-available/our-story
 nginx -t && systemctl reload nginx
 echo "Sitio actualizado."
