@@ -4,36 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Panel · Nuestra Historia</title>
-<style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{min-height:100dvh;background:linear-gradient(155deg,#3e0e2e 0%,#5c1645 50%,#2a0820 100%);
-       font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#fdf2f8;padding:1.5rem}
-  .wrap{max-width:860px;margin:0 auto}
-  h1{font-size:1.35rem;font-weight:600;letter-spacing:.01em;margin-bottom:.25rem}
-  .sub{color:#fbcfe8;font-size:.85rem;opacity:.85;margin-bottom:1.5rem}
-  .card{background:rgba(55,25,42,0.90);border:1px solid rgba(212,175,55,0.22);
-        border-radius:18px;padding:1.25rem 1.35rem;margin-bottom:1rem;
-        box-shadow:0 6px 30px rgba(0,0,0,0.35)}
-  .card h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:#f9a8d4;margin-bottom:1rem}
-  label{display:block;font-size:.78rem;color:#fda4af;margin:0 0 .3rem}
-  input[type=text],input[type=password],textarea,select{
-    width:100%;background:rgba(10,4,8,0.55);border:1px solid rgba(253,164,175,0.25);
-    color:#fff;border-radius:10px;padding:.6rem .7rem;font-size:.9rem;margin-bottom:.9rem;outline:none}
-  input:focus,textarea:focus{border-color:rgba(251,191,36,0.6)}
-  textarea{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.8rem;line-height:1.5;min-height:420px;resize:vertical}
-  .row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.9rem}
-  .btn{display:inline-block;padding:.7rem 1.4rem;border:0;border-radius:12px;cursor:pointer;
-       font-size:.9rem;font-weight:600;letter-spacing:.02em;background:linear-gradient(135deg,#9d174d,#be185d);
-       color:#fff;box-shadow:0 4px 16px rgba(190,24,93,0.35)}
-  .btn:disabled{opacity:.5;cursor:not-allowed}
-  .btn.ghost{background:transparent;border:1px solid rgba(253,164,175,0.4);color:#fbcfe8;box-shadow:none}
-  .status{margin-top:.9rem;font-size:.82rem;line-height:1.6;color:#fbcfe8;min-height:1.2em}
-  .status.ok{color:#86efac}
-  .status.err{color:#fca5a5}
-  .hint{font-size:.75rem;color:#8b5a6b;margin:-0.4rem 0 .9rem}
-  details summary{cursor:pointer;color:#fde68a;font-size:.85rem}
-</style>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="admin.css">
 </head>
 <body>
 <div class="wrap">
@@ -45,7 +17,7 @@
     <label>Token de administrador</label>
     <input type="password" id="token" placeholder="ADMIN_TOKEN" autocomplete="off">
     <p class="status hint">El token se guarda solo en tu navegador (sessionStorage).</p>
-    <button class="btn" onclick="unlock()">Entrar</button>
+    <button class="btn" id="btnUnlock">Entrar</button>
   </div>
 
   <div id="panel" hidden>
@@ -78,137 +50,13 @@
     </div>
 
     <div class="card">
-      <button class="btn" id="btnSave" onclick="save()">Guardar y reconstruir</button>
-      <button class="btn ghost" onclick="loadRepo()">Cargar plantilla del repo</button>
+      <button class="btn" id="btnSave">Guardar y reconstruir</button>
+      <button class="btn ghost" id="btnRepo">Cargar plantilla del repo</button>
       <p class="status" id="status"></p>
     </div>
   </div>
 </div>
 
-<script>
-const GATE = document.getElementById('gate')
-const PANEL = document.getElementById('panel')
-const STATUS = document.getElementById('status')
-const REPO = 'ValenzuelaxD/our-story'
-let data = null
-
-function setStatus(msg, cls) {
-  STATUS.textContent = msg
-  STATUS.className = 'status ' + (cls || '')
-}
-
-function unlock() {
-  const token = document.getElementById('token').value.trim()
-  if (!token) return
-  sessionStorage.setItem('admin_token', token)
-  GATE.hidden = true
-  PANEL.hidden = false
-  load()
-}
-
-function gateToken() {
-  return sessionStorage.getItem('admin_token') || ''
-}
-
-function authHeaders() {
-  return { 'Content-Type': 'application/json', Authorization: 'Bearer ' + gateToken() }
-}
-
-async function load() {
-  setStatus('Cargando contenido…')
-  try {
-    const res = await fetch('/api/contenido')
-    const j = await res.json()
-    if (j.ok && j.content) {
-      data = j.content
-    } else {
-      data = null
-    }
-  } catch (e) {
-    data = null
-  }
-  if (data) {
-    fillIdentidad()
-    document.getElementById('editor').value = JSON.stringify(data, null, 2)
-    setStatus('Contenido cargado desde la base de datos.')
-  } else {
-    document.getElementById('editor').value = ''
-    setStatus('No hay contenido guardado aún. Usa "Cargar plantilla del repo" para empezar.')
-  }
-}
-
-function fillIdentidad() {
-  const id = data.identidad || {}
-  const set = (el, v) => { document.getElementById(el).value = v ?? '' }
-  set('nombreEl', id.nombreEl); set('nombreElPublico', id.nombreElPublico)
-  set('nombreElCompleto', id.nombreElCompleto); set('nombreElla', id.nombreElla)
-  set('nombreEllaCompleto', id.nombreEllaCompleto); set('nombreEllaFuturo', id.nombreEllaFuturo)
-  set('inicioNamoro', id.inicioNamoro); set('dataCasamento', id.dataCasamento)
-  set('anioInicio', id.anioInicio); set('siteOrigin', id.siteOrigin)
-}
-
-function applyIdentidad() {
-  if (!data) data = {}
-  if (!data.identidad) data.identidad = {}
-  const id = data.identidad
-  const get = (el) => document.getElementById(el).value.trim()
-  id.nombreEl = get('nombreEl'); id.nombreElPublico = get('nombreElPublico')
-  id.nombreElCompleto = get('nombreElCompleto'); id.nombreElla = get('nombreElla')
-  id.nombreEllaCompleto = get('nombreEllaCompleto'); id.nombreEllaFuturo = get('nombreEllaFuturo')
-  id.inicioNamoro = get('inicioNamoro'); id.dataCasamento = get('dataCasamento')
-  id.anioInicio = get('anioInicio'); id.siteOrigin = get('siteOrigin')
-  document.getElementById('editor').value = JSON.stringify(data, null, 2)
-}
-
-async function loadRepo() {
-  setStatus('Descargando plantilla del repo…')
-  try {
-    const res = await fetch('https://raw.githubusercontent.com/' + REPO + '/main/src/data/contenido.json')
-    if (!res.ok) throw new Error('HTTP ' + res.status)
-    data = await res.json()
-    fillIdentidad()
-    document.getElementById('editor').value = JSON.stringify(data, null, 2)
-    setStatus('Plantilla cargada. Revisa y guarda.', 'ok')
-  } catch (e) {
-    setStatus('No se pudo descargar la plantilla: ' + e.message, 'err')
-  }
-}
-
-async function save() {
-  applyIdentidad()
-  let parsed
-  try {
-    parsed = JSON.parse(document.getElementById('editor').value)
-  } catch (e) {
-    setStatus('JSON inválido: ' + e.message, 'err')
-    return
-  }
-  if (!parsed.texto && !parsed.identidad) {
-    setStatus('El JSON debe incluir al menos "texto" o "identidad".', 'err')
-    return
-  }
-  const btn = document.getElementById('btnSave')
-  btn.disabled = true
-  setStatus('Guardando y disparando rebuild…')
-  try {
-    const res = await fetch('/api/contenido', {
-      method: 'PUT',
-      headers: authHeaders(),
-      body: JSON.stringify(parsed),
-    })
-    const j = await res.json()
-    if (!res.ok) {
-      setStatus('Error: ' + (j.error || ('HTTP ' + res.status)), 'err')
-      return
-    }
-    setStatus('Guardado. El sitio se está reconstruyendo' +
-      (j.rebuild_dispatched ? '…' : ' (el rebuild se hará en el próximo deploy).'), 'ok')
-  } catch (e) {
-    setStatus('Error de red: ' + e.message, 'err')
-  } finally {
-    btn.disabled = false
-  }
-}
-</script>
+<script src="admin.js"></script>
 </body>
 </html>

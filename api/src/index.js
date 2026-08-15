@@ -460,6 +460,25 @@ app.post('/api/recados', recadosLimiter, async (req, res) => {
 })
 
 // Panel de administración (Fase 3): estático servido por la propia API en /admin.
+// La CSP de helmet por defecto bloquea los scripts y fuerza HTTPS (upgrade-insecure-requests);
+// aquí se sobrescribe para el panel: permisiva solo con lo que el panel necesita.
+const ADMIN_CSP = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "font-src 'self' https: data:",
+  "form-action 'self'",
+  "frame-ancestors 'self'",
+  "img-src 'self' data:",
+  "object-src 'none'",
+  "script-src 'self'",
+  "script-src-attr 'none'",
+  "style-src 'self' https: 'unsafe-inline'",
+  "connect-src 'self' https://raw.githubusercontent.com",
+].join('; ')
+app.use('/admin', (_req, res, next) => {
+  res.setHeader('Content-Security-Policy', ADMIN_CSP)
+  next()
+})
 app.use('/admin', express.static(PUBLIC_DIR, { index: 'admin.html' }))
 
 app.use((_req, res) => {
