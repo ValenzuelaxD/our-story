@@ -12,3 +12,7 @@ flock "$LOCK_FILE" git reset --hard origin/main
 
 docker compose -f deploy/docker-compose.yml up -d --build
 echo "API actualizada."
+echo "--- logs our-story-api ---"
+docker logs --tail 60 our-story-api 2>&1 || true
+echo "--- logs our-story-mysql ---"
+docker logs --tail 30 our-story-mysql 2>&1 || true
