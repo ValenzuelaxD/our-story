@@ -3,11 +3,16 @@ services:
     image: mysql:5.7
     container_name: our-story-mysql
     restart: always
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    command: >
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+      --innodb-buffer-pool-size=96M
+      --innodb-log-buffer-size=8M
+      --performance_schema=OFF
     env_file:
       - ../api/.env
     volumes:
-      - mysql-data:/var/lib/mysql
+      - mysql-data-v1:/var/lib/mysql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p$$MYSQL_ROOT_PASSWORD"]
       interval: 10s
@@ -30,4 +35,4 @@ services:
         condition: service_healthy
 
 volumes:
-  mysql-data:
+  mysql-data-v1:
