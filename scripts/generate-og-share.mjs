@@ -7,6 +7,11 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
+// VPS pequeño (1.8 GB): un solo worker de libvips evita picos de memoria al
+// decodificar og-cover.jpg (12 MP) y que el build muera de OOM.
+sharp.concurrency(1)
+sharp.cache(false)
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 const src = path.join(root, 'public', 'imgs', 'og-cover.jpg')
