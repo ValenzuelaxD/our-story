@@ -12,8 +12,8 @@ cd "$REPO_DIR"
 exec 9>"$LOCK_FILE"
 flock -x 9
 
-flock "$LOCK_FILE" git fetch origin main
-flock "$LOCK_FILE" git reset --hard origin/main
+git fetch origin main
+git reset --hard origin/main
 
 docker compose -f deploy/docker-compose.yml up -d --build
 echo "API actualizada."
