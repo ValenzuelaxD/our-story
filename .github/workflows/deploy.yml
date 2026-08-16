@@ -9,8 +9,8 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: deploy-${{ github.ref }}
-  cancel-in-progress: true
+  group: vps-deploy-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   deploy:
