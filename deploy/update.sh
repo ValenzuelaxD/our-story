@@ -11,8 +11,11 @@ LOCK_FILE="/tmp/our-story-deploy.lock"
 
 cd "$REPO_DIR"
 
-# Serializa el sync con el deploy de la API (ambos workflows corren en paralelo)
-# para evitar que dos `git fetch` concurrentes compitan por las refs.
+# Serializa TODO el deploy del sitio con el de la API (mismo lock): evita que
+# npm install + vite build + docker build corran a la vez y maten de OOM el VPS.
+exec 9>"$LOCK_FILE"
+flock -x 9
+
 flock "$LOCK_FILE" git fetch origin main
 flock "$LOCK_FILE" git reset --hard origin/main
 
