@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Actualiza el sitio en el VPS (lo invoca GitHub Actions o manualmente).
 set -euo pipefail
+umask 022
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 

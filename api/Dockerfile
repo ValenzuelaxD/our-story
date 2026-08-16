@@ -8,8 +8,8 @@ COPY package.json package-lock.json* ./
 
 RUN npm ci --omit=dev && npm cache clean --force
 
-COPY src ./src
-COPY public ./public
+COPY --chown=app:app src ./src
+COPY --chown=app:app public ./public
 
 USER app
 
